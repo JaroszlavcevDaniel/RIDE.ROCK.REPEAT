@@ -15,7 +15,7 @@ import firebase from 'firebase/compat/app';
 
 })
 export class Navbar implements OnInit  {
-   lang: Language = 'hu';
+   lang: Language = 'hu'; 
 
   currentLang: Language;
   content$!: Observable<any>;
@@ -46,7 +46,7 @@ export class Navbar implements OnInit  {
     this.languageService.setLanguage(lang);
     this.router.navigate(['/', lang]);
   }
-
+// majd ide kell valami 
 
   login() {
     this.auth.loginWithGoogle();
