@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
-    background-color: black !important; 
+       background-color: black !important; 
+  
 }
 
 #home_banner_div {
@@ -19,3 +20,12 @@ body {
 a:hover {
     color: red !important;
     }
+
+main {
+    background-image: url("/images/back.jpg") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    font-weight: bolder !important;
+    text-shadow: 5px 5px 5px rgb(13, 13, 13) !important;
+}
+

@@ -6,9 +6,9 @@
   <img class="w-100 rounded-2" [src]="article?.image" alt="">
   </div>
 
-  <div class="col-lg-6 col-12">
-   <h1 class="text-light">{{ article?.title }}</h1>
-  <markdown class="text-light">{{ article?.content }}</markdown>
+  <div *ngIf="article as a" class="col-lg-6 col-12">
+   <h1 class="text-light">{{ a?.title }}</h1>
+  <markdown class="text-light">{{ a?.content }}</markdown>
     </div>
    </div>
 </div>
@@ -25,6 +25,8 @@
      <a target="_blank" class="text-decoration-none" [href]="article?.linkEight"> {{article?.linkEightName}} </a> 
      <a target="_blank" class="text-decoration-none" [href]="article?.linkNine"> {{article?.linkNineName}} </a> 
      <a target="_blank" class="text-decoration-none" [href]="article?.linkTen"> {{article?.linkTenName}} </a> 
+    <a target="_blank" class="text-decoration-none" [href]="article?.linkEleven"> {{article?.linkElevenName}} </a> 
+
     </h4>
 </div>
  <!-- CAROUSEL  -->
@@ -76,8 +78,9 @@
 
 
 </div> 
- <markdown class="text-light m-4 p-1">{{ article?.contentSecondPart }}</markdown> 
-
+<div *ngIf="article as a">
+ <markdown class="text-light m-4 p-1">{{ a?.contentSecondPart }}</markdown> 
+</div>
 
 <!-- <div class="container">
 

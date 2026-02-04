@@ -30,6 +30,8 @@ export interface ArticleLang {
   linkNineName: string;
   linkTen: string;
   linkTenName: string;
+  linkEleven: string;
+  linkElevenName: string;
   carouselText: string;
   
 
@@ -75,6 +77,8 @@ export interface Article {
   linkNineName: string;
   linkTen: string;
   linkTenName: string;
+  linkEleven: string;
+  linkElevenName: string;
   fotoOne: string;
   fotoTwo: string;
   fotoThree: string;
