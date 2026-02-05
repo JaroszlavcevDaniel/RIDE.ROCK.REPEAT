@@ -4,6 +4,7 @@ import { map, Observable } from 'rxjs';
 import { ContentService } from '../../services/content-service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Article } from '../../models/article-model';
+import emailjs from 'emailjs-com';
 
 @Component({
   selector: 'app-contact',
@@ -40,10 +41,36 @@ ngOnInit(): void {
   });
 }
 
-  onSubmit(): void {
-    if (this.presentForm.valid) {
-      alert('Your message sended to Ride.Rock.Repeat 🚀 Thank You!');
-      this.presentForm.reset();
-    }
-  }
+success = false;
+sending = false;
+
+onSubmit(): void {
+  if (this.presentForm.invalid || this.sending) return;
+
+  this.sending = true;
+
+  emailjs.send(
+        'service_nhs9ip5',
+    'template_9b7dp1h',
+    {
+      yourName: this.presentForm.value.yourName,
+      yourEmail: this.presentForm.value.yourEmail,
+      yourMessage: this.presentForm.value.yourMessage,
+    },
+    'kjQe7FQOJlPovmcD4'
+  ).then(() => {
+    this.presentForm.reset();
+    this.success = true;
+    this.sending = false;
+
+    setTimeout(() => {
+      this.success = false;
+    }, 3000);
+
+  }).catch(() => {
+    this.sending = false;
+    alert('Hiba történt 😢');
+  });
+}
+
 }

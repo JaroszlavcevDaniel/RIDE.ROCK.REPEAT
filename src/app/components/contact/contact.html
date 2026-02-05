@@ -35,7 +35,7 @@
     {{ content.contact.contactTextTwo }}
   </p>
 
-  <form class="mt-4" [formGroup]="presentForm" (ngSubmit)="onSubmit()">
+  <form class="mt-4" [formGroup]="presentForm" (ngSubmit)="onSubmit()" action="https://formspree.io/f/XXXXXXX" method="POST">
 
     <div class="col-md-6 my-3">
       <label class="form-label text-light"> {{ content.contact.yourName }}</label>
@@ -52,9 +52,24 @@
       <textarea   class="form-control"  rows="4"  formControlName="yourMessage"></textarea>
     </div>
 
-    <button  class="btn btn-success"  type="submit"  [disabled]="presentForm.invalid">   {{ content.contact.sendMessage }}</button>
+    <button
+  type="submit"
+  class="btn btn-success"
+  [disabled]="presentForm.invalid || sending">
+  {{ sending ? 'Küldés...' : 'Küldés' }}
+  </button>
 
 
 
   </form>
+</div>
+
+<!-- SUCCESS MESSAGE -->
+<div
+  *ngIf="success"
+  class="success-box text-center my-4">
+
+  <div class="checkmark">✓</div>
+  <p class="mb-0">Üzenet sikeresen elküldve</p>
+
 </div>
