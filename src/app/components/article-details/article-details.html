@@ -1,17 +1,14 @@
 
-<div class="container m-1">
-    <div class="row">
-
- <div class="col-lg-6 col-12">
-  <img class="w-100 rounded-2" [src]="article?.image" alt="">
-  </div>
-
-  <div *ngIf="article as a" class="col-lg-6 col-12">
-   <h1 class="text-light">{{ a?.title }}</h1>
+<div class="container d-flex justify-content-center" >
+   
+  <div *ngIf="article as a" class="text-start" style="max-width: 800px;">
+    
+   <h1 class="text-light m-3">{{ a?.title }}</h1>
+   <img class="w-75 rounded-2 mx-auto d-block m-3" [src]="article?.image" alt="">
   <markdown class="text-light">{{ a?.content }}</markdown>
     </div>
    </div>
-</div>
+
 <!-- LINKS  -->
 <div *ngIf="article?.isThereLinks" class="text-info p-3">
   <h4 >Links: 
@@ -37,10 +34,10 @@
 <div id="carouselExample" class="carousel slide d-flex">
   <div class="carousel-inner justify-content-center">
 
- <div class="carousel-item active">
+       <div class="carousel-item active">
       <img [src]="article?.fotoOne" class="d-block w-75 mx-auto rounded-2" alt="...">
     </div>
-       <div class="carousel-item">
+    <div class="carousel-item ">
       <img [src]="article?.fotoTwo" class="d-block w-75 mx-auto rounded-2" alt="...">
     </div>
        <div class="carousel-item">
@@ -78,8 +75,10 @@
 
 
 </div> 
-<div *ngIf="article as a">
+<div *ngIf="article as a" class="d-flex justify-content-center">
+  <div class="text-start" style="max-width: 800px;">
  <markdown class="text-light m-4 p-1">{{ a?.contentSecondPart }}</markdown> 
+ </div>
 </div>
 
 <!-- <div class="container">
