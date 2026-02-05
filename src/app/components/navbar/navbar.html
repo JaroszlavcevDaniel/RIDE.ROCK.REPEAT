@@ -40,15 +40,22 @@
             {{ content.navbar.playlists }}
           </a>
         </li>
-        <li class="nav-item">
-          <button *ngIf="!user" (click)="login()" class="btn btn-secondary">
+
+          <li class="nav-item me-5">
+          <a class="nav-link text-light" [routerLink]="['/', currentLang, 'contact']">
+            {{ content.navbar.contact }}
+          </a>
+        </li>
+
+        <li class="nav-item ">
+          <button *ngIf="!user" (click)="login()" class="btn btn-secondary btn-pulse">
          Login by Google
         </button>
 
-<div *ngIf="user">
-  👋 {{ user.displayName }}
-  <button (click)="logout()" class="btn btn-secondary">LogOut</button>
-</div>
+        <div *ngIf="user">
+          👋 {{ user.displayName }}
+          <button (click)="logout()" class="btn btn-secondary">LogOut</button>
+        </div>
         </li>
 
       </ul>

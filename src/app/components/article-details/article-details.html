@@ -3,8 +3,8 @@
    
   <div *ngIf="article as a" class="text-start" style="max-width: 800px;">
     
-   <h1 class="text-light m-3">{{ a?.title }}</h1>
-   <img class="w-75 rounded-2 mx-auto d-block m-3" [src]="article?.image" alt="">
+   <h1 class=" text-neon m-3">{{ a?.title }}</h1>
+   <img class="w-75 rounded-2 mx-auto d-block m-3" [src]="article?.image" alt="article-picture" id="articlePicture">
   <markdown class="text-light">{{ a?.content }}</markdown>
     </div>
    </div>

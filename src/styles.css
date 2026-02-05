@@ -26,6 +26,173 @@ main {
     background-size: cover !important;
     background-repeat: no-repeat !important;
     font-weight: bolder !important;
-    text-shadow: 5px 5px 5px rgb(13, 13, 13) !important;
+    /* text-shadow: 5px 5px 5px rgb(13, 13, 13) !important; */
 }
 
+a, #articlePicture:hover {
+    transform: scale(1.05) !important;
+}
+
+.btn-animate {
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.btn-animate:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25) !important;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.btn-pulse {
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+.btn-pulse:hover {
+  animation: none;
+}
+
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,.4) 10%, transparent 10%);
+  transform: scale(0);
+  transition: transform 0.4s ease;
+}
+
+.btn-ripple:active::after {
+  transform: scale(2.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-animate,
+  .btn-pulse {
+    animation: none;
+    transition: none;
+  }
+}
+
+@keyframes neonDeep {
+  0% {
+    text-shadow:
+      0 0 6px #8bf38e,
+      0 0 12px rgba(129, 202, 124, 0.5);
+  }
+  50% {
+    text-shadow:
+      0 0 10px #85e3b3,
+      0 0 24px rgba(134, 246, 203, 0.8);
+  }
+  100% {
+    text-shadow:
+      0 0 6px #83ff8b,
+      0 0 12px rgba(134, 233, 150, 0.5);
+  }
+}
+
+.text-neon {
+  animation: neonDeep 4s ease-in-out infinite;
+}
+
+.main-container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000 100%);
+}
+
+/* csillag layer */
+.stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* egy csillag */
+.star {
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,1),
+    rgba(255,255,255,0)
+  );
+}
+
+/* eltérő pozíciók + időzítés */
+.star:nth-child(1) { left: 10%; animation-delay: 0s; }
+.star:nth-child(2) { left: 30%; animation-delay: 2s; }
+.star:nth-child(3) { left: 50%; animation-delay: 4s; }
+.star:nth-child(4) { left: 70%; animation-delay: 1s; }
+.star:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.article-image {
+  width: 100%;
+  height: 200px;           /* ← EZ a kulcs */
+  object-fit: cover;
+}
+
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-wrapper::after {
+  content: '';
+  position: absolute;
+
+  /* ⬇️ EZT finomhangolod a lámpa helyére */
+  top: 34%;
+  left: 42%;
+
+  width: 120px;
+  height: 120px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 200, 0.6) 0%,
+    rgba(255, 255, 200, 0.25) 40%,
+    rgba(255, 255, 200, 0) 70%
+  );
+
+  transform: translate(-50%, -50%);
+  filter: blur(8px);
+  animation: headlightPulse 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes headlightPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}

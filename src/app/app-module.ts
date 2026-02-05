@@ -96,6 +96,7 @@ import { environment } from './environment/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { Contact } from './components/contact/contact';
 
 @NgModule({
   declarations: [
@@ -112,6 +113,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     NotFound,
     MainPage,
     ArticleDetails,
+    Contact,
   ],
   imports: [
     BrowserModule,

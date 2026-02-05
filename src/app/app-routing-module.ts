@@ -9,6 +9,7 @@ import { About } from './components/about/about';
 import { NotFound } from './components/not-found/not-found';
 import { LanguageGuard } from './core/core/guards/language-guard';
 import { ArticleDetails } from './components/article-details/article-details';
+import { Contact } from './components/contact/contact';
 
 const routes: Routes = [
 
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: ':lang/playlists',
     component: Music
+  },
+   {
+    path: ':lang/contact',
+    component: Contact
   },
 
   // 🔁 DEFAULT

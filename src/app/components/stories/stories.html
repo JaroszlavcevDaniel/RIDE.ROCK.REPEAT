@@ -9,7 +9,7 @@
       <div class="row">
 
        <div class="col-6 align-items-center">
-      <img [src]="article.image" alt="Featured article image" class="img-fluid rounded-2 p-1 m-1" >
+      <img [src]="article.image" alt="Featured article image" class="card-img-top article-image p-1 m-1" >
     </div>
       
       <div class="card-body col-6">
@@ -19,7 +19,7 @@
         <h6 class="p-2">{{ article[lang].excerpt }}</h6>
         
         <!-- Read More Link -->
-   <a class="text-light btn bg-black text-decoration-none fw-bold"[routerLink]="['/', lang, 'articles', article[lang].slug]">
+   <a class="text-light btn bg-black text-decoration-none fw-bold btn-animate btn-ripple"[routerLink]="['/', lang, 'articles', article[lang].slug]">
         {{ lang === 'hu' ? 'Olvasom tovább' : 'Read more' }} 
       </a>
       </div>
