@@ -1,1 +1,60 @@
-<p>contact works!</p>
+<div class="container" *ngIf="content$ | async as content">
+
+
+  <markdown class="text-light">
+    {{ content.contact.contactText }}
+  </markdown>
+
+  <div class="d-flex gap-5 align-items-center my-5">
+
+  <a href="https://www.instagram.com/zelikdaniel?igsh=MWZ6cm9tdGxmMGVpeA%3D%3D&utm_source=qr"
+     target="_blank"
+     aria-label="Instagram"
+     class="social-icon">
+    <i class="bi bi-instagram"></i>
+  </a>
+
+  <a href="https://www.facebook.com/daniel.zelik.7/"
+     target="_blank"
+     aria-label="Facebook"
+     class="social-icon">
+    <i class="bi bi-facebook"></i>
+  </a>
+
+  <a href="https://github.com/JaroszlavcevDaniel"
+     target="_blank"
+     aria-label="GitHub"
+     class="social-icon">
+    <i class="bi bi-github"></i>
+  </a>
+
+</div>
+
+
+  <p class="text-light mt-3">
+    {{ content.contact.contactTextTwo }}
+  </p>
+
+  <form class="mt-4" [formGroup]="presentForm" (ngSubmit)="onSubmit()">
+
+    <div class="col-md-6 my-3">
+      <label class="form-label text-light"> {{ content.contact.yourName }}</label>
+      <input    class="form-control"   type="text" formControlName="yourName">
+    </div>
+
+    <div class="col-md-6 my-3">
+      <label class="form-label text-light">{{ content.contact.yourEmail }}</label>
+      <input   class="form-control"  type="email" formControlName="yourEmail">
+    </div>
+
+    <div class="col-md-8 my-3">
+      <label class="form-label text-light">{{ content.contact.yourMessage }}</label>
+      <textarea   class="form-control"  rows="4"  formControlName="yourMessage"></textarea>
+    </div>
+
+    <button  class="btn btn-success"  type="submit"  [disabled]="presentForm.invalid">   {{ content.contact.sendMessage }}</button>
+
+
+
+  </form>
+</div>

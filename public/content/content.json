@@ -10,6 +10,14 @@
     "title": "Motorkerékpár. Zene. Utazás. Történetek az útról.",
       "subtitle": "Ez nem egy tesztoldal. Nem egy influencer blog. Ez egy történet az útról egy motorral, zenével és gondolatokkal.",
       "cta": "Olvasom tovább"
+    },
+    "contact": {
+    "contactText": "## Kapcsolatfelvétel ## \n \n Ha szeretnél kapcsolatba lépni velem, kövess vagy írj bátran az alábbi közösségi média felületeken. Ott osztom meg a legfrissebb tartalmakat, utazásokat és gondolatokat, és ott a leggyorsabb az elérés is.  ",
+    "contactTextTwo": "Ha inkább közvetlen üzenetet küldenél, használd nyugodtan az alábbi űrlapot. Igyekszem minden megkeresésre mielőbb válaszolni.",
+    "yourName": "A teljes neved:",
+    "yourEmail": "Az email címed:",
+    "yourMessage": "Az üzeneted",
+    "sendMessage": "Küldés"
     }
   },
   "en": {
@@ -23,6 +31,15 @@
       "title": "Motorcycle. Music. Travel. Stories from the road.",
       "subtitle": "This is not a test site. Not an influencer blog. This is the story of the road with a motorbike, music and thoughts.",
       "cta": "Read more"
+    },
+    "contact": {
+    "contactText": "## Contact me ## \n \n If you would like to get in touch with me, feel free to follow or write to me on the following social media platforms. I share the latest content, travels and thoughts there, and it is also the fastest way to reach me.",
+    "contactTextTwo": "If you would rather send a direct message, please feel free to use the form below. I will try to respond to all inquiries as soon as possible.",
+    "yourName": "Your full name:",
+    "yourEmail": "Your email address:",
+    "yourMessage": "Your message",
+    "sendMessage": "Send"
+     
     }
   },
   "articles": [
@@ -295,6 +312,7 @@
         "content": "Real rock doesn’t try to please. It doesn’t apologize, it doesn’t blend into the background, and it never aims to satisfy everyone. These songs aren’t tied to eras – they’re tied to a feeling. That moment when you twist the throttle and everything else stops mattering. \n \n ##  1. Led Zeppelin – Whole Lotta Love ## \n \n A primal riff, raw energy, pure instinct. This is where so much of rock music was born. \n \n ##  2. AC/DC – Back in Black ## \n \n Perfectly simple and absolutely timeless. Nothing unnecessary – just rhythm, power, and confidence. \n \n ##  3. Guns N’ Roses – Welcome to the Jungle ## \n \n Chaos, tension, and urban wildness. This isn’t background music – it’s a gateway into another world. \n \n ##  4. Deep Purple – Highway Star ## \n \n Speed told through sound. If any song was written for riding, this is the one. \n \n ##  5. Black Sabbath – Paranoid ## \n \n Dark, simple, and elemental. This is where everything heavier began. \n \n ##  6. The Rolling Stones – Gimme Shelter ## \n \n Tension from the first note to the last. Rock isn’t just volume – it’s weight. \n \n ##  7. Nirvana – Smells Like Teen Spirit ## \n \n A generation’s scream through distortion. Dirty, honest, and impossible to ignore. \n \n ##  8. Queens of the Stone Age – No One Knows ## \n \n Groove, desert dust, and controlled madness. Modern rock that stands shoulder to shoulder with the legends. \n \n ##  9. Motörhead – Ace of Spades ## \n \n Throttle, noise, and zero compromise. Lived by Lemmy’s rules – or not at all. \n \n ##  10. Foo Fighters – Everlong ## \n \n Emotional yet powerful. Proof that real rock isn’t built on anger alone. \n \n ##  ride.rock.repeat ## \n \n Real rock isn’t a genre. It’s an attitude."
       }
     }
+    
 
 
   ]

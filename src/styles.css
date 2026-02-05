@@ -29,9 +29,7 @@ main {
     /* text-shadow: 5px 5px 5px rgb(13, 13, 13) !important; */
 }
 
-a, #articlePicture:hover {
-    transform: scale(1.05) !important;
-}
+
 
 .btn-animate {
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
@@ -119,15 +117,15 @@ a, #articlePicture:hover {
   z-index: 0;
 }
 
-/* egy csillag */
 .star {
+  position: absolute;
+  top: -10px;
   width: 2px;
-  height: 80px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,1),
-    rgba(255,255,255,0)
-  );
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall 6s linear infinite;
 }
 
 /* eltérő pozíciók + időzítés */

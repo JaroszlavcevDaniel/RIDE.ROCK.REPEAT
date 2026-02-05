@@ -1,3 +1,4 @@
+import { Contact } from './../components/contact/contact';
 import { signal } from '@angular/core';
 export interface ArticleLang {
   title: string;
@@ -33,6 +34,13 @@ export interface ArticleLang {
   linkEleven: string;
   linkElevenName: string;
   carouselText: string;
+  contactText: string;
+  contactTextTwo: string;
+  yourName: string;
+  yourEmail: string;
+  yourMessage: string;
+  sendMessage: string;
+
   
 
 }
@@ -89,4 +97,10 @@ export interface Article {
   fotoEight: string;
   fotoNine: string;
   fotoTen: string;
+  contactText: string;
+  contactTextTwo: string;
+  yourName: string;
+  yourEmail: string;
+  yourMessage: string;
+  sendMessage: string;
 }
