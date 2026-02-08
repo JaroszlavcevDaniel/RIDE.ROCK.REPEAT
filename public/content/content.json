@@ -22,7 +22,7 @@
   },
   "en": {
     "navbar": {
-      "about": "About projekt",
+      "about": "About project",
       "travel": "Travel articles",
        "playlists": "Playlists",
        "contact": "Contact me"
@@ -396,7 +396,9 @@
       "linkTwo": "/hu/articles/top-20-dolog-must-have-nomad-utazasban",
       "linkTwoName": "Top-20 dolog, ami must-have egy nomad motoros utazásban, ",
       "linkThree": "/hu/articles/utazasom-magyarorszagon-szlovenian-es-olaszorszagon-keresztul",
-      "linkThreeName": "Magyarországon Szlovénián és Olaszországon keresztül",
+      "linkThreeName": "Magyarországon Szlovénián és Olaszországon keresztül, ",
+      "linkFour": "/hu/articles/nagy-utmutato-a-vadkempingezeshez–usa&kanada",
+      "linkFourName": "Nagy útmutató a vadkempingezéshez – USA & Kanada",
 
       "hu": {
         "title": "Nagy útmutató a vadkempingezéshez – Balkán & Kelet-Európa",
@@ -412,7 +414,76 @@
         "excerpt": "The Balkans and Eastern Europe are, for many travelers, a true goldmine for wild camping. Less regulated, less crowded, and far more human-centered than Western Europe...",
         "content": "\n \n   The Balkans and Eastern Europe are, for many travelers, a true goldmine for wild camping. Less regulated, less crowded, and far more human-centered than Western Europe. At the same time, this region requires more common sense, local awareness, and intuition. In this part, we go country by country and look at what you can realistically expect. \n \n   ## Slovenia – officially forbidden, practically flexible ## \n \n  In Slovenia, wild camping is officially illegal, especially in national parks such as Triglav. That said, many motorcyclists and hikers still camp discreetly in remote forested or mountainous areas for a single night. People are generally friendly, but nature protection is taken seriously. \n \n  Risks: \n \n  – mountain weather \n \n   – park rangers in protected areas \n \n  Tips: \n \n  – avoid national parks \n \n  – arrive late, leave early \n \n  – ask locals if you’re unsure \n \n  ## Croatia – forget the coastline ## \n \n  In Croatia, wild camping is strictly forbidden, especially along the coast and on the islands. Authorities regularly check popular areas, and fines are common. In remote inland or mountainous regions, a one-night bivouac may occasionally be tolerated, but this is never guaranteed. \n \n  Risks: \n \n  – fines \n \n  – conflicts in tourist areas \n \n  Tips: \n \n  – use official campsites or ask for permission \n \n  – don’t try wild camping on the coast \n \n  ## Bosnia and Herzegovina – wild, beautiful, but careful ## \n \n  Wild camping in Bosnia is often accepted, especially in rural and mountainous regions. People are incredibly hospitable and may even offer food or drinks. However, there is one very important factor: landmines. In some areas, especially remote or abandoned regions, remnants of war are still present. \n \n  Risks: \n \n  – unmarked landmine areas \n \n  – strong storms \n \n  Tips: \n \n  – camp only in clearly used, visible areas \n \n  – if a place feels untouched by humans, choose another spot \n \n  – always ask locals \n \n  ## Serbia – relaxed attitude, few rules ## \n \n  In Serbia, wild camping is loosely regulated and widely tolerated in practice. Especially in rural and mountainous areas, nobody really cares where you spend the night. Locals are usually open, helpful, and curious about travelers. \n \n  Risks: \n \n  – stray dogs \n \n  – weather changes \n \n  Tips: \n \n  – avoid camping near cities \n \n  – talk to locals whenever possible  \n \n  ## Montenegro – mountains yes, coast no ## \n \n  In Montenegro, wild camping in the mountains is often tolerated or accepted. The coastline, however, is heavily touristic and closely monitored. The mountains offer incredible landscapes with very few people around. \n \n  Risks: \n \n  – steep terrain \n \n  – rapidly changing weather \n \n  Tips: \n \n  – the mountains are your best option \n \n  – avoid core zones of national parks \n \n  ## Albania – a wild camping paradise ## \n \n  Albania is often described as one of Europe’s wildest and freest countries. Wild camping is accepted almost everywhere, especially outside cities. Locals are extremely welcoming and often invite travelers into their yards. \n \n  Risks: \n \n  – stray dogs \n \n  – limited infrastructure \n \n  Tips: \n \n  – accept invitations when offered \n \n  – be respectful and grateful \n \n  ## North Macedonia – quiet and welcoming ## \n \n  Wild camping in North Macedonia is generally unproblematic. Few tourists, lots of nature, and a relaxed pace of life. \n \n  Risks: \n \n  – isolation \n \n  – limited services \n \n  Tips: \n \n  – carry enough water and fuel \n \n  – know your location \n \n  ## Romania – freedom and bears ## \n \n  In Romania, wild camping is widely accepted, especially in the Carpathian Mountains. \n \n  However, you must seriously consider the presence of brown bears. \n \n  Locals are mostly friendly, but the wilderness is real. \n \n  Risks: \n \n  – bears \n \n  – remote mountain roads \n \n  Tips: \n \n  – never leave food outside \n \n  – avoid animal trails and feeding areas \n \n  ## Bulgaria – freer than you might expect ## \n \n  In Bulgaria, wild camping is often accepted or tolerated, particularly in rural and mountainous regions. Along the coast, regulations are stricter and enforcement is more common. \n \n  Risks: \n \n  – weather \n \n  – isolated locations \n \n  Tips: \n \n  – avoid tourist hotspots \n \n  – stay discreet \n \n  ## Hungary – legally forbidden, practically a grey zone ## \n \n  In Hungary, wild camping is officially illegal, especially in forests and protected areas. Despite this, many people spend a single night in remote fields or near rivers without issues. \n \n  Risks: \n \n  – inspections by authorities \n \n  – private land issues \n \n  Tips: \n \n  – ask for permission when possible \n \n  – arrive late, leave early \n \n  ## Summary – why we love this region ## \n \n  The Balkans and Eastern Europe offer the purest feeling of freedom when it comes to wild camping. Fewer rules, more human connection, more spontaneous moments. \n \n  But that freedom comes with responsibility: \n \n  – pay attention \n \n  – ask questions \n \n  – respect people and nature \n \n  If you do that, these countries will give you some of the best nights of your life – in a tent, under the stars."
       }
+    },
+    {
+      "id": 13,
+      "featured": false,
+      "isActive": true,
+      "isArticle": true,
+      "isPlaylist": false,
+      "category": "motor",
+      "image": "images/nagy-utmutato-a-vadkempingezeshez–usa&kanada.png",
+      "date": "2026-02-08",
+      "isThereCarousel": false,
+      "isThereLinks": true,
+      "linkOne": "/hu/articles/nagy-utmutato-a-vadkempingezeshez–europa",
+      "linkOneName": "Nagy útmutató a vadkempingezéshez – Európa, ",
+      "linkTwo": "/hu/articles/top-20-dolog-must-have-nomad-utazasban",
+      "linkTwoName": "Top-20 dolog, ami must-have egy nomad motoros utazásban, ",
+      "linkFour": "/hu/articles/nagy-utmutato-a-vadkempingezeshez–balkan&kelet-europa",
+      "linkFourName": "Nagy útmutató a vadkempingezéshez – Balkán & Kelet-Európa, ",
+      "linkThree": "/hu/articles/utazasom-magyarorszagon-szlovenian-es-olaszorszagon-keresztul",
+      "linkThreeName": "Magyarországon Szlovénián és Olaszországon keresztül",
+
+      "hu": {
+        "title": "Nagy útmutató a vadkempingezéshez – USA & Kanada",
+        "slug": "nagy-utmutato-a-vadkempingezeshez–usa&kanada",
+        "excerpt": "Az Egyesült Államok és Kanada a vadkemping szerelmeseinek igazi paradicsoma: hatalmas, érintetlen területek, kevés korlátozás, de mindenütt fontos a szabályok ismerete és a természet tisztelete...",
+        "content": "\n \n  Az Egyesült Államok és Kanada a vadkemping szerelmeseinek igazi paradicsoma: hatalmas, érintetlen területek, kevés korlátozás, de mindenütt fontos a szabályok ismerete és a természet tisztelete.\n \n   ## Egyesült Államok – Szabadság, szabályokkal ##  \n \n  Az USA-ban rengeteg Bureau of Land Management (BLM) terület és nemzeti erdő található, ahol a vadkemping legális, gyakran díjmentesen. Ugyanakkor a nemzeti parkokban a vadkemping szigorúan tiltott, és a hatóságok rendszeresen ellenőriznek. Az emberek megszokták a kempingezőket, de a szabályok betartását elvárják. \n \n Veszélyek: \n \n – vadállatok (medvék, puma, kígyók) \n \n – extrém hőség vagy hideg \n \n – hatalmas távolságok, elszigeteltség \n \n Tippek: \n \n – ellenőrizd, hogy BLM vagy állami földön vagy \n \n – tartsd be a „Leave No Trace” elvet (ne hagyj nyomot) \n \n – legyen elegendő víz és élelem \n \n ##  Kanada – Vadon nagybetűvel ##  \n \n Kanadában a vadkemping sok helyen engedélyezett vagy eltűrt, főleg a városoktól távoli területeken. A vadon hatalmas és érintetlen, de a biztonság érdekében készülj fel mindenre. \n \n Veszélyek: \n \n – medvék, farkasok \n \n – gyors időjárásváltozás, hó a magasabb régiókban \n \n – elszigeteltség, nagy távolságok a legközelebbi településig \n \n Tippek: \n \n – legyen nálad bear spray, az ételt elkülönítve tárold \n \n – mindig tudd, hol vagy, legyen offline térképed \n \n – ne becsüld alá a távolságokat \n \n ##  Összegzés ##  \n \n Az USA és Kanada hatalmas, szinte végtelen területeket kínál a vadkemping szerelmeseinek. A szabadság hatalmas, de a felelősség és a természet tisztelete elengedhetetlen. A megfelelő előkészületekkel ezek a helyek életed egyik legemlékezetesebb éjszakáit adják majd – sátorban, a csillagok alatt."
+      },
+
+      "en": {
+        
+        "title": "Ultimate Guide to Wild Camping – USA & Canada",
+        "slug": "ultimate-guide-to-wild-camping–usa&canada",
+        "excerpt": "The United States and Canada are a true paradise for wild camping enthusiasts: vast, untouched areas with few restrictions, but everywhere it’s important to know the rules and respect nature...",
+        "content": "\n \n  The United States and Canada are a true paradise for wild camping enthusiasts: vast, untouched areas with few restrictions, but everywhere it’s important to know the rules and respect nature. \n \n  ## United States – Freedom, with rules ## \n \n  In the U.S., there are countless Bureau of Land Management (BLM) areas and national forests where wild camping is legal, often free of charge. However, in national parks, wild camping is strictly prohibited, and authorities regularly check for violations. People are used to seeing campers, but following the rules is expected. \n \n  Risks: \n \n  – wildlife (bears, cougars, snakes) \n \n – extreme heat or cold \n \n – vast distances and isolation \n \n Tips: \n \n – check whether you are on BLM or state land \n \n – follow the “Leave No Trace” principle \n \n – bring enough water and food \n \n ##  Canada – Wilderness with a capital  ##  \n \n In Canada, wild camping is widely permitted or tolerated, especially in areas far from cities. The wilderness is vast and untouched, but safety requires careful preparation. \n \n Risks: \n \n – bears, wolves \n \n – rapidly changing weather, snow at higher elevations \n \n – isolation, long distances to the nearest settlement \n \n Tips: \n \n – carry bear spray and store food separately \n \n – always know your location, have offline maps \n \n – never underestimate the distances \n \n ##  Summary ##  \n \n The United States and Canada offer enormous, virtually endless areas for wild camping. The freedom is incredible, but responsibility and respect for nature are essential. With proper preparation, these places will give you some of the most unforgettable nights of your life – in a tent under the stars."
+      }
+    },
+    {
+      "id": 14,
+      "featured": false,
+      "isActive": true,
+      "isArticle": false,
+      "isPlaylist": true,
+      "category": "playlist",
+      "image": "images/top-10-rock-dal-az-utazas-hangulatahoz.jpg",
+      "date": "2026-02-08",
+      "isThereCarousel": false,
+      "isThereLinks": true,
+       "linkOne": "https://www.youtube.com/watch?v=mev_FBj0Fyk&list=PL1mlkHn3-O-LNmE-JbyqN648Nv9hRGGfJ",
+      "linkOneName": "FULL PLAYLIST",
+      "linkTwo": "",
+      "linkTwoName": " ",
+      "linkThree": "",
+      "linkThreeName": "",
+
+      "hu": {
+        "title": "Top 10 Rock Dal az Utazás Hangulatához",
+        "slug": "top-10-rock-dal-az-utazas-hangulatahoz",
+        "excerpt": "Ha hosszú utakon vagy, vagy csak a szabad ég alatt szeretnél elgondolkodni, ezek a dalok tökéletes társak a motoron, autóban vagy gyalog...",
+        "content": "\n \n Ha hosszú utakon vagy, vagy csak a szabad ég alatt szeretnél elgondolkodni, ezek a dalok tökéletes társak a motoron, autóban vagy gyalog. \n \n ## 1. Eddie Vedder – Long Nights ## \n \n Az úton töltött hosszú éjszakákat idézi, lassú, melankolikus, de motiváló hangulatú. Tökéletes a motorozás utáni pihenéshez a csillagok alatt. \n \n ## 2. Pearl Jam – Just Breathe ## \n \n Lassú, lírai dal, ami a szabadság és az utazás elmélkedő oldalát mutatja. Remek háttérzene, ha az úton gondolkodsz és élvezed a tájat. \n \n ## 3. Tom Petty – Wildflowers ## \n \n A függetlenség és a szabad életérzés himnusza. Tökéletes a hosszú vidéki utakon való guruláshoz. \n \n ## 4. Neil Young – Harvest Moon ## \n \n Romantikus, nyugodt dallam az éjszakai úthoz vagy a kempingezéshez. Az utazás lassú, elgondolkodtató oldalát hozza. \n \n ## 5. John Mayer – Stop This Train ## \n \n A haladás, az idő múlása és az utazás metaforáját dolgozza fel. Ideális, ha gondolkodósabb, érzelmes road tripet szeretnél. \n \n ## 6. Bruce Springsteen – The River ## \n \n A szabadság, az utazás és az életút történetét meséli el. Tökéletes háttér a lassabb, festői utakhoz. \n \n ## 7. Kings of Leon – Closer ## \n \n Egy könnyed, melankolikus, de lendületes szám az útról és az érzésekről. Segít ráhangolódni a nyitott utakra. \n \n ## 8. Fleetwood Mac – Landslide ## \n \n Az elmúlás, a változás és a mozgás érzését adja, lassú és gondolkodtató. Tökéletes a természetben töltött órákhoz. \n \n ## 9. Eddie Vedder – Society ## \n \n A szabadságvágy és a társadalomtól való elszakadás témája tökéletes road trip hangulatot ad. Ideális egyedül utazáskor, amikor csak a tájat és a gondolataidat figyeled. \n \n ## 10. The War on Drugs – Red Eyes ## \n \n Érzékletes, melankolikus és kicsit álomszerű hangulat, ami az útról, a tájról és az utazás ritmusáról szól. Tökéletes a naplementés, hosszú útszakaszokra."
+      },
+
+      "en": {
+        
+        "title": "Top 10 Rock Songs to Get in the Travel Mood",
+        "slug": "top-10-rock-songs-to-get-in-the-travel-mood",
+        "excerpt": "If you’re on long roads or just want to enjoy the open sky, these songs are perfect companions for a motorcycle, car, or walking trip...",
+        "content": "\n \n If you’re on long roads or just want to enjoy the open sky, these songs are perfect companions for a motorcycle, car, or walking trip. \n \n ## 1. Eddie Vedder – Long Nights ##  \n \n Captures the feel of long nights on the road, slow, melancholic, yet motivating. Perfect for relaxing after a long ride under the stars. \n \n ## 2. Pearl Jam – Just Breathe ##  \n \n A slow, lyrical song highlighting the reflective side of freedom and travel. Great background music for thinking and enjoying the landscape while on the road. \n \n ##  3. Tom Petty – Wildflowers ##  \n \n An anthem of independence and the feeling of a free life. Perfect for long drives through the countryside. \n \n ##  4. Neil Young – Harvest Moon ##  \n \n Romantic, calm melody for night driving or camping. Shows the slower, contemplative side of traveling. \n \n ##  5. John Mayer – Stop This Train ##  \n \n Deals with moving forward, the passage of time, and the metaphor of travel. Ideal for more reflective, emotional road trips. \n \n ##  6. Bruce Springsteen – The River ##  \n \n Tells the story of freedom, travel, and life’s journey. Perfect for slower, scenic routes. \n \n ##  7. Kings of Leon – Closer ##  \n \n Light, melancholic, yet uplifting song about the road and emotions. Helps you get in the mood for open roads. \n \n ## 8. Fleetwood Mac – Landslide ##  \n \n Conveys feelings of change, movement, and passing time, slow and contemplative. Perfect for hours spent in nature. \n \n ##  9. Eddie Vedder – Society ##  \n \n Themes of freedom and disconnecting from society give the perfect road trip vibe. Ideal for solo trips, where it’s just you, the scenery, and your thoughts. \n \n ##  10. The War on Drugs – Red Eyes ##  \n \n Evocative, melancholic, and somewhat dreamy, capturing the rhythm of travel and the landscape. Perfect for sunset drives and long stretches on the road."
+      }
     }
+    
     
     
     
