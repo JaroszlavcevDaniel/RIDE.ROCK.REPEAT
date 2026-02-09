@@ -1,34 +1,44 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { addDoc, collection, collectionData, Firestore, orderBy, query, serverTimestamp } from '@angular/fire/firestore';
 import firebase from 'firebase/compat/app';
+import { Observable } from 'rxjs';
+import { ArticleComment } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CommentService {
 
-  constructor(private firestore: AngularFirestore) {}
+  constructor(private firestore: Firestore) {}
 
-  getComments(articleId: string) {
-    return this.firestore
-      .collection('articles')
-      .doc(articleId)
-      .collection('comments', ref => ref.orderBy('createdAt', 'asc'))
-      .valueChanges({ idField: 'id' });
+  getComments(articleId: string): Observable<ArticleComment[]> {
+    const commentsRef = collection(
+      this.firestore,
+      `articles/${articleId}/comments`
+    );
+
+    const q = query(commentsRef, orderBy('createdAt', 'asc'));
+
+    return collectionData(q, { idField: 'id' }) as Observable<ArticleComment[]>;
   }
 
-  addComment(articleId: string, text: string, user: firebase.User) {
-    console.log('Adding comment for article:', articleId);
-    return this.firestore
-      .collection('articles')
-      .doc(articleId)
-      .collection('comments')
-      .add({
-        text,
-        userId: user.uid,
-        userName: user.displayName || 'Anonymous',
-        userPhoto: user.photoURL || '',
-        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-      });
+  addComment(
+    articleId: string,
+    text: string,
+    user: any
+  ) {
+    const commentsRef = collection(
+      this.firestore,
+      `articles/${articleId}/comments`
+    );
+
+    return addDoc(commentsRef, {
+      text,
+      userId: user.uid,
+      userName: user.displayName || 'Anonymous',
+      userPhoto: user.photoURL || null,
+      createdAt: serverTimestamp()
+    });
   }
 }

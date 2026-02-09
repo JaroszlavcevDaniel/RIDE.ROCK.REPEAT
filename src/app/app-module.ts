@@ -26,6 +26,9 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { Contact } from './components/contact/contact';
+import { ArticleComments } from './components/article-comments/article-comments';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,7 @@ import { Contact } from './components/contact/contact';
     MainPage,
     ArticleDetails,
     Contact,
+    ArticleComments,
   ],
   imports: [
     BrowserModule,
@@ -56,9 +60,12 @@ import { Contact } from './components/contact/contact';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+     
+
   ],
   providers: [
- 
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+   provideFirestore(() => getFirestore()),
   ],
   bootstrap: [App]
 })

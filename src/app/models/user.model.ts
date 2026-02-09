@@ -1,4 +1,4 @@
-// User model for authenticated users
+
 export interface User {
   uid: string;
   email: string | null;
@@ -6,12 +6,13 @@ export interface User {
   photoURL: string | null;
 }
 
-// Comment model for article comments
-export interface Comment {
+export interface ArticleComment {
   id?: string;
   text: string;
+
   userId: string;
   userName: string;
-  userPhoto: string;
-  createdAt: any; // Firebase Timestamp
+  userPhoto?: string | null;
+
+  createdAt: any;
 }
