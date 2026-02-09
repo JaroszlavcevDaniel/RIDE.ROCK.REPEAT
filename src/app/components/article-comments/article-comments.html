@@ -32,7 +32,7 @@
   </ng-container>
 
   <!-- COMMENT FORM -->
-  <ng-container *ngIf="user$ | async as user; else loginHint">
+  <ng-container *ngIf="user$ | async as user; else loginHint" class="mb-2">
     <div class="mt-4">
       <textarea
         [(ngModel)]="newComment"
@@ -42,7 +42,7 @@
       ></textarea>
 
       <button
-        class="btn btn-success mt-2"
+        class="btn btn-success m-4"
         (click)="submitComment(user)"
         [disabled]="!newComment.trim()"
       >
