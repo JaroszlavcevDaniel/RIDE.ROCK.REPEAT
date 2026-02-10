@@ -37,7 +37,7 @@ ngOnInit(): void {
   this.content$ = this.contentService.getContent();
 
   this.content$.subscribe(data => {
-    console.log('CONTENT FROM SERVICE:', data);
+    // console.log('CONTENT FROM SERVICE:', data);
   });
 }
 
