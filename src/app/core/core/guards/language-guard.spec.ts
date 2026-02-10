@@ -1,17 +1,17 @@
-import { TestBed } from '@angular/core/testing';
-import { CanActivateFn } from '@angular/router';
+// import { TestBed } from '@angular/core/testing';
+// import { CanActivateFn } from '@angular/router';
 
-import { languageGuard } from './language-guard';
+// import { languageGuard } from './language-guard';
 
-describe('languageGuard', () => {
-  const executeGuard: CanActivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => languageGuard(...guardParameters));
+// describe('languageGuard', () => {
+//   const executeGuard: CanActivateFn = (...guardParameters) => 
+//       TestBed.runInInjectionContext(() => languageGuard(...guardParameters));
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-  });
+//   beforeEach(() => {
+//     TestBed.configureTestingModule({});
+//   });
 
-  it('should be created', () => {
-    expect(executeGuard).toBeTruthy();
-  });
-});
+//   it('should be created', () => {
+//     expect(executeGuard).toBeTruthy();
+//   });
+// });

@@ -81,7 +81,7 @@
  </div>
 </div>
 
-<app-article-comments class="text-light" [articleId]="article.id"></app-article-comments>
+<app-article-comments class="text-light" *ngIf="article" [articleId]="article.id"></app-article-comments>
 
 <!-- <div class="container">
 

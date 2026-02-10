@@ -40,7 +40,7 @@ export class ArticleDetails implements OnInit, OnDestroy {
       })
     ).subscribe(article => {
       this.article = article;
-      console.log('Aktuális cikk adatai:', this.article);
+      // console.log('Aktuális cikk adatai:', this.article);
     });
   }
 
