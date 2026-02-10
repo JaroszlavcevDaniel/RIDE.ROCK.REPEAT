@@ -4,12 +4,13 @@
       "about": "Projektről",
       "travel": "Utazási cíkkek",
       "playlists": "Playlisztek",
-      "contact": "Kapcsolatfelvétel"
+      "contact": "Kapcsolatfelvétel",
+      "back": "vissza"
     },
     "hero": {
     "title": "Motorkerékpár. Zene. Utazás. Történetek az útról.",
       "subtitle": "Ez nem egy tesztoldal. Nem egy influencer blog. Ez egy történet az útról egy motorral, zenével és gondolatokkal.",
-      "cta": "Olvasom tovább"
+      "cta": "Merüljünk bele"
     },
     "contact": {
     "contactText": "## Kapcsolatfelvétel ## \n \n Ha szeretnél kapcsolatba lépni velem, kövess vagy írj bátran az alábbi közösségi média felületeken. Ott osztom meg a legfrissebb tartalmakat, utazásokat és gondolatokat, és ott a leggyorsabb az elérés is.  ",
@@ -25,12 +26,13 @@
       "about": "About project",
       "travel": "Travel articles",
        "playlists": "Playlists",
-       "contact": "Contact me"
+       "contact": "Contact me",
+       "back": "back"
     },
     "hero": {
       "title": "Motorcycle. Music. Travel. Stories from the road.",
       "subtitle": "This is not a test site. Not an influencer blog. This is the story of the road with a motorbike, music and thoughts.",
-      "cta": "Read more"
+      "cta": "Dive into the story"
     },
     "contact": {
     "contactText": "## Contact me ## \n \n If you would like to get in touch with me, feel free to follow or write to me on the following social media platforms. I share the latest content, travels and thoughts there, and it is also the fastest way to reach me.",

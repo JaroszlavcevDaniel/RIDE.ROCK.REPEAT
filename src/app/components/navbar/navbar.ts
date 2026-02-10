@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../../services/content-service';
 import { LanguageService } from '../../services/language-service';
-import { Observable } from 'rxjs';
+import { filter, Observable } from 'rxjs';
 import { Language } from '../../models/language.type';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { AuthService } from '../../services/auth-service';
 import firebase from 'firebase/compat/app';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -19,6 +20,7 @@ export class Navbar implements OnInit  {
 
   currentLang: Language;
   content$!: Observable<any>;
+  showBackButton = false;
 
   user: firebase.User | null = null;
 
@@ -26,11 +28,31 @@ export class Navbar implements OnInit  {
     private router: Router,
     private languageService: LanguageService,
     private contentService: ContentService,
-    private auth: AuthService
+    private auth: AuthService,
+    private location: Location
   ) {
     this.currentLang = this.languageService.getCurrentLang();
     this.content$ = this.contentService.getContent();
     this.auth.user$.subscribe(user => this.user = user);
+  
+       this.router.events
+      .pipe(filter(e => e instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        const langFromUrl = event.urlAfterRedirects.split('/')[1];
+
+        if (this.isLanguage(langFromUrl)) {
+          this.currentLang = langFromUrl;
+          this.showBackButton = event.urlAfterRedirects !== `/${this.currentLang}`;
+        }
+      });
+  }
+
+    goBack(): void {
+    this.location.back();
+  }
+
+    private isLanguage(value: string): value is Language {
+    return value === 'hu' || value === 'en';
   }
 
     ngOnInit(): void {

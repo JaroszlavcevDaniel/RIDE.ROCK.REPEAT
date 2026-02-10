@@ -1,8 +1,12 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light px-4 fixed-top mb-5">
 
-  <a class="navbar-brand" routerLink="/">Ride. Rock. Repeat. </a>
+  <a class="navbar-brand" [routerLink]="['/', currentLang]">Ride. Rock. Repeat. </a>
 <img style="width: 4% !important;" src="images/ride_rock_repeat_logo.png" alt=""> 
+<ng-container *ngIf="content$ | async as content">
+<a *ngIf="showBackButton" class="m-2 btn btn-secondary text-light fw-bolder btn-ripple btn-animate" 
+(click)="goBack()"> ←  {{ content.navbar.back }}</a>
+</ng-container>
   <!-- TOGGLER (mobilhoz) -->
   <button
     class="navbar-toggler"
@@ -54,7 +58,7 @@
 
         <div *ngIf="user">
           👋 {{ user.displayName }}
-          <button (click)="logout()" class="btn btn-secondary">LogOut</button>
+          <button (click)="logout()" class="btn btn-secondary mx-4">LogOut</button>
         </div>
         </li>
 
