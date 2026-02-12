@@ -3,12 +3,12 @@
   <h4 class="mb-3 text-light">Comments 👥 Kommentek</h4>
 
   <!-- COMMENTS LIST -->
-  <ng-container *ngIf="comments$ | async as comments">
+  <ng-container *ngIf="comments$ | async as comments" class="">
     <div *ngIf="comments.length === 0" class="text-light mb-3">
       No comments yet. Be the first 🤘 Még nincsenek hozzászólások. Légy az első!
     </div>
 
-    <div *ngFor="let comment of comments" class="comment mb-3 p-3 rounded border">
+    <div *ngFor="let comment of comments" class="comment mb-3 p-2 rounded border">
       <div class="d-flex align-items-center mb-2">
         <img
           *ngIf="comment.userPhoto"
