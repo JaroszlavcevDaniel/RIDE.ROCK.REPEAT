@@ -28,6 +28,7 @@
       </div>
 
       <p class="mb-0">{{ comment.text }}</p>
+      <p class="m-2 text-black">{{ comment.id }}</p>
     </div> 
   </ng-container>
 
@@ -42,7 +43,7 @@
       ></textarea>
 
       <button
-        class="btn btn-success mt-2"
+        class="btn btn-success m-2"
         (click)="submitComment(user)"
         [disabled]="!newComment.trim()"
       >

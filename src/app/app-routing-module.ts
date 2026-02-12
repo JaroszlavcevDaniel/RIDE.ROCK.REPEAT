@@ -24,7 +24,7 @@ const routes: Routes = [
     component: Home
   },
 
-  // 🔥 STATIKUS OLDALAK
+ 
   {
     path: ':lang/about',
     component: About
