@@ -5,6 +5,7 @@ import { ContentService } from '../../services/content-service';
 import { Language, LanguageService } from '../../services/language-service';
 import { Observable, Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { SeoService } from '../../services/seo-service';
 
 @Component({
   selector: 'app-main-page',
@@ -22,7 +23,8 @@ export class MainPage implements OnInit, OnDestroy {
 
   constructor(
     private contentService: ContentService,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private seo: SeoService
   ) {}
 
   ngOnInit() {
@@ -40,6 +42,23 @@ export class MainPage implements OnInit, OnDestroy {
         this.featuredPlaylist = a;
       })
     );
+        this.updateSeo();
+  }
+
+  private updateSeo() {
+    if (this.lang === 'hu') {
+      this.seo.updateTags({
+        title: 'Ride.Rock.Repeat – Motor, zene, történetek',
+        description: 'Fedezd fel a legfrissebb motoros kalandokat, zenéket és történeteket a Ride.Rock.Repeat oldalán.',
+        type: 'website'
+      });
+    } else {
+      this.seo.updateTags({
+        title: 'Ride.Rock.Repeat – Motorcycle, Music, Stories',
+        description: 'Discover the latest motorcycling adventures, music, and stories on Ride.Rock.Repeat.',
+        type: 'website'
+      });
+    }
   }
 
   ngOnDestroy() {

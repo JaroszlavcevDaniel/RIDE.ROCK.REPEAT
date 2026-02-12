@@ -5,10 +5,10 @@ import { ActivatedRoute } from '@angular/router';
 import { ContentService } from '../../services/content-service';
 import { CommonModule } from '@angular/common';
 import firebase from 'firebase/compat/app';
-// import { CommentService } from '../../services/comment-service';
 import { AuthService } from '../../services/auth-service';
 import { combineLatest, Subscription, switchMap } from 'rxjs';
 import { CommentService } from '../../services/comment-service';
+import { SeoService } from '../../services/seo-service';
 
 
 @Component({
@@ -24,7 +24,8 @@ export class ArticleDetails implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private contentService: ContentService,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private seo: SeoService
   ) {}
 
   ngOnInit(): void {
@@ -41,7 +42,21 @@ export class ArticleDetails implements OnInit, OnDestroy {
     ).subscribe(article => {
       this.article = article;
       // console.log('Aktuális cikk adatai:', this.article);
+      this.updateSeo();
     });
+  }
+
+    private updateSeo(): void {
+
+    if (!this.article) return;
+
+    this.seo.updateTags({
+      title: this.article.title + ' | Ride.Rock.Repeat',
+      description: this.article.description,
+      image: this.article.image,
+      type: 'article'
+    });
+
   }
 
   ngOnDestroy(): void {

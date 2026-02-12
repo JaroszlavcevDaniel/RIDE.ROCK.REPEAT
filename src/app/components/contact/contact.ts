@@ -5,6 +5,7 @@ import { ContentService } from '../../services/content-service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Article } from '../../models/article-model';
 import emailjs from 'emailjs-com';
+import { SeoService } from '../../services/seo-service';
 
 @Component({
   selector: 'app-contact',
@@ -24,7 +25,8 @@ export class Contact implements OnInit {
   constructor(
     private fb: FormBuilder,
     private languageService: LanguageService,
-    private contentService: ContentService
+    private contentService: ContentService,
+    private seo: SeoService
   ) {
     this.presentForm = this.fb.group({
       yourName: ['', Validators.required],
@@ -39,6 +41,19 @@ ngOnInit(): void {
   this.content$.subscribe(data => {
     // console.log('CONTENT FROM SERVICE:', data);
   });
+  if (this.lang === 'hu') {
+    this.seo.updateTags({
+      title: 'Kapcsolat | Ride.Rock.Repeat',
+      description: 'Lépj kapcsolatba velünk a Ride.Rock.Repeat oldalon.',
+      type: 'website'
+    });
+  } else {
+    this.seo.updateTags({
+      title: 'Contact | Ride.Rock.Repeat',
+      description: 'Get in touch with us at Ride.Rock.Repeat.',
+      type: 'website'
+    });
+  }
 }
 
 success = false;
