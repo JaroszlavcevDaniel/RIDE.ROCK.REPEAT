@@ -47,12 +47,12 @@
   "articles": [
     {
       "id": 1,
-      "featured": true,
+      "featured": false,
       "isActive": true,
       "isArticle": true,
       "isPlaylist": false,
       "category": "motor",
-      "image": "images/mytripHSI/efwef.png",
+      "image": "images/zsdfds.png",
       "date": "2026-01-29",
       "isThereCarousel": true,
       "fotoOne": "images/mytripHSI/mnwfee.png",
@@ -74,7 +74,7 @@
       "linkThreeName": "Nagy útmutató a vadkempingezéshez – Európa",
 
       "hu": {
-        "featuredText": "Kiemelt cíkk:",
+       
         "title": "Magyarországon Szlovénián és Olaszországon keresztül",
         "slug": "utazasom-magyarorszagon-szlovenian-es-olaszorszagon-keresztul",
         "excerpt": "Egy motoros utazás, ahol az utak, a hegyek és a szabadság találkoznak...",
@@ -84,7 +84,7 @@
       },
 
       "en": {
-        "featuredText": "Featured article:",
+       
         "title": "My trip through Hungary, Slovenia, and Italy",
         "slug": "my-trip-through-hungary-slovenia-italy",
         "excerpt": "A motorcycle journey where roads, mountains and freedom meet...",
@@ -318,7 +318,7 @@
     },
     {
       "id": 10,
-      "featured": false,
+      "featured": true,
       "isActive": true,
       "isArticle": true,
       "isPlaylist": false,
@@ -335,6 +335,7 @@
       "linkThreeName": "Magyarországon Szlovénián és Olaszországon keresztül",
 
       "hu": {
+        "featuredText": "Kiemelt cíkk:",
         "title": "Hogyan aludhatsz ingyen utazás közben?",
         "slug": "hogyan-aludhatsz-ingyen-utazas-kozben",
         "excerpt": "Az utazás egyik legnagyobb kihívása – főleg motorral vagy hosszabb túrán – a szállás kérdése...",
@@ -342,10 +343,10 @@
       },
 
       "en": {
-        
+        "featuredText": "Featured article:",
         "title": "How Can You Sleep for Free While Traveling?",
         "slug": "how-can-you-sleep-for-free-while-traveling",
-        "excerpt": "One of the biggest challenges of traveling – especially on a motorcycle or during a long journey – is finding a place to sleep...",
+        "excerpt": "One of the biggest challenges of traveling – especially on a motorcycle..",
         "content": "\n \n ##  A budget-friendly, human-centered and surprisingly beautiful way across Europe ## \n \n  One of the biggest challenges of traveling – especially on a motorcycle or during a long journey – is finding a place to sleep. Many people don’t know this, but there are ways to sleep completely for free, safely and legally. And not in random parking lots or hidden forests, but on people’s land, in their gardens or yards. \n \n  ## Why wild camping isn’t always the best option? ## \n \n  In many European countries, wild camping is either forbidden or heavily restricted. \n \n  This can mean not only fines, but constant stress as well: \n \n  – will someone show up during the night \n \n  – will you be asked to leave \n \n  – can you really sleep peacefully \n \n  That’s why having an alternative where you don’t have to pay, yet are genuinely welcome, is priceless. \n \n  ## 1 Night Tent – a network built on kindness ## \n \n  One of my favorite solutions is a website called 1 Night Tent. \n \n  Here, registered hosts all over Europe offer: \n \n  – their land \n \n  – their garden \n \n  – a small field or backyard \n \n  where travelers are welcome to camp for one night. \n \n  Not for money. \n \n  Not as an obligation. \n \n  *Simply out of kindness.* \n \n  I find this incredibly beautiful, especially in a world where it often feels like everything revolves around money. \n \n  ## My personal experiences ## \n \n  I’ve used this platform several times myself. I stayed with a German–Hungarian family who welcomed me incredibly warmly, and with an Austrian family who were just as open and kind. Both places were also located in absolutely stunning surroundings – places where I probably would never have stopped otherwise. I already wrote about these experiences in my article “Through Hungary, Slovenia and Italy” (link below). \n \n  ## How to use it wisely and respectfully ## \n \n  This is important: this is not a service, but a system based on trust. \n \n  So there are a few things you should always keep in mind: \n \n  – Before you arrive, read all the information about the host \n \n  – Let friends or family know where you’ll be staying \n \n  – Be respectful, punctual and honest \n \n  – Don’t be pushy – nobody owes anyone anything \n \n  – Try not to disturb, leave no trash, keep things quiet \n \n  At the same time: \n \n  – bring your good vibes \n \n  – talk about your journey \n \n  – share stories \n \n  – be human \n \n  A small gift can also mean a lot: a fridge magnet, a bottle of wine, something local – not mandatory, but a nice gesture. \n \n  ## Why I’ll keep using it ## \n \n  Because these experiences always remind me that there are still so many kind people in this world. I truly hope that one day I’ll have my own house with a garden, and I’ll be able to host travelers, riders and adventurers myself – just for one night, a conversation, a smile. \n \n  Because I believe this is how we can make the world a better place. \n \n  With a spot for a tent. \n \n  With a kind word. \n \n  With a story shared by the roadside. \n \n  ## Ride safe, and see you somewhere out there on the road. 🏍️ ##"
       }
     },
@@ -501,7 +502,7 @@
       
       "hu": {
         "featuredText": "Kiemelt playliszt:",
-        "title": "Skandináv Hangulat playlist – sötét erdők, kemény riffek",
+        "title": "Skandináv Hangulat – sötét erdők, kemény riffek",
         "slug": "igazi-skandinav-hangulatu-playlist–sotet-erdok-hideg-tavak-kemeny-riffek",
         "excerpt": "Ha létezik zenei megfelelője a ködös északi erdőknek, a végtelen tavaknak...",
         "content": " \n\n Ha létezik zenei megfelelője a ködös északi erdőknek, a végtelen tavaknak és a lassan hömpölygő, melankolikus gondolatoknak, akkor ez a playlist az. \n\n Ez nem háttérzene egy nyári piknikhez – ez a skandináv melankólia keményebb, súlyosabb, mégis gyönyörű arca.\n\n A doom, a melodic death metal és az északi gótikus rock találkozik ebben az összeállításban. Olyan zenék, amelyek egyszerre nehezek és felemelőek, sötétek és katartikusak. \n\n Tökéletes társ egy hosszú, magányos motorozáshoz, amikor csak az út, a szél és a motor mély dübörgése marad veled.  \n\n 1. Swallow the Sun – Upon the Water \n\n Ez a dal lassan hömpölyög, mint egy sötét skandináv tó felszíne. Mélyre húz, elcsendesít, majd fokozatosan súlyos érzelmi hullámokkal borít be – tökéletes kezdése egy éjszakai gurulásnak. \n\n 2. Dark Tranquillity – Misery’s Crown \n\n Dallamos, mégis pengeéles. A refrén epikus tágassága olyan, mintha egy végtelen északi országúton gyorsítanál bele a hideg levegőbe. \n\n 3. Swallow the Sun – New Moon \n\n Sötét, komor és végtelenül őszinte. A lassú építkezés és a súlyos riffek olyan belső utazásra visznek, amelyet csak a motor monoton zúgása tud kísérni. \n\n 4. Insomnium – While We Sleep \n\n Melodikus death metal a javából. Egyszerre kemény és érzelmes, mint egy hajnali indulás, amikor a nap még csak sejthető a horizont mögött. \n\n 5. HIM – Wings of a Butterfly \n\n Gótikus rock eleganciával és szenvedéllyel. Egy kis romantikus sötétség a komorabb tételek között, ami jól esik a hosszú utak közben. \n\n 6. Katatonia – My Twin \n\n Minimalista, mégis mélyre hatoló hangulat. Olyan, mint amikor az aszfalt monoton csíkja és a gondolataid összeolvadnak. \n\n 7. Swallow the Sun – Crimson Crown \n\n Monumentális és súlyos. A dal olyan, mint egy viharos északi égbolt: komor, fenyegető, mégis gyönyörű. \n\n 8. Sentenced – No One There \n\n A finn melankólia klasszikusa. Szomorú, mégis erőt adó – egy esti, magányos gurulás tökéletes kísérője. \n\n 9. Amorphis – House of Sleep \n\n Dallamos, himnikus és könnyebben befogadható, mégis mély. Egy kis lélegzetvétel a sötétebb tételek között. \n\n 10. Swallow the Sun – Falling World \n\n Nehéz, sűrű atmoszféra, amely teljesen körbeölel. A lassú tempó és a súlyos hangzás szinte fizikailag is érezhető. \n\n 11. Tribulation – The Motherhood of God \n\n Misztikus, baljós és különleges. Olyan, mint egy elhagyatott északi kolostor árnyéka a hegyek között. \n\n 12. Swallow the Sun – Clouds on Your Side \n\n Mély érzelmi töltet és atmoszférikus dallamok. A dal fokozatosan bontakozik ki, mint egy hosszú, elnyújtott kanyar az országúton. \n\n 13. In Flames – The Chosen Pessimist \n\n Epikus hosszúságú, érzelmi hullámvasút. Lassan építkezik, majd monumentális erővel robban – igazi északi mestermű. \n\n 14. Tiamat – Whatever That Hurts \n\n Gótikus, pszichedelikus és súlyos. Egy sötét, belső utazás hangja, amely tökéletesen illik a hideg, szeles estékhez. \n\n 15. Swallow the Sun – Melancholy \n\n A cím mindent elmond. Mély, fájdalmas, mégis gyönyörű – tiszta skandináv érzelem zenei formában. \n\n 16. Swallow the Sun – Stone Wings \n\n Zárásként egy monumentális, komor darab. Olyan érzés, mintha egy hosszú út végén leállítanád a motort, és csak a csend maradna körülötted. \n\n ## Mikor hallgasd? ## \n\n • Hosszú, magányos motorozás közben \n\n • Ködös reggeleken \n\n • Esti gurulásnál, amikor a város fényei tükröződnek az aszfalton \n\n • Amikor szükséged van a sötét, mégis felemelő energiára \n\n Ez a playlist nem könnyű – de éppen ezért erős. \n\n Skandináv, komor, mégis katartikus. \n\n Indítsd be a motort. Emeld a fordulatszámot. \n\n Ride. Rock. Repeat."
@@ -510,7 +511,7 @@
       "en": {
 
         "featuredText": "Best playlist:",
-        "title": "Scandinavian Atmosphere Playlist – Dark Forests, Heavy Riffs",
+        "title": "Scandinavian Atmosphere – Dark Forests, Heavy Riffs",
         "slug": "true-scandinavian-atmosphere-playlist–dark-forests-cold-waters-heavy-riffs",
         "excerpt": "If there is a musical equivalent to misty northern forests...",
         "content": "If there is a musical equivalent to misty northern forests, endless lakes, and slowly drifting melancholic thoughts, this playlist is it. \n\n This is not background music for a summer picnic – this is the heavier, darker, yet breathtakingly beautiful face of Scandinavian melancholy. \n\n Doom, melodic death metal and Nordic gothic rock meet in this selection. These are songs that are heavy yet uplifting, dark yet cathartic.\n\n The perfect companion for a long, solitary motorcycle ride, when only the road, the wind, and the deep rumble of your engine remain with you.\n\n  1. Swallow the Sun – Upon the Water\n\n This track flows slowly like the surface of a dark Scandinavian lake. It pulls you under, quiets your mind, then gradually overwhelms you with waves of heavy emotion – the perfect opening for a night ride.\n\n 2. Dark Tranquillity – Misery’s Crown\n\n Melodic yet razor-sharp. The epic vastness of the chorus feels like accelerating down an endless northern highway into the cold air.\n\n 3. Swallow the Sun – New Moon\n\n Dark, somber, and brutally honest. Its slow build and crushing riffs create an inner journey best accompanied by the steady hum of your motorcycle.\n\n 4. Insomnium – While We Sleep\n\n Melodic death metal at its finest. Heavy yet emotional – like setting off at dawn when the sun is only a faint promise on the horizon.\n\n 5. HIM – Wings of a Butterfly\n\n Gothic rock with elegance and passion. A touch of romantic darkness among the heavier tracks, perfect for long stretches of open road.\n\n 6. Katatonia – My Twin\n\n Minimalistic yet deeply penetrating. Like watching the endless lines of asphalt blur together with your thoughts.\n\n 7. Swallow the Sun – Crimson Crown\n\n Monumental and crushing. This song feels like a stormy Nordic sky – dark, threatening, yet undeniably beautiful.\n\n 8. Sentenced – No One There\n\n A true Finnish melancholy classic. Sad yet empowering – the ideal soundtrack for a solitary evening ride.\n\n 9. Amorphis – House of Sleep\n\n Melodic, anthemic, and slightly more accessible, yet still profound. A moment to breathe among the darker pieces.\n\n 10. Swallow the Sun – Falling World\n\n Heavy and dense in atmosphere. The slow tempo and massive sound feel almost physical in their weight.\n\n 11. Tribulation – The Motherhood of God\n\n Mysterious, ominous, and unique. Like the shadow of an abandoned northern monastery hidden in the mountains.\n\n 12. Swallow the Sun – Clouds on Your Side\n\n Deep emotional charge and atmospheric melodies. The song unfolds gradually like a long, sweeping curve on a deserted highway.\n\n 13. In Flames – The Chosen Pessimist\n\n Epic in length and emotional intensity. It builds slowly, then explodes with monumental force – a true Nordic masterpiece.\n\n 14. Tiamat – Whatever That Hurts\n\n Gothic, psychedelic, and heavy. The sound of a dark inner journey, perfectly fitting for cold, windy nights.\n\n 15. Swallow the Sun – Melancholy\n\n The title says it all. Deep, painful, yet beautiful – pure Scandinavian emotion in musical form.\n\n 16. Swallow the Sun – Stone Wings\n\n A monumental, somber closing piece. It feels like shutting off the engine after a long ride and being left alone with the silence.\n\n ## When to Listen? ##\n\n • During a long, solitary motorcycle ride\n\n • On misty mornings before the world fully wakes up\n\n • On evening rides when city lights reflect on the asphalt\n\n • Whenever you need dark yet uplifting energy\n\n This playlist isn’t easy – and that’s exactly why it’s powerful.\n\n Scandinavian. Somber. Cathartic.\n\n Start the engine. Raise the revs.\n\n Ride. Rock. Repeat."

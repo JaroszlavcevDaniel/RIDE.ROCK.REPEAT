@@ -13,7 +13,7 @@
         <h5 class="card-title text-light fst-italic">{{ article[lang].featuredText }} </h5>
         <h5 class="card-title fw-bold"> {{ article[lang].title }} </h5>
       <p class="card-text">{{ article[lang].excerpt }}
-      <a class="text-light btn bg-black text-decoration-none fw-bold btn-animate btn-ripple"[routerLink]="['/', lang, 'articles', article[lang].slug]">
+      <a class="text-light btn bg-black text-decoration-none fw-bold btn-animate btn-ripple m-2"[routerLink]="['/', lang, 'articles', article[lang].slug]">
         {{ lang === 'hu' ? 'Olvasom tovább' : 'Read more' }} 
       </a>
       </p>
@@ -41,7 +41,7 @@
         <h5 class="card-title fw-bold"> {{ article[lang].title }} </h5>
         <!-- <p class="card-text">{{ article[lang].excerpt }} </p> -->
       <p class="card-text">{{ article[lang].excerpt }}
-      <a class="text-light btn bg-black text-decoration-none fw-bold btn-ripple btn-animate"[routerLink]="['/', lang, 'articles', article[lang].slug]">
+      <a class="text-light btn bg-black text-decoration-none fw-bold btn-ripple btn-animate m-2"[routerLink]="['/', lang, 'articles', article[lang].slug]">
         {{ lang === 'hu' ? 'Olvasom tovább' : 'Read more' }} 
       </a>
       </p>
