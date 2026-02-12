@@ -15,7 +15,7 @@ export interface SeoData {
 })
 export class SeoService {
 
-  private defaultImage = 'https://riderockrepeat.com/assets/cover.jpg';
+  private defaultImage = 'https://riderockrepeat.com/images/ride_rock_repeat_logo.png';
 
   constructor(
     private meta: Meta,

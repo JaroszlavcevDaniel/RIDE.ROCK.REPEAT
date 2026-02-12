@@ -46,14 +46,14 @@ export class About implements OnInit, OnDestroy {
       this.seo.updateTags({
         title: 'Rólunk | Ride.Rock.Repeat',
         description: 'A Ride.Rock.Repeat története, küldetése és világa.',
-        keywords: 'kerékpár, zene, történetek',
+        keywords: 'motor, zene, történetek',
         type: 'website'
       });
     } else {
       this.seo.updateTags({
         title: 'About | Ride.Rock.Repeat',
         description: 'The story, mission and world of Ride.Rock.Repeat.',
-        keywords: 'cycling, music, stories',
+        keywords: 'motorcycle, music, stories',
         type: 'website'
       });
     }
@@ -67,3 +67,4 @@ export class About implements OnInit, OnDestroy {
 
 
 }
+ 
