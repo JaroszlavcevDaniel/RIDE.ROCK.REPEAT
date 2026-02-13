@@ -17,11 +17,15 @@
         <h5 class="card-title text-light fw-bolder p-2">{{ article[lang]?.title }}</h5>
         
         <h6 class="p-2">{{ article[lang].excerpt }}</h6>
+
+        <!-- <app-favorite-button-component [articleId]="article.id" class="btn btn-dark">💚</app-favorite-button-component> -->
+
         
         <!-- Read More Link -->
    <a class="text-light btn bg-black text-decoration-none fw-bold btn-animate btn-ripple"[routerLink]="['/', lang, 'articles', article[lang].slug]">
         {{ lang === 'hu' ? 'Olvasom tovább' : 'Read more' }} 
       </a>
+      
       </div>
       </div>
       </div>

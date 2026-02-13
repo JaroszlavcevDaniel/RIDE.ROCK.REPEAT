@@ -41,6 +41,10 @@ const routes: Routes = [
     path: ':lang/contact',
     component: Contact
   },
+  // {
+  //   path: ':lang/favorites',
+  //   component: Contact
+  // },
 
   // 🔁 DEFAULT
   {

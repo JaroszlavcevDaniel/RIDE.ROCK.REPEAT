@@ -72,16 +72,6 @@ export class ContentService {
     );
   }
 
-  // getArticleBySlug(slug: string, lang: 'hu' | 'en'): Observable<any> {
-  //   return this.content$.pipe(
-  //     map(data => {
-  //       const article = data.articles.find(
-  //         (article: any) => article[lang]?.slug === slug
-  //       );
-  //       return article ? article[lang] : null;
-  //     })
-  //   );
-  // }
   getArticleBySlug(slug: string, lang: 'hu' | 'en'): Observable<any> {
   return this.content$.pipe(
     map(data => {

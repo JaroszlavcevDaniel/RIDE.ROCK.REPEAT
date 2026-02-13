@@ -29,6 +29,8 @@ import { Contact } from './components/contact/contact';
 import { ArticleComments } from './components/article-comments/article-comments';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+// import { FavoriteButtonComponent } from './components/favorite-button-component/favorite-button-component';
+// import { Favorites } from './components/favorites/favorites';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
     ArticleDetails,
     Contact,
     ArticleComments,
+    // FavoriteButtonComponent,
+    // Favorites,
   ],
   imports: [
     BrowserModule,
