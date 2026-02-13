@@ -43,14 +43,14 @@ export class About implements OnInit, OnDestroy {
 
     if (this.lang === 'hu') {
       this.seo.updateTags({
-        title: 'Rólunk | Ride.Rock.Repeat',
+        title: 'Rólam | Ride.Rock.Repeat',
         description: 'A Ride.Rock.Repeat története, küldetése és világa.',
         keywords: 'motor, zene, történetek',
         type: 'website'
       });
     } else {
       this.seo.updateTags({
-        title: 'About | Ride.Rock.Repeat',
+        title: 'About me | Ride.Rock.Repeat',
         description: 'The story, mission and world of Ride.Rock.Repeat.',
         keywords: 'motorcycle, music, stories',
         type: 'website'
