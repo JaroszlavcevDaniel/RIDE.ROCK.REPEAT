@@ -30,6 +30,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { CookieBanner } from './core/components/cookie-banner/cookie-banner';
 import { CookieInfo } from './components/cookie-info/cookie-info';
 import { PopUp } from './components/pop-up/pop-up';
+import { PopupStories } from './components/popup-stories/popup-stories';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { PopUp } from './components/pop-up/pop-up';
     CookieBanner,
     CookieInfo,
     PopUp,
+    PopupStories,
   ],
   imports: [
     BrowserModule,

@@ -8,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopUp implements OnInit {
 
-  show: boolean = true; // 
+  show: boolean = false; 
 
   constructor() { }
 
-  ngOnInit(): void {
-    setTimeout(() => this.show = true, 5000);
-  }
+ ngOnInit(): void {
+  setTimeout(() => {
+    this.show = true; 
+  }, 2000);
+  
+}
 
   closePopup() {
     this.show = false;
