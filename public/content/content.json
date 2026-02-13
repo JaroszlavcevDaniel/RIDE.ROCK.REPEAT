@@ -14,7 +14,7 @@
     },
     "contact": {
     "contactText": "## Kapcsolatfelvétel ## \n \n Ha szeretnél kapcsolatba lépni velem, kövess vagy írj bátran az alábbi közösségi média felületeken. Ott osztom meg a legfrissebb tartalmakat, utazásokat és gondolatokat, és ott a leggyorsabb az elérés is.  ",
-    "contactTextTwo": "Ha inkább közvetlen üzenetet küldenél, használd nyugodtan az alábbi űrlapot. Igyekszem minden megkeresésre mielőbb válaszolni.",
+    "contactTextTwo": "Ha inkább közvetlen üzenetet küldenél, használd nyugodtan az alábbi űrlapot. \n \n  Beszélek magyarul, oroszul, ukránul és angolul, örülök bármilyen hozzászólásnak. \n \n Igyekszem minden megkeresésre mielőbb válaszolni.",
     "yourName": "A teljes neved:",
     "yourEmail": "Az email címed:",
     "yourMessage": "Az üzeneted",
@@ -42,7 +42,7 @@
     },
     "contact": {
     "contactText": "## Contact me ## \n \n If you would like to get in touch with me, feel free to follow or write to me on the following social media platforms. I share the latest content, travels and thoughts there, and it is also the fastest way to reach me.",
-    "contactTextTwo": "If you would rather send a direct message, please feel free to use the form below. I will try to respond to all inquiries as soon as possible.",
+    "contactTextTwo": "If you would rather send a direct message, please feel free to use the form below. \n \n  I speak Hungarian, Russian, Ukrainian and English, I am happy to receive any comments. \n \n  I will try to respond to all inquiries as soon as possible.",
     "yourName": "Your full name:",
     "yourEmail": "Your email address:",
     "yourMessage": "Your message",
@@ -141,11 +141,11 @@
       "category": "about me",
       "date": "2026-02-01",
       "hu": {
-        "aboutText": "\n \n Szia, Dániel vagyok. \n \n Magyarországon élek, motorozom, kódolok, és keresem az utat – szó szerint és átvitt értelemben is. \n \n A motorozás nem hobbi számomra, hanem életforma. Nemrég egy sport-touring motort cseréltem le egy cruiserre, egy Yamaha Virago 535-re, és ezzel együtt kicsit a tempó is megváltozott: kevesebb rohanás, több élmény, több kilométer történettel. Hiszek abban, hogy az út legalább annyira fontos, mint a cél. \n  \n A digitális világban front end fejlesztéssel foglalkozom: HTML, CSS, JavaScript, TypeScript és Angular – szeretem, amikor a design és a funkcionalitás találkozik, és egy ötletből működő, élő felület lesz. \n \n A háttérben szinte mindig rock zene szól, leginkább nu-metal. Energia, őszinteség, súly – ezek ugyanúgy inspirálnak a kódban, mint az utakon. \n \n Az álmom egyszerű, de nagy: körbemotorozni a világot. Addig pedig megyek tovább, tanulok, építek, utazom – és megosztom mindazt, amit útközben találok. \n \n Ride. Rock. Repeat. "
+        "aboutText": "\n \n Szia, Dániel vagyok. \n \n Magyarországon élek, motorozom, kódolok, és keresem az utat – szó szerint és átvitt értelemben is. \n \n A motorozás nem hobbi számomra, hanem életforma. Nemrég egy sport-touring motort cseréltem le egy cruiserre, egy Yamaha Virago 535-re, és ezzel együtt kicsit a tempó is megváltozott: kevesebb rohanás, több élmény, több kilométer történettel. Hiszek abban, hogy az út legalább annyira fontos, mint a cél. \n  \n A digitális világban front end fejlesztéssel foglalkozom: HTML, CSS, JavaScript, TypeScript és Angular – szeretem, amikor a design és a funkcionalitás találkozik, és egy ötletből működő, élő felület lesz. \n \n  Beszélek magyarul, oroszul, ukránul és angolul, örülök bármilyen hozzászólásnak.  \n \n A háttérben szinte mindig rock zene szól, leginkább nu-metal. Energia, őszinteség, súly – ezek ugyanúgy inspirálnak a kódban, mint az utakon. \n \n Az álmom egyszerű, de nagy: körbemotorozni a világot. Addig pedig megyek tovább, tanulok, építek, utazom – és megosztom mindazt, amit útközben találok. \n \n Ride. Rock. Repeat. "
       
       },
       "en": {
-        "aboutText": " \n \n Hi, I’m Dániel. \n  \n I live in Hungary, I ride motorcycles, I code, and I’m constantly searching for the road — both literally and figuratively. \n  \nMotorcycling isn’t just a hobby for me; it’s a way of life. Recently, I swapped my sport-touring bike for a cruiser — a Yamaha Virago 535 — and with that, my pace changed as well: less rushing, more experience, more miles with stories behind them. I believe the journey matters just as much as the destination. \n  \n In the digital world, I focus on front-end development: HTML, CSS, JavaScript, TypeScript, and Angular. I love when design and functionality meet, and an idea turns into a living, breathing interface. \n \n There’s almost always rock music playing in the background, mostly nu-metal. Energy, honesty, and weight — these inspire me just as much in code as they do on the road. \n \n My dream is simple, but big: to ride a motorcycle around the world. Until then, I keep moving, learning, building, traveling — and sharing what I find along the way. \n \n Ride. Rock. Repeat."
+        "aboutText": " \n \n Hi, I’m Dániel. \n  \n I live in Hungary, I ride motorcycles, I code, and I’m constantly searching for the road — both literally and figuratively. \n  \nMotorcycling isn’t just a hobby for me; it’s a way of life. Recently, I swapped my sport-touring bike for a cruiser — a Yamaha Virago 535 — and with that, my pace changed as well: less rushing, more experience, more miles with stories behind them. I believe the journey matters just as much as the destination. \n  \n In the digital world, I focus on front-end development: HTML, CSS, JavaScript, TypeScript, and Angular. I love when design and functionality meet, and an idea turns into a living, breathing interface. \n \n I speak Hungarian, Russian, Ukrainian and English, I am happy to receive any comments. \n \n There’s almost always rock music playing in the background, mostly nu-metal. Energy, honesty, and weight — these inspire me just as much in code as they do on the road. \n \n My dream is simple, but big: to ride a motorcycle around the world. Until then, I keep moving, learning, building, traveling — and sharing what I find along the way. \n \n Ride. Rock. Repeat."
         
       }
     },
