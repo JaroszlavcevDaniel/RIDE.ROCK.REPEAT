@@ -39,7 +39,6 @@ ngOnInit(): void {
   this.content$ = this.contentService.getContent();
 
   this.content$.subscribe(data => {
-    // console.log('CONTENT FROM SERVICE:', data);
   });
   if (this.lang === 'hu') {
     this.seo.updateTags({

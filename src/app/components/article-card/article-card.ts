@@ -16,7 +16,6 @@ export type Lang = 'hu' | 'en';
 
 export class ArticleCard implements OnInit {
 
-//  article?: Article;
 @Input() article?: Article;
   lang!: Language;
   slug!: string;
@@ -30,10 +29,9 @@ export class ArticleCard implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // nyelv az URL-ből
+
     this.lang = this.route.snapshot.paramMap.get('lang') as Language;
 
-    // slug az URL-ből
     this.slug = this.route.snapshot.paramMap.get('slug')!;
 
     console.log('DETAIL LANG:', this.lang);
@@ -45,10 +43,6 @@ export class ArticleCard implements OnInit {
         console.log('DETAIL ARTICLE:', article);
         this.article = article;
       });
-
-
-
   }
 
-  
 }

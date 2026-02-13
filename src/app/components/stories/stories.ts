@@ -14,7 +14,7 @@ import { SeoService } from '../../services/seo-service';
 })
 export class Stories implements OnInit, OnDestroy {
 
-  articles: Article[] = [];  // Array to hold all active articles
+  articles: Article[] = []; 
   lang: Language = 'hu';
   private sub = new Subscription();
 
@@ -25,7 +25,6 @@ export class Stories implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    // Subscribe to language changes
     this.sub.add(
       this.languageService.lang$.subscribe(l => {
         this.lang = l;
@@ -33,10 +32,9 @@ export class Stories implements OnInit, OnDestroy {
       })
     );
 
-    // Subscribe to active articles
     this.sub.add(
       this.contentService.getActiveArticles().subscribe(articles => {
-        this.articles = articles;  // Now correctly assigns array to array
+        this.articles = articles;  
       })
     );
      this.updateSeo();

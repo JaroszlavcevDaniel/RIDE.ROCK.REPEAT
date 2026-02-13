@@ -13,7 +13,7 @@ import { SeoService } from '../../services/seo-service';
 })
 export class Music implements OnInit, OnDestroy {
 
-  articles: Article[] = [];  // Array to hold all active articles
+  articles: Article[] = []; 
   lang: Language = 'hu';
   private sub = new Subscription();
 
@@ -24,15 +24,14 @@ export class Music implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    // Subscribe to language changes
+   
     this.sub.add(
       this.languageService.lang$.subscribe(l => this.lang = l)
     );
 
-    // Subscribe to active articles
     this.sub.add(
       this.contentService.getActivePlaylists().subscribe(articles => {
-        this.articles = articles;  // Now correctly assigns array to array
+        this.articles = articles;  
       })
     );
     this.updateSeo();

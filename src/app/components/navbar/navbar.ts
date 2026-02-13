@@ -68,7 +68,6 @@ export class Navbar implements OnInit  {
     this.languageService.setLanguage(lang);
     this.router.navigate(['/', lang]);
   }
-// majd ide kell valami 
 
   login() {
     this.auth.loginWithGoogle();

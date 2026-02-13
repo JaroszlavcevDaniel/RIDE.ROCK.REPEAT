@@ -19,7 +19,7 @@ const routes: Routes = [
     component: ArticleDetails
   },
 
-  // 🔥 FŐOLDAL
+  
   {
     path: ':lang',
     component: Home
@@ -48,14 +48,14 @@ const routes: Routes = [
     component: CookieInfo
   },
 
-  // 🔁 DEFAULT
+
   {
     path: '',
     redirectTo: 'hu',
     pathMatch: 'full'
   },
 
-  // 🧱 404
+// 404
   {
     path: '**',
     redirectTo: 'hu'

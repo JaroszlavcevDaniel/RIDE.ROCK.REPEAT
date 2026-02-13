@@ -72,30 +72,19 @@ export class ContentService {
     );
   }
 
-  // getArticleBySlug(slug: string, lang: 'hu' | 'en'): Observable<any> {
-  //   return this.content$.pipe(
-  //     map(data => {
-  //       const article = data.articles.find(
-  //         (article: any) => article[lang]?.slug === slug
-  //       );
-  //       return article ? article[lang] : null;
-  //     })
-  //   );
-  // }
   getArticleBySlug(slug: string, lang: 'hu' | 'en'): Observable<any> {
   return this.content$.pipe(
     map(data => {
-      // 1. Megkeressük a konténert, amiben a közös adatok vannak (képek, id, isThereCarousel)
+    
       const articleContainer = data.articles.find(
         (a: any) => a.hu?.slug === slug || a.en?.slug === slug
       );
 
       if (!articleContainer) return null;
 
-      // 2. Összefésüljük: a közös adatokat ÉS a választott nyelv tartalmát
       return {
-        ...articleContainer,      // Benne lesz: id, fotoOne, isThereCarousel, isThereLinks, stb.
-        ...articleContainer[lang] // Felülírja/Hozzáadja: title, content, carouselText, stb.
+        ...articleContainer,     
+        ...articleContainer[lang]
       };
     })
   );

@@ -3,19 +3,19 @@ import { BreadcrumbItem } from "./breadcrumbItem.model";
 export interface RouteModel {
   lang: 'hu' | 'en';
 
-  // technikai
-  path: string;        // /hu/stories/az-elso-ut
-  slug: string;        // az-elso-ut
 
-  // tartalom kapcsolat
+  path: string;        
+  slug: string;        
+
+
   contentType: 'article' | 'ride' | 'playlist' | 'page';
-  contentId: string;  // pl. "first-ride"
+  contentId: string; 
 
-  // SEO
+
   title: string;
   description: string;
   ogImage?: string;
 
-  // navigáció
+
   breadcrumb?: BreadcrumbItem[];
 }

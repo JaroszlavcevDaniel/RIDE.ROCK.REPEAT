@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
        background-color: black !important; 
@@ -26,10 +25,7 @@ main {
     background-size: cover !important;
     background-repeat: no-repeat !important;
     font-weight: bolder !important;
-    /* text-shadow: 5px 5px 5px rgb(13, 13, 13) !important; */
 }
-
-
 
 .btn-animate {
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
@@ -109,7 +105,6 @@ main {
   background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000 100%);
 }
 
-/* csillag layer */
 .stars {
   position: absolute;
   inset: 0;
@@ -128,7 +123,6 @@ main {
   animation: fall 6s linear infinite;
 }
 
-/* eltérő pozíciók + időzítés */
 .star:nth-child(1) { left: 10%; animation-delay: 0s; }
 .star:nth-child(2) { left: 30%; animation-delay: 2s; }
 .star:nth-child(3) { left: 50%; animation-delay: 4s; }
@@ -151,7 +145,7 @@ main {
 
 .article-image {
   width: 100%;
-  height: 200px;           /* ← EZ a kulcs */
+  height: 200px;          
   object-fit: cover;
 }
 
@@ -164,7 +158,6 @@ main {
   content: '';
   position: absolute;
 
-  /* ⬇️ EZT finomhangolod a lámpa helyére */
   top: 34%;
   left: 42%;
 
@@ -257,7 +250,7 @@ main {
   background-color: #1a1a1a;
   color: white;
   padding: 16px 24px;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   max-width: 300px;
   z-index: 1000;

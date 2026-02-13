@@ -8,7 +8,6 @@ import { Rides } from './components/rides/rides';
 import { Music } from './components/music/music';
 import { About } from './components/about/about';
 import { Navbar } from './components/navbar/navbar';
-import { LanguageSwitch } from './components/language-switch/language-switch';
 import { ArticleCard } from './components/article-card/article-card';
 import { Footer } from './components/footer/footer';
 import { NotFound } from './components/not-found/not-found';
@@ -21,7 +20,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MarkdownModule } from 'ngx-markdown';
 import { environment } from './environment/environment';
 
-// ✅ USE ONLY COMPAT API (remove modular API imports)
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
@@ -42,7 +40,7 @@ import { PopUp } from './components/pop-up/pop-up';
     Music,
     About,
     Navbar,
-    LanguageSwitch,
+    // LanguageSwitch,
     ArticleCard,
     Footer,
     NotFound,

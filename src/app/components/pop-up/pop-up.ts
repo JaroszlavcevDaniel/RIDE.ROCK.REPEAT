@@ -8,13 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopUp implements OnInit {
 
-  show: boolean = true; // true = megjelenik automatikusan
+  show: boolean = true; // 
 
   constructor() { }
 
   ngOnInit(): void {
-    // Itt lehet pl. késleltetni a megjelenést, ha szeretnéd
-    setTimeout(() => this.show = true, 200);
+    setTimeout(() => this.show = true, 5000);
   }
 
   closePopup() {

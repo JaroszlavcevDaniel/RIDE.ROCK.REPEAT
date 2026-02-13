@@ -29,19 +29,17 @@ export class ArticleDetails implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    // Figyeljük az URL slug-ot és a LanguageService aktuális nyelvét egyszerre
     this.subscription = combineLatest([
       this.route.paramMap,
-      this.languageService.lang$ // Feltételezve, hogy ez egy Observable
+      this.languageService.lang$ 
     ]).pipe(
       switchMap(([params, lang]) => {
         const slug = params.get('slug')!;
-        // A ContentService-t úgy hívjuk, hogy mindig az aktuális nyelvet passzoljuk
         return this.contentService.getArticleBySlug(slug, lang as 'hu' | 'en');
       })
     ).subscribe(article => {
       this.article = article;
-      // console.log('Aktuális cikk adatai:', this.article);
+
       this.updateSeo();
     });
   }
