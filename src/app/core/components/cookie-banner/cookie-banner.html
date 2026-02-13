@@ -1,0 +1,13 @@
+<div *ngIf="visible" class="cookie-banner">
+  <p>
+    Ez a weboldal sütiket használ az élmény javítására és
+    analitikai méréshez. / This website uses cookies to improve your experience and for analytical measurement.  <a routerLink=":lang/cookieinfo"> Adatkezelési tájékoztató / Data processing information </a>
+  </p>
+ 
+
+  <div class="buttons">
+    <button class="btn btn-success m-1" (click)="accept()">Elfogadom / Accept</button>
+    <button class="btn btn-secondary m-1" (click)="reject()">Elutasítom / Refuse</button>
+  </div>
+</div>
+

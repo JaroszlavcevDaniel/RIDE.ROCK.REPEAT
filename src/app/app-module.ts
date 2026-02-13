@@ -29,6 +29,9 @@ import { Contact } from './components/contact/contact';
 import { ArticleComments } from './components/article-comments/article-comments';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { CookieBanner } from './core/components/cookie-banner/cookie-banner';
+import { CookieInfo } from './components/cookie-info/cookie-info';
+import { PopUp } from './components/pop-up/pop-up';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,9 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
     ArticleDetails,
     Contact,
     ArticleComments,
+    CookieBanner,
+    CookieInfo,
+    PopUp,
   ],
   imports: [
     BrowserModule,

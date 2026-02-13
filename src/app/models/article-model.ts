@@ -40,7 +40,8 @@ export interface ArticleLang {
   yourEmail: string;
   yourMessage: string;
   sendMessage: string;
-
+  heroTextMusic: string;
+  heroTextStories: string;
   
 
 }
@@ -103,4 +104,6 @@ export interface Article {
   yourEmail: string;
   yourMessage: string;
   sendMessage: string;
+  heroTextMusic: string;
+  heroTextStories: string;
 }
