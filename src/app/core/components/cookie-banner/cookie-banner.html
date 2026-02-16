@@ -1,4 +1,4 @@
-<div *ngIf="visible" class="cookie-banner">
+<div *ngIf="visible" class="cookie-banner bg-dark border border-warning">
   <p>
     Ez a weboldal sütiket használ az élmény javítására és
     analitikai méréshez. / This website uses cookies to improve your experience and for analytical measurement.  <a routerLink=":lang/cookieinfo"> Adatkezelési tájékoztató / Data processing information </a>
@@ -6,8 +6,8 @@
  
 
   <div class="buttons">
-    <button class="btn btn-success m-1" (click)="accept()">Elfogadom / Accept</button>
-    <button class="btn btn-secondary m-1" (click)="reject()">Elutasítom / Refuse</button>
+    <button class="btn btn-success m-1 btn-ripple btn-animate " (click)="accept()">Elfogadom / Accept</button>
+    <button class="btn btn-secondary m-1 btn-ripple btn-animate " (click)="reject()">Elutasítom / Refuse</button>
   </div>
 </div>
 
