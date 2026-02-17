@@ -173,7 +173,7 @@ main {
 
   transform: translate(-50%, -50%);
   filter: blur(8px);
-  animation: headlightPulse 5s ease-in-out infinite;
+  animation: headlightPulse 4s ease-in-out infinite;
   pointer-events: none;
 }
 
