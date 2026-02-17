@@ -1,10 +1,10 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light px-4 fixed-top mb-5">
 
-  <a class="navbar-brand" [routerLink]="['/', currentLang]">Ride. Rock. Repeat. </a>
+  <a class="navbar-brand new-rocker-regular" [routerLink]="['/', currentLang]">Ride. Rock. Repeat. </a>
 <img style="width: 4% !important;" src="images/ride_rock_repeat_logo.png" alt="Ride. Rock. Repeat. logo" class="rounded-5"> 
 <ng-container *ngIf="content$ | async as content">
-<a *ngIf="showBackButton" class="m-2 btn btn-secondary text-light fw-bolder btn-ripple btn-animate" 
+<a *ngIf="showBackButton" class="m-2 btn btn-secondary text-light fw-bolder btn-ripple btn-animate new-rocker-regular" 
 (click)="goBack()"> ←  {{ content.navbar.back }}</a>
 </ng-container>
   <!-- TOGGLER (mobilhoz) -->
@@ -28,30 +28,30 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
-          <a class="nav-link text-light" [routerLink]="['/', currentLang, 'about']">
+          <a class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'about']">
             {{ content.navbar.about }}
           </a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-light" [routerLink]="['/', currentLang, 'stories']">
+          <a class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'stories']">
             {{ content.navbar.travel }}
           </a>
         </li>
 
           <li class="nav-item">
-          <a class="nav-link text-light" [routerLink]="['/', currentLang, 'playlists']">
+          <a class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'playlists']">
             {{ content.navbar.playlists }}
           </a>
         </li>
 
           <li class="nav-item me-5">
-          <a class="nav-link text-light" [routerLink]="['/', currentLang, 'contact']">
+          <a class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'contact']">
             {{ content.navbar.contact }}
           </a>
         </li>
 
-        <li class="nav-item ">
+        <li class="nav-item new-rocker-regular">
           <button *ngIf="!user" (click)="login()" class="btn btn-secondary btn-pulse">
          Login by Google
         </button>
