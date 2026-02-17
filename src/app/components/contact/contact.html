@@ -1,7 +1,7 @@
 <div class="container" *ngIf="content$ | async as content">
 
 
-  <markdown class="text-light">
+  <markdown class="text-light" style="text-align: justify !important">
     {{ content.contact.contactText }}
   </markdown>
 
@@ -31,7 +31,7 @@
 </div>
 
 
-  <p class="text-light mt-3">
+  <p class="text-light mt-3" style="text-align: justify !important">
     {{ content.contact.contactTextTwo }}
   </p>
 

@@ -3,9 +3,9 @@
    
   <div *ngIf="article as a" class="text-start" style="max-width: 800px;">
     
-   <h1 class=" text-neon m-3">{{ a?.title }}</h1>
+   <h1 class="article-title m-3 text-uppercase">{{ a?.title }}</h1>
    <img class="w-75 rounded-2 mx-auto d-block m-3" [src]="article?.image" alt="article-picture" id="articlePicture">
-  <markdown class="text-light text-justify">{{ a?.content }}</markdown>
+  <markdown class="text-light" style="text-align: justify !important">{{ a?.content }}</markdown>
     </div>
    </div>
 
@@ -77,7 +77,7 @@
 </div> 
 <div *ngIf="article as a" class="d-flex justify-content-center">
   <div class="text-start" style="max-width: 800px;">
- <markdown class="text-light m-4 p-1 text-justify">{{ a?.contentSecondPart }}</markdown> 
+ <markdown class="text-light m-4 p-1 " style="text-align: justify !important">{{ a?.contentSecondPart }}</markdown> 
  </div>
 </div>
 
