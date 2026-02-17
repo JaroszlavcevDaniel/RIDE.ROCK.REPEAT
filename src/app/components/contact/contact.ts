@@ -19,7 +19,7 @@ export class Contact implements OnInit {
 
   presentForm: FormGroup;
 
-  // EZ MÁR CSAK A NYELVHEZ TARTOZÓ RÉSZ
+  
   content$!: Observable<any>;
 
   constructor(
