@@ -1,40 +1,110 @@
 <section class="article-comments mt-5">
 
-  <h4 class="mb-3 text-light">Comments 👥 Kommentek</h4>
+  <h4 class="mb-3 text-light">
+    Comments 👥 Kommentek
+  </h4>
 
-  <!-- COMMENTS LIST -->
-  <ng-container *ngIf="comments$ | async as comments" class="">
-    <div *ngIf="comments.length === 0" class="text-light mb-3">
-      No comments yet. Be the first 🤘 Még nincsenek hozzászólások. Légy az első!
-    </div>
+  
+  <ng-container *ngIf="user$ | async as user; else loginHint">
 
-    <div *ngFor="let comment of comments" class="comment mb-3 p-2 rounded border">
-      <div class="d-flex align-items-center mb-2">
-        <img
-          *ngIf="comment.userPhoto"
-          [src]="comment.userPhoto"
-          alt="avatar"
-          width="36"
-          height="36"
-          class="rounded-circle me-2 "
-        />
 
-        <div>
-          <strong>{{ comment.userName }}</strong><br />
-          <small class="text-secondary">
-            {{ comment.createdAt?.toDate() | date:'medium' }}
-          </small>
-        </div>
+    <ng-container *ngIf="comments$ | async as comments">
+
+  
+      <div *ngIf="comments.length === 0" class="text-light mb-3">
+        No comments yet. Be the first 🤘
+        Még nincsenek hozzászólások. Légy az első!
       </div>
 
-      <p class="mb-0">{{ comment.text }}</p>
-      <p class="m-2 text-black">{{ comment.id }}</p>
-    </div> 
-  </ng-container>
+     
+      <div
+        *ngFor="let comment of topLevelComments"
+        class="comment mb-3 p-3 rounded border">
 
-  <!-- COMMENT FORM -->
-  <ng-container *ngIf="user$ | async as user; else loginHint">
+       
+        <div class="d-flex align-items-center mb-2">
+
+          <img
+            *ngIf="comment.userPhoto"
+            [src]="comment.userPhoto"
+            width="36"
+            height="36"
+            class="rounded-circle me-2"
+          />
+
+          <div>
+            <strong>{{ comment.userName }}</strong><br />
+            <small class="text-secondary">
+              {{ comment.createdAt?.toDate() | date:'medium' }}
+            </small>
+          </div>
+
+        </div>
+
+       
+        <p class="mb-2">{{ comment.text }}</p>
+
+   
+        <button
+          class="btn btn-sm btn-outline-light"
+          (click)="startReply(comment.id)">
+          ↩ Reply / Válasz
+        </button>
+
+       
+        <div *ngIf="replyingTo === comment.id" class="mt-2">
+
+          <textarea
+            [(ngModel)]="replyText"
+            class="form-control"
+            rows="2"
+            placeholder="Write a reply... Írd ide a választ"
+          ></textarea>
+
+          <button
+            class="btn btn-success mt-2"
+            (click)="submitReply(user)"
+            [disabled]="!replyText.trim()">
+            Send reply / Válasz küldése
+          </button>
+
+        </div>
+
+  
+        <div
+          *ngFor="let reply of repliesMap[comment.id]"
+          class="ms-4 mt-3 p-2 border-start">
+
+          <div class="d-flex align-items-center mb-1">
+
+            <img
+              *ngIf="reply.userPhoto"
+              [src]="reply.userPhoto"
+              width="28"
+              height="28"
+              class="rounded-circle me-2"
+            />
+
+            <div>
+              <strong>{{ reply.userName }}</strong>
+              <small class="text-secondary ms-2">
+                {{ reply.createdAt?.toDate() | date:'medium' }}
+              </small>
+            </div>
+
+          </div>
+
+          <p class="mb-0">{{ reply.text }}</p>
+
+        </div>
+
+      </div>
+
+    </ng-container>
+
+    
     <div class="mt-4">
+
       <textarea
         [(ngModel)]="newComment"
         class="form-control"
@@ -43,19 +113,20 @@
       ></textarea>
 
       <button
-        class="btn btn-success m-2"
+        class="btn btn-success mt-2"
         (click)="submitComment(user)"
-        [disabled]="!newComment.trim()"
-      >
+        [disabled]="!newComment.trim()">
         Post comment ☑️ Hozzászólás közzététele
       </button>
+
     </div>
+
   </ng-container>
 
-  <!-- LOGIN HINT -->
   <ng-template #loginHint>
     <p class="text-light mt-4">
-      Please log in with Google to comment. 👀 Kérlek, jelentkezz be Google-fiókkal a hozzászóláshoz.
+      Please log in with Google to comment.
+      👀 Kérlek, jelentkezz be Google-fiókkal a hozzászóláshoz.
     </p>
   </ng-template>
 

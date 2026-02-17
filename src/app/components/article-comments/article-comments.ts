@@ -12,6 +12,12 @@ import { ArticleComment } from '../../models/user.model';
 })
 export class ArticleComments implements OnInit {
 
+replyingTo: string | null = null;
+replyText = '';
+
+topLevelComments: ArticleComment[] = [];
+repliesMap: { [key: string]: ArticleComment[] } = {};
+
   @Input() articleId!: string;
 
   comments$!: Observable<ArticleComment[]>;
@@ -24,9 +30,48 @@ export class ArticleComments implements OnInit {
     private commentService: CommentService
   ) {}
 
+  startReply(commentId: string) {
+  this.replyingTo = commentId;
+}
+
+async submitReply(user: any) {
+  if (!this.replyText.trim() || !this.replyingTo) return;
+
+  await this.commentService.addComment(
+    this.articleId,
+    this.replyText,
+    user,
+    this.replyingTo
+  );
+
+  this.replyText = '';
+  this.replyingTo = null;
+}
   ngOnInit() {
     this.user$ = this.auth.user$;
     this.comments$ = this.commentService.getComments(this.articleId);
+    this.comments$.subscribe(comments => {
+
+
+  this.topLevelComments =
+    comments.filter(c => !c.parentId);
+
+
+  this.repliesMap = {};
+
+
+  comments
+    .filter(c => c.parentId)
+    .forEach(reply => {
+
+      if (!this.repliesMap[reply.parentId!]) {
+        this.repliesMap[reply.parentId!] = [];
+      }
+
+      this.repliesMap[reply.parentId!].push(reply);
+    });
+});
+
   }
 
   async submitComment(user: any) {

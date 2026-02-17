@@ -26,7 +26,9 @@ export class CommentService {
   addComment(
     articleId: string,
     text: string,
-    user: any
+    user: any,
+    parentId: string | null = null 
+
   ) {
     const commentsRef = collection(
       this.firestore,
@@ -38,7 +40,8 @@ export class CommentService {
       userId: user.uid,
       userName: user.displayName || 'Anonymous',
       userPhoto: user.photoURL || null,
-      createdAt: serverTimestamp()
+      createdAt: serverTimestamp(),
+      parentId: parentId 
     });
   }
 }

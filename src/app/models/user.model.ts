@@ -7,12 +7,11 @@ export interface User {
 }
 
 export interface ArticleComment {
-  id?: string;
+  id: string;
   text: string;
-
   userId: string;
   userName: string;
   userPhoto?: string | null;
-
   createdAt: any;
+  parentId?: string | null; 
 }
