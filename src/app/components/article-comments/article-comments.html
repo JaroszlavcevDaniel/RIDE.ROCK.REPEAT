@@ -4,24 +4,25 @@
     Comments 👥 Kommentek
   </h4>
 
-  
+  <!-- USER CHECK -->
   <ng-container *ngIf="user$ | async as user; else loginHint">
 
+    <!-- COMMENTS STREAM -->
+    <ng-container *ngIf="structuredComments$ | async as data">
 
-    <ng-container *ngIf="comments$ | async as comments">
-
-  
-      <div *ngIf="comments.length === 0" class="text-light mb-3">
+      <!-- EMPTY STATE -->
+      <div *ngIf="data.topLevel.length === 0"
+           class="text-light mb-3">
         No comments yet. Be the first 🤘
         Még nincsenek hozzászólások. Légy az első!
       </div>
 
-     
+      <!-- TOP LEVEL COMMENTS -->
       <div
-        *ngFor="let comment of topLevelComments"
-        class="comment mb-3 p-3 rounded border"> 
+        *ngFor="let comment of data.topLevel"
+        class="comment mb-3 p-3 rounded border">
 
-       
+        <!-- HEADER -->
         <div class="d-flex align-items-center mb-2">
 
           <img
@@ -41,26 +42,28 @@
 
         </div>
 
-       
+        <!-- COMMENT TEXT -->
         <p class="mb-2">{{ comment.text }}</p>
+
+        <!-- DEBUG ID (ha már nem kell, törölheted) -->
         <p class="mb-2 text-black">{{ comment.id }}</p>
 
-   
+        <!-- REPLY BUTTON -->
         <button
           class="btn btn-sm btn-outline-light"
           (click)="startReply(comment.id)">
           ↩ Reply / Válasz
         </button>
 
-       
+        <!-- REPLY BOX -->
         <div *ngIf="replyingTo === comment.id" class="mt-2">
 
           <textarea
             [(ngModel)]="replyText"
             class="form-control"
             rows="2"
-            placeholder="Write a reply... Írd ide a választ"
-          ></textarea>
+            placeholder="Write a reply... Írd ide a választ">
+          </textarea>
 
           <button
             class="btn btn-success mt-2"
@@ -71,9 +74,9 @@
 
         </div>
 
-  
+        <!-- REPLIES -->
         <div
-          *ngFor="let reply of repliesMap[comment.id]"
+          *ngFor="let reply of data.repliesMap[comment.id]"
           class="ms-4 mt-3 p-2 border-start">
 
           <div class="d-flex align-items-center mb-1">
@@ -81,7 +84,7 @@
             <img
               *ngIf="reply.userPhoto"
               [src]="reply.userPhoto"
-              width="28" 
+              width="28"
               height="28"
               class="rounded-circle me-2"
             />
@@ -104,15 +107,15 @@
 
     </ng-container>
 
-    
+    <!-- NEW COMMENT -->
     <div class="mt-4">
 
       <textarea
         [(ngModel)]="newComment"
         class="form-control"
         rows="3"
-        placeholder="Write a comment... 👀 Írd ide a kommented..."
-      ></textarea>
+        placeholder="Write a comment... 👀 Írd ide a kommented...">
+      </textarea>
 
       <button
         class="btn btn-success mt-2"
@@ -125,6 +128,7 @@
 
   </ng-container>
 
+  <!-- LOGIN REQUIRED -->
   <ng-template #loginHint>
     <p class="text-light mt-4">
       Please log in with Google to comment.
