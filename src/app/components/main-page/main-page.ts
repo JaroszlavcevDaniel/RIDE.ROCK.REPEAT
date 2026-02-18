@@ -6,6 +6,7 @@ import { Language, LanguageService } from '../../services/language-service';
 import { Observable, Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { SeoService } from '../../services/seo-service';
+import { SoundService } from '../../services/sound-service';
 
 @Component({
   selector: 'app-main-page',
@@ -24,7 +25,8 @@ export class MainPage implements OnInit, OnDestroy {
   constructor(
     private contentService: ContentService,
     private languageService: LanguageService,
-    private seo: SeoService
+    private seo: SeoService,
+    private soundService: SoundService
   ) {}
 
   ngOnInit() {
@@ -63,5 +65,9 @@ export class MainPage implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.sub.unsubscribe(); 
+  }
+
+  onClick() {
+    this.soundService.playClickTwo();
   }
 }

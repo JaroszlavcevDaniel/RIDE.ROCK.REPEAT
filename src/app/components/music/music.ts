@@ -4,6 +4,7 @@ import { Language, LanguageService } from '../../services/language-service';
 import { Subscription } from 'rxjs';
 import { ContentService } from '../../services/content-service';
 import { SeoService } from '../../services/seo-service';
+import { SoundService } from '../../services/sound-service';
 
 @Component({
   selector: 'app-music',
@@ -20,7 +21,8 @@ export class Music implements OnInit, OnDestroy {
   constructor(
     private contentService: ContentService,
     private languageService: LanguageService,
-    private seo: SeoService
+    private seo: SeoService,
+    private soundService: SoundService
   ) {}
 
   ngOnInit() {
@@ -51,6 +53,10 @@ export class Music implements OnInit, OnDestroy {
         type: 'website'
       });
     }
+  }
+
+    onClick() {
+    this.soundService.playClickTwo();
   }
   
   ngOnDestroy() {

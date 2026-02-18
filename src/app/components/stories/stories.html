@@ -20,7 +20,7 @@
         <h6 class="p-2">{{ article[lang].excerpt }}</h6>
         
         <!-- Read More Link -->
-   <a class="text-light btn bg-black text-decoration-none fw-bold btn-animate btn-ripple"[routerLink]="['/', lang, 'articles', article[lang].slug]">
+   <a class="text-light btn bg-black text-decoration-none fw-bold btn-animate btn-ripple" (click)="onClick()" [routerLink]="['/', lang, 'articles', article[lang].slug]">
         {{ lang === 'hu' ? 'Olvasom tovább' : 'Read more' }} 
       </a>
       </div>

@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { Observable, Subscription } from 'rxjs';
 import { Article } from '../../models/article-model';
 import { SeoService } from '../../services/seo-service';
+import { SoundService } from '../../services/sound-service';
 
 @Component({
   selector: 'app-stories',
@@ -21,7 +22,8 @@ export class Stories implements OnInit, OnDestroy {
   constructor(
     private contentService: ContentService,
     private languageService: LanguageService,
-     private seo: SeoService
+    private seo: SeoService,
+    private soundService: SoundService
   ) {}
 
   ngOnInit() {
@@ -56,6 +58,10 @@ export class Stories implements OnInit, OnDestroy {
     }
   }
 
+    onClick() {
+    this.soundService.playClickTwo();
+  }
+  
   ngOnDestroy() {
     this.sub.unsubscribe(); 
   }
