@@ -14,7 +14,7 @@ export class SoundService {
     this.clickSound = new Audio('sounds/start.mp3');
     this.clickSound.volume = 0.4; 
     this.clickSoundTwo = new Audio('sounds/next.mp3');
-    this.clickSoundTwo.volume = 0.3; 
+    this.clickSoundTwo.volume = 0.1; 
 
   }
 
