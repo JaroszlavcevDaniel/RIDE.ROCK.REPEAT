@@ -3,7 +3,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { LanguageService } from './services/language-service';
 import { filter } from 'rxjs';
 import { Language } from './models/language.type';
-
+declare let gtag: Function; 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
@@ -15,7 +15,14 @@ export class App implements OnInit {
   constructor(
     private router: Router,
     private languageService: LanguageService
-  ) {}
+  ) {
+     this.router.events.subscribe(event => {
+    if (event instanceof NavigationEnd) {
+      gtag('event', 'page_view', { page_path: event.urlAfterRedirects });
+    }
+  });
+
+  }
 
   ngOnInit(): void {
     this.router.events

@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /
+
+# --- Sitemap kivétel: ne irányítsd át Angular index.html-re ---
+RewriteRule ^sitemap\.xml$ - [L]
+
+# --- Angular SPA redirect minden más URL-re ---
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
