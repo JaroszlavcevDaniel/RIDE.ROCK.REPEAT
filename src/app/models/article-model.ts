@@ -42,6 +42,7 @@ export interface ArticleLang {
   sendMessage: string;
   heroTextMusic: string;
   heroTextStories: string;
+  ctaTwo: string;
   
 
 }
@@ -106,4 +107,5 @@ export interface Article {
   sendMessage: string;
   heroTextMusic: string;
   heroTextStories: string;
+  ctaTwo: string;
 }
