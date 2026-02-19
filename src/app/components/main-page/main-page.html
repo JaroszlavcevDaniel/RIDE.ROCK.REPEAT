@@ -1,4 +1,4 @@
-<div class="container bg-black mt-0 ">
+<div class="container bg-black mt-2 ">
   <div class="row mt-0">
 
 
@@ -8,8 +8,10 @@
 <div class="col-lg-7 col-md-12">
 
 
-<div class="card bg-dark text-light rounded-3 m-1"  *ngIf="featuredArticle as article">
-  <div class="row g-0 align-items-center">
+<div class="card bg-dark text-light rounded-3 m-3 card-hover"  *ngIf="featuredArticle as article"
+
+>
+  <div class="row g-0 align-items-center" (click)="onClick()" [routerLink]="['/', lang, 'articles', article[lang].slug]">
     <div class="col-lg-3">
         <img src="images/myTrip.png" class="article-image-main rounded-3 " alt="motorcycle article image">
     </div>
@@ -18,9 +20,10 @@
         <small class="card-title text-light">{{ article[lang].featuredText }} </small>
         <h5 class="card-title fw-bolder new-rocker-regular text-warning mb-0"> {{ article[lang].title }} </h5>
       <small class="card-text">{{ article[lang].excerpt }}
-      <a class="text-light btn bg-black text-decoration-none fw-bold btn-animate btn-ripple" (click)="onClick()" [routerLink]="['/', lang, 'articles', article[lang].slug]">
+      <!-- <a class="text-light btn bg-black text-decoration-none fw-bold " 
+      >
         {{ lang === 'hu' ? 'Olvasom tovább' : 'Read more' }} 
-      </a>
+      </a> -->
       </small>
       </div>
     </div>
@@ -28,7 +31,8 @@
 </div>
 
 <!-- KEIEMELT PLAYLISZT  -->
- <div class="card bg-dark text-light rounded-3 m-1" *ngIf="featuredPlaylist as article">
+ <div class="card bg-dark text-light rounded-3 m-3 card-hover" *ngIf="featuredPlaylist as article"
+ (click)="onClick()"  [routerLink]="['/', lang, 'articles', article[lang].slug]">
   <div class="row g-0 align-items-center">
     <div class="col-lg-3">
       <img src="images/nu_metal.png" class="card-img-top article-image-main p-1 m-1 rounded-3 " alt="plylist picture">
@@ -39,9 +43,9 @@
         <h5 class="card-title fw-bolder new-rocker-regular text-warning mb-0"> {{ article[lang].title }} </h5>
         <!-- <p class="card-text">{{ article[lang].excerpt }} </p> -->
       <small class="card-text">{{ article[lang].excerpt }}
-      <a class="text-light btn bg-black text-decoration-none fw-bold btn-ripple btn-animate m-2" (click)="onClick()"  [routerLink]="['/', lang, 'articles', article[lang].slug]">
+      <!-- <a class="text-light btn bg-black text-decoration-none fw-bold btn-ripple btn-animate m-2" >
         {{ lang === 'hu' ? 'Olvasom tovább' : 'Read more' }} 
-      </a>
+      </a> -->
       </small>
       </div>
     </div>
@@ -52,7 +56,7 @@
 
     <!-- LOGO -->
 
-<div class="col-lg-5 col-md-12 d-flex justify-content-center logo-wrapper mt-1 bg-transparent">
+<div class="col-lg-5 col-md-12 d-flex justify-content-center logo-wrapper mt-1 bg-transparent align-content-center">
   <img src="images/RRR_logo_big.png"
        alt="Ride.Rock.Repeat logo"
        class="img-fluid w-75">

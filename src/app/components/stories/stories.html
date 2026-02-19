@@ -1,12 +1,13 @@
 <div class="container text-light m-2 ">
  <app-popup-stories></app-popup-stories>
 
-  <div *ngIf="articles.length > 0; else noArticles">
+  <div *ngIf="articles.length > 0; else noArticles" >
     
     <div class="row justify-content-center" style="gap: 10px !important;">
 
    
-    <div *ngFor="let article of articles" class="article-card col-lg-5 col-12 m-1 bg-dark rounded-3 container align-content-center">
+    <div *ngFor="let article of articles" class="article-card col-lg-5 col-12 m-1 bg-dark rounded-3 container align-content-center card-hover"
+    (click)="onClick()" [routerLink]="['/', lang, 'articles', article[lang].slug]">
       <div class="row">
 
        <div class="col-6 align-items-center">
@@ -20,9 +21,9 @@
         <h6 class="p-2">{{ article[lang].excerpt }}</h6>
         
         <!-- Read More Link -->
-   <a class="text-light btn bg-black text-decoration-none fw-bold btn-animate btn-ripple" (click)="onClick()" [routerLink]="['/', lang, 'articles', article[lang].slug]">
+   <!-- <a class="text-light btn bg-black text-decoration-none fw-bold btn-animate btn-ripple" >
         {{ lang === 'hu' ? 'Olvasom tovább' : 'Read more' }} 
-      </a>
+      </a> -->
       </div>
       </div>
       </div>

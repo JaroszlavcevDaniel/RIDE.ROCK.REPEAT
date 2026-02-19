@@ -380,3 +380,8 @@ background:
   font-family: "Tapestry", serif !important;
   font-style: normal;
 }
+
+.card-hover:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
