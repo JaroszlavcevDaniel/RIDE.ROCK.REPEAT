@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from '../../services/content-service';
 import { LanguageService } from '../../services/language-service';
-import { filter, Observable } from 'rxjs';
+import { filter, Observable, Subject } from 'rxjs';
 import { Language } from '../../models/language.type';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { AuthService } from '../../services/auth-service';
 import firebase from 'firebase/compat/app';
 import { Location } from '@angular/common';
+import { Collapse } from 'bootstrap';
 
 @Component({
   selector: 'app-navbar',
@@ -16,6 +17,9 @@ import { Location } from '@angular/common';
 
 })
 export class Navbar implements OnInit  {
+
+  private destroy$ = new Subject<void>();
+  
    lang: Language = 'hu'; 
 
   currentLang: Language;
@@ -59,6 +63,9 @@ export class Navbar implements OnInit  {
     this.languageService.lang$.subscribe(lang => {
       this.lang = lang;
     });
+      this.router.events
+    .pipe(filter(event => event instanceof NavigationEnd))
+    .subscribe(() => this.closeNavbar());
   }
 
   switchLanguage(lang: Language): void {
@@ -77,6 +84,20 @@ export class Navbar implements OnInit  {
     this.auth.logout();
   }
 
+closeNavbar() {
+  const navbar = document.getElementById('mainNavbar');
 
+  if (navbar && navbar.classList.contains('show')) {
+    const bsCollapse = Collapse.getInstance(navbar)
+      || new Collapse(navbar, { toggle: false });
+
+    bsCollapse.hide();
+  }
+}
+
+ngOnDestroy() {
+  this.destroy$.next();
+  this.destroy$.complete();
+}
 
 }
