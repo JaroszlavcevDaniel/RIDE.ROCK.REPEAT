@@ -4,51 +4,50 @@
     Comments 👥 Kommentek
   </h4>
 
-  <!-- USER CHECK -->
-  <ng-container *ngIf="user$ | async as user; else loginHint">
+  <!-- COMMENTS STREAM (MINDENKI LÁTJA) -->
+  <ng-container *ngIf="structuredComments$ | async as data">
 
-    <!-- COMMENTS STREAM -->
-    <ng-container *ngIf="structuredComments$ | async as data">
+    <!-- EMPTY STATE -->
+    <div *ngIf="data.topLevel.length === 0"
+         class="text-light mb-3">
+      No comments yet. Be the first 🤘
+      Még nincsenek hozzászólások. Légy az első!
+    </div>
 
-      <!-- EMPTY STATE -->
-      <div *ngIf="data.topLevel.length === 0"
-           class="text-light mb-3">
-        No comments yet. Be the first 🤘
-        Még nincsenek hozzászólások. Légy az első!
-      </div>
+    <!-- TOP LEVEL COMMENTS -->
+    <div
+      *ngFor="let comment of data.topLevel"
+      class="comment mb-3 p-3 rounded border">
 
-      <!-- TOP LEVEL COMMENTS -->
-      <div
-        *ngFor="let comment of data.topLevel"
-        class="comment mb-3 p-3 rounded border">
+      <!-- HEADER -->
+      <div class="d-flex align-items-center mb-2">
 
-        <!-- HEADER -->
-        <div class="d-flex align-items-center mb-2">
+        <img
+          *ngIf="comment.userPhoto"
+          [src]="comment.userPhoto"
+          width="36"
+          height="36"
+          class="rounded-circle me-2"
+        />
 
-          <img
-            *ngIf="comment.userPhoto"
-            [src]="comment.userPhoto"
-            width="36"
-            height="36"
-            class="rounded-circle me-2"
-          />
-
-          <div>
-            <strong>{{ comment.userName }}</strong><br />
-            <small class="text-secondary">
-              {{ comment.createdAt?.toDate() | date:'medium' }}
-            </small>
-          </div>
-
+        <div>
+          <strong>{{ comment.userName }}</strong><br />
+          <small class="text-secondary">
+            {{ comment.createdAt?.toDate() | date:'medium' }}
+          </small>
         </div>
 
-        <!-- COMMENT TEXT -->
-        <p class="mb-2">{{ comment.text }}</p>
+      </div>
 
-        <!-- DEBUG ID (ha már nem kell, törölheted) -->
-        <p class="mb-2 text-black">{{ comment.id }}</p>
+      <!-- COMMENT TEXT -->
+      <p class="mb-2">{{ comment.text }}</p>
 
-        <!-- REPLY BUTTON -->
+      <!-- DEBUG ID -->
+      <p class="mb-2 text-black">{{ comment.id }}</p>
+
+      <!-- REPLY BUTTON (CSAK LOGIN USERNEK) -->
+      <ng-container *ngIf="user$ | async as user">
+
         <button
           class="btn btn-sm btn-outline-light"
           (click)="startReply(comment.id)">
@@ -74,41 +73,45 @@
 
         </div>
 
-        <!-- REPLIES -->
-        <div
-          *ngFor="let reply of data.repliesMap[comment.id]"
-          class="ms-4 mt-3 p-2 border-start">
+      </ng-container>
 
-          <div class="d-flex align-items-center mb-1">
+      <!-- REPLIES (MINDENKI LÁTJA) -->
+      <div
+        *ngFor="let reply of data.repliesMap[comment.id]"
+        class="ms-4 mt-3 p-2 border-start">
 
-            <img
-              *ngIf="reply.userPhoto"
-              [src]="reply.userPhoto"
-              width="28"
-              height="28"
-              class="rounded-circle me-2"
-            />
+        <div class="d-flex align-items-center mb-1">
 
-            <div>
-              <strong>{{ reply.userName }}</strong>
-              <small class="text-secondary ms-2">
-                {{ reply.createdAt?.toDate() | date:'medium' }}
-              </small>
-            </div>
+          <img
+            *ngIf="reply.userPhoto"
+            [src]="reply.userPhoto"
+            width="28"
+            height="28"
+            class="rounded-circle me-2"
+          />
 
+          <div>
+            <strong>{{ reply.userName }}</strong>
+            <small class="text-secondary ms-2">
+              {{ reply.createdAt?.toDate() | date:'medium' }}
+            </small>
           </div>
-
-          <p class="mb-0">{{ reply.text }}</p>
-          <p class="mb-0 text-black">{{ reply.id }}</p>
 
         </div>
 
+        <p class="mb-0">{{ reply.text }}</p>
+        <p class="mb-0 text-black">{{ reply.id }}</p>
+
       </div>
 
-    </ng-container>
+    </div>
 
-    <!-- NEW COMMENT -->
-    <div class="mt-4">
+  </ng-container>
+
+  <!-- NEW COMMENT -->
+  <div class="mt-4">
+
+    <ng-container *ngIf="user$ | async as user; else loginHint">
 
       <textarea
         [(ngModel)]="newComment"
@@ -124,9 +127,9 @@
         Post comment ☑️ Hozzászólás közzététele
       </button>
 
-    </div>
+    </ng-container>
 
-  </ng-container>
+  </div>
 
   <!-- LOGIN REQUIRED -->
   <ng-template #loginHint>
