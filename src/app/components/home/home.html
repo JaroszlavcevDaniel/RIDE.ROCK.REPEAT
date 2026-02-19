@@ -1,5 +1,5 @@
 <!-- HERO SZEKCIÓ  -->
-<div class="container-fluid bg-black rounded-2 z-index-3" id="home_banner_div" *ngIf="content$ | async as content">
+<div class="container-fluid bg-black rounded-2 position-relative z-index-5" id="home_banner_div" *ngIf="content$ | async as content">
     <br>
     <p class="card-text m-3 text-light fw-bolder bannerText text-uppercase mt-0" style="font-size: 2em;">{{ content.hero.title }}</p>
     <br>
