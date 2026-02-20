@@ -5,6 +5,7 @@ import firebase from 'firebase/compat/app';
 import { Observable } from 'rxjs';
 import { ArticleComment } from '../models/user.model';
 import { TelegramService } from './telegram-service';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +14,8 @@ export class CommentService {
 
   constructor(
     private firestore: Firestore,
-    private telegramService: TelegramService
+    private telegramService: TelegramService,
+     private http: HttpClient 
 ) {}
 
   getComments(articleId: string): Observable<ArticleComment[]> {
@@ -28,40 +30,38 @@ export class CommentService {
   }
 
   addComment(
-    articleId: string,
-    text: string,
-    user: any,
-    parentId: string | null = null 
+  articleId: string,
+  text: string,
+  user: any,
+  parentId: string | null = null
+) {
+  const commentsRef = collection(
+    this.firestore,
+    `articles/${articleId}/comments`
+  );
 
-  ) {
-    const commentsRef = collection(
-      this.firestore,
-      `articles/${articleId}/comments`
-    );
-
-    return addDoc(commentsRef, {
+  return addDoc(commentsRef, {
     text,
     userId: user.uid,
     userName: user.displayName || 'Anonymous',
     userPhoto: user.photoURL || null,
     createdAt: serverTimestamp(),
     parentId: parentId
-  }).then(() => {
-
-    //  TELEGRAM 
-    const message = `
-🔥 Új komment érkezett!
-
-📄 Cikk: ${articleId}
-👤 Felhasználó: ${user.displayName || 'Anonymous'}
-
-💬 ${text}
-`;
-
-    this.telegramService.sendNotification(message);
-
+  }).then(async () => {
+    // ----- TELEGRAM ÉRTESÍTÉS VERCEL API ALAPJÁN -----
+    try {
+      await this.http.post('/api/sendCommentNotification', { 
+        articleId, 
+        text, 
+        user 
+      }).toPromise();
+      console.log('Telegram notification sent via Vercel API');
+    } catch (err) {
+      console.error('Error sending Telegram notification:', err);
+    }
   }).catch(err => {
     console.error('Komment mentési hiba:', err);
   });
 }
+
 }
