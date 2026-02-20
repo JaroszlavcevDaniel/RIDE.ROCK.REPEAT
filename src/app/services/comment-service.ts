@@ -50,7 +50,7 @@ export class CommentService {
   }).then(async () => {
     // ----- TELEGRAM ÉRTESÍTÉS VERCEL API ALAPJÁN -----
     try {
-      await this.http.post('/api/sendCommentNotification', { 
+      await this.http.post('https://my-telegram-api.vercel.app/api/sendCommentNotification',{ 
         articleId, 
         text, 
         user 
