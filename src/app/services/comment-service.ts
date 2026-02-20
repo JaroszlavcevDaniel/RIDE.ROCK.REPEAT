@@ -4,13 +4,17 @@ import { addDoc, collection, collectionData, Firestore, orderBy, query, serverTi
 import firebase from 'firebase/compat/app';
 import { Observable } from 'rxjs';
 import { ArticleComment } from '../models/user.model';
+import { TelegramService } from './telegram-service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CommentService {
 
-  constructor(private firestore: Firestore) {}
+  constructor(
+    private firestore: Firestore,
+    private telegramService: TelegramService
+) {}
 
   getComments(articleId: string): Observable<ArticleComment[]> {
     const commentsRef = collection(
@@ -36,12 +40,28 @@ export class CommentService {
     );
 
     return addDoc(commentsRef, {
-      text,
-      userId: user.uid,
-      userName: user.displayName || 'Anonymous',
-      userPhoto: user.photoURL || null,
-      createdAt: serverTimestamp(),
-      parentId: parentId 
-    });
-  }
+    text,
+    userId: user.uid,
+    userName: user.displayName || 'Anonymous',
+    userPhoto: user.photoURL || null,
+    createdAt: serverTimestamp(),
+    parentId: parentId
+  }).then(() => {
+
+    //  TELEGRAM 
+    const message = `
+🔥 Új komment érkezett!
+
+📄 Cikk: ${articleId}
+👤 Felhasználó: ${user.displayName || 'Anonymous'}
+
+💬 ${text}
+`;
+
+    this.telegramService.sendNotification(message);
+
+  }).catch(err => {
+    console.error('Komment mentési hiba:', err);
+  });
+}
 }
