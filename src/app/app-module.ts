@@ -31,6 +31,7 @@ import { CookieBanner } from './core/components/cookie-banner/cookie-banner';
 import { CookieInfo } from './components/cookie-info/cookie-info';
 import { PopUp } from './components/pop-up/pop-up';
 import { PopupStories } from './components/popup-stories/popup-stories';
+import { Tools } from './components/tools/tools';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { PopupStories } from './components/popup-stories/popup-stories';
     CookieInfo,
     PopUp,
     PopupStories,
+    Tools,
   ],
   imports: [
     BrowserModule,

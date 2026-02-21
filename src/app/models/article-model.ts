@@ -43,6 +43,7 @@ export interface ArticleLang {
   heroTextMusic: string;
   heroTextStories: string;
   ctaTwo: string;
+  tools: string;
   
 
 }
@@ -108,4 +109,5 @@ export interface Article {
   heroTextMusic: string;
   heroTextStories: string;
   ctaTwo: string;
+  tools: string;
 }

@@ -5,6 +5,7 @@
       "travel": "Utazási cíkkek",
       "playlists": "Playlisztek",
       "contact": "Kapcsolatfelvétel",
+      "tools": "Motoros eszközök",
       "back": "vissza"
     },
     "hero": {
@@ -27,6 +28,9 @@
     },
     "stories": {
       "heroTextStories": ""
+    },
+    "toolsComp": {
+      "toolsh1": "Itt találhatsz néhány hasznos eszközt az utazásodhoz"
     }
   },
   "en": {
@@ -35,6 +39,7 @@
       "travel": "Travel articles",
        "playlists": "Playlists",
        "contact": "Contact me",
+        "tools": "Rider's tools",
        "back": "back"
     },
     "hero": {
@@ -56,6 +61,9 @@
     },
      "stories": {
       "heroTextStories": ""
+    },
+    "toolsComp": {
+      "toolsh1": "Here you can find some useful tools for your trip"
     }
   },
   "articles": [

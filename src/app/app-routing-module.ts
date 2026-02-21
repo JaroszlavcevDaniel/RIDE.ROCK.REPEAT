@@ -10,6 +10,7 @@ import { LanguageGuard } from './core/core/guards/language-guard';
 import { ArticleDetails } from './components/article-details/article-details';
 import { Contact } from './components/contact/contact';
 import { CookieInfo } from './components/cookie-info/cookie-info';
+import { Tools } from './components/tools/tools';
 
 const routes: Routes = [
 
@@ -41,6 +42,12 @@ const routes: Routes = [
     path: ':lang/contact',
     component: Contact
   },
+
+  {
+    path: ':lang/tools',
+    component: Tools
+  },
+
 
    {
     path: ':lang/cookieinfo',
