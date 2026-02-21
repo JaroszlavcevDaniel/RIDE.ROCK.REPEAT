@@ -47,21 +47,23 @@ export class CommentService {
     userPhoto: user.photoURL || null,
     createdAt: serverTimestamp(),
     parentId: parentId
-  }).then(async () => {
-    // ----- TELEGRAM ÉRTESÍTÉS VERCEL API ALAPJÁN -----
-    try {
-      await this.http.post('https://my-telegram-api.vercel.app/api/sendCommentNotification',{ 
-        articleId, 
-        text, 
-        user 
-      }).toPromise();
-      console.log('Telegram notification sent via Vercel API');
-    } catch (err) {
-      console.error('Error sending Telegram notification:', err);
-    }
-  }).catch(err => {
-    console.error('Komment mentési hiba:', err);
-  });
-}
+  })
+//   .then(async () => {
+//     // ----- TELEGRAM ÉRTESÍTÉS VERCEL API ALAPJÁN -----
+//     try {
+//       await this.http.post('https://my-telegram-api.vercel.app/api/sendCommentNotification',{ 
+//         articleId, 
+//         text, 
+//         user 
+//       }).toPromise();
+//       console.log('Telegram notification sent via Vercel API');
+//     } catch (err) {
+//       console.error('Error sending Telegram notification:', err);
+//     }
+//   }
+// ).catch(err => {
+//     console.error('Komment mentési hiba:', err);
+//   });
+// }
 
-}
+}}

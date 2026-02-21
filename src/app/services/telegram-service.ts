@@ -6,10 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class TelegramService {
-  constructor(private http: HttpClient) {}
+  // constructor(private http: HttpClient) {}
 
-  sendNotification(message: string): Observable<any> {
-    // Helyettünk a Vercel szerver hívja a Telegram API-t
-    return this.http.post('/api/sendCommentNotification', { message });
-  }
+  // sendNotification(message: string): Observable<any> {
+  //   // Helyettünk a Vercel szerver hívja a Telegram API-t
+  //   return this.http.post('/api/sendCommentNotification', { message });
+  // }
 }
