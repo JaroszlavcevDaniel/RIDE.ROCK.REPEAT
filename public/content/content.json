@@ -5,7 +5,7 @@
       "travel": "Utazási cíkkek",
       "playlists": "Playlisztek",
       "contact": "Kapcsolatfelvétel",
-      "tools": "Motoros eszközök",
+      "tools": "🛠️ Motoros eszközök",
       "back": "vissza"
     },
     "hero": {
@@ -13,6 +13,7 @@
       "subtitle": "Ez nem egy tesztoldal. Sem influencer blog. Ez egy történet az útról egy motorral, zenével és gondolatokkal.",
       "cta": "Megnézem a cikkeket",
       "ctaTwo": "Megnézem a playliszteket"
+      
 
     },
     "contact": {
@@ -30,7 +31,17 @@
       "heroTextStories": ""
     },
     "toolsComp": {
-      "toolsh1": "Itt találhatsz néhány hasznos eszközt az utazásodhoz"
+      "toolsh1": "Itt találhatsz néhány hasznos eszközt az utazásodhoz",
+      "fuelCalcBadge": "Üzemanyag fogyasztás kalkulátor",
+      "wildCampMapHu": "Vadkemping térkép Magyarul🇭🇺 (hamarosan)",
+      "wildCampMapEn": "Vadkemping térkép Angolul🇬🇧 (hamarosan)",
+      "fuelCalcUsedFuel": "Felhasznált üzemanyag ",
+      "fuelCalcDistance": "Megtett távolság",
+      "fuelCalcPayed": "Üzemanyag ára per liter",
+      "fuelCalcBtn": "Számítás",
+      "fuelCalcResultOne": "Átlagfogyasztás",
+      "fuelCalcResultTwo": "Összköltség",
+      "fuelCalcTip": "\n \n ## Ne feledd: ## \n \n A hirtelen gyorsítás fogyasztja a legtöbb benzint. Finoman gyorsíts, tarts stabil tempót. \n \n Ne pörgesd feleslegesen — a legtöbb utcai motor gazdaságosan közepes fordulaton (kb. 3–6 ezer RPM tartományban) működik. \n \n Alacsonyabb fokozatban magasabb a fogyasztás. Amint lehet, válts fel. \n \n Guruláskor ne húzd a kuplungot — modern befecskendezős motoroknál motorféknél gyakran nulla az üzemanyag-befecskendezés. \n \n A lapos gumi jelentősen növeli a gördülési ellenállást → akár +5–10% fogyasztás. \n \n Rendszeres karbantartás: 1. tiszta légszűrő 2. jól kenett lánc (hogyha van🌝) 3. megfelelő láncfeszesség \n \n Az első pár percben a motor dúsabb keverékkel működik → magasabb fogyasztás."
     }
   },
   "en": {
@@ -39,7 +50,7 @@
       "travel": "Travel articles",
        "playlists": "Playlists",
        "contact": "Contact me",
-        "tools": "Rider's tools",
+        "tools": "🛠️ Rider's tools",
        "back": "back"
     },
     "hero": {
@@ -63,7 +74,17 @@
       "heroTextStories": ""
     },
     "toolsComp": {
-      "toolsh1": "Here you can find some useful tools for your trip"
+      "toolsh1": "Here you can find some useful tools for your trip",
+      "fuelCalcBadge": "Fuel consumption calculator",
+       "wildCampMapHu": "Wild camping map in Hungarian🇭🇺 (soon)",
+       "wildCampMapEn": "Wild camping map in English🇬🇧 (soon)",
+        "fuelCalcUsedFuel": "Fuel used",
+        "fuelCalcDistance": "Distance traveled",
+         "fuelCalcPayed": "Fuel price per liter",
+         "fuelCalcBtn": "Count",
+         "fuelCalcResultOne": "Average consumption",
+         "fuelCalcResultTwo": "Total cost",
+         "fuelCalcTip": "\n \n ## Don't forget: ## \n \n Sudden acceleration consumes the most fuel. Accelerate smoothly and maintain a steady pace. \n \n Do not rev unnecessarily — most street motorcycles operate most efficiently at medium RPM (approximately in the 3,000–6,000 RPM range). \n \n Fuel consumption is higher in lower gears. Shift up as soon as possible. \n \n When coasting, do not pull the clutch — on modern fuel-injected motorcycles, fuel injection is often zero during engine braking. \n \n Underinflated tires significantly increase rolling resistance → up to +5–10% higher fuel consumption. \n \n Regular maintenance: 1. clean air filter 2. properly lubricated chain (if there is one 🌝) 3. correct chain tension \n \n During the first few minutes, the engine runs with a richer fuel mixture → higher fuel consumption."
     }
   },
   "articles": [

@@ -32,6 +32,9 @@ import { CookieInfo } from './components/cookie-info/cookie-info';
 import { PopUp } from './components/pop-up/pop-up';
 import { PopupStories } from './components/popup-stories/popup-stories';
 import { Tools } from './components/tools/tools';
+import { FuelCalc } from './fuel-calc/fuel-calc';
+import { WildCampMapHu } from './wild-camp-map-hu/wild-camp-map-hu';
+import { WildCampMapEn } from './wild-camp-map-en/wild-camp-map-en';
 
 @NgModule({
   declarations: [
@@ -55,6 +58,9 @@ import { Tools } from './components/tools/tools';
     PopUp,
     PopupStories,
     Tools,
+    FuelCalc,
+    WildCampMapHu,
+    WildCampMapEn,
   ],
   imports: [
     BrowserModule,

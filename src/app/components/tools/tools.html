@@ -5,14 +5,33 @@
   </h2>
 
   <div class="container">
+  <div class="row">
+  
 
-    <div class="bg-dark card-body  m-1 btn btn-dark">
-    <p class="text-light text-uppercase p-2">Benzin fogyasztás kalkulátor</p>
-    </div>
-    <button class="btn btn-dark text-light text-uppercase m-1">Vadkemping térkép Magyarul</button>
-    <button class="btn btn-dark text-light text-uppercase m-1">Vadkemping térkép Angolul</button>
+<div class="card col-lg-3 col-md-12 col-12 m-2 bg-dark text-light btn btn-dark card-hover"
+  [routerLink]="['/', currentLang, 'fuelCalc']" >
+  <img src="images/the-case-for-the-mid-sized-cruiser.webp" class="article-image-main rounded-3 " alt="fuel calculator logo">
+  <div class="card-body">
+    <p class="card-text">{{ content.toolsComp.fuelCalcBadge }} 
+      <span class="badge bg-danger text-lowercase fs-7 btn-pulse ">new</span></p>
+  </div>
+</div>
 
+<div class="card col-lg-3 col-md-12 col-12 m-2 bg-dark text-light btn btn-dark card-hover"
+[routerLink]="['/', currentLang, 'wildCampMapHu']">
+  <img src="images/wildCampMapHu.jpg" class="article-image-main rounded-3 " alt="wild camping map hungarian">
+  <div class="card-body">
+    <p class="card-text">{{ content.toolsComp.wildCampMapHu }}</p>
+  </div>
+</div>
 
-    </div>
+<div class="card col-lg-3 col-md-12 col-12 m-2 bg-dark text-light btn btn-dark card-hover"
+[routerLink]="['/', currentLang, 'wildCampMapEn']">
+  <img src="images/wildCampMapEn.jpg" class="article-image-main rounded-3 " alt="wild camping map english">
+  <div class="card-body">
+    <p class="card-text">{{ content.toolsComp.wildCampMapEn }}</p>
+  </div>
 
 </div>
+</div>
+ </div>

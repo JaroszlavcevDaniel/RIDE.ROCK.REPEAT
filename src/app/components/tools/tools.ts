@@ -13,7 +13,7 @@ import { SeoService } from '../../services/seo-service';
 export class Tools  implements OnInit {
 
   lang: Language = 'hu';
-
+  currentLang: Language;
   content$!: Observable<any>;
 
   constructor(
@@ -21,7 +21,7 @@ export class Tools  implements OnInit {
     private contentService: ContentService,
     private seo: SeoService
   ) {
-  
+   this.currentLang = this.languageService.getCurrentLang();
   }
 
 ngOnInit(): void {

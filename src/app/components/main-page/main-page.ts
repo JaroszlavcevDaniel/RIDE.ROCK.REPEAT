@@ -20,16 +20,24 @@ export class MainPage implements OnInit, OnDestroy {
   featuredArticle?: Article;
   featuredPlaylist?: Article;
   lang: Language = 'hu';
-  private sub = new Subscription()
+    currentLang: Language;
+  private sub = new Subscription();
+  content$!: Observable<any>;
 
   constructor(
     private contentService: ContentService,
     private languageService: LanguageService,
     private seo: SeoService,
     private soundService: SoundService
-  ) {}
+  ) {
+    this.currentLang = this.languageService.getCurrentLang();
+    this.content$ = this.contentService.getContent();
+  }
 
   ngOnInit() {
+     
+      this.content$.subscribe(data => {
+  });
     this.sub.add(
       this.languageService.lang$.subscribe(l => this.lang = l)
     );
@@ -46,7 +54,7 @@ export class MainPage implements OnInit, OnDestroy {
     );
         this.updateSeo();
   }
-
+  
   private updateSeo() {
     if (this.lang === 'hu') {
       this.seo.updateTags({

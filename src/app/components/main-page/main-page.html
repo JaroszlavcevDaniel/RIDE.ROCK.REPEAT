@@ -8,7 +8,7 @@
 <div class="col-lg-7 col-md-12">
 
 
-<div class="card bg-dark text-light rounded-3 m-3 card-hover"  *ngIf="featuredArticle as article"
+<div class="card bg-dark text-light rounded-3 m-2 card-hover"  *ngIf="featuredArticle as article"
 
 >
   <div class="row g-0 align-items-center" (click)="onClick()" [routerLink]="['/', lang, 'articles', article[lang].slug]">
@@ -31,7 +31,7 @@
 </div>
 
 <!-- KEIEMELT PLAYLISZT  -->
- <div class="card bg-dark text-light rounded-3 m-3 card-hover" *ngIf="featuredPlaylist as article"
+ <div class="card bg-dark text-light rounded-3 m-2 card-hover" *ngIf="featuredPlaylist as article"
  (click)="onClick()"  [routerLink]="['/', lang, 'articles', article[lang].slug]">
   <div class="row g-0 align-items-center">
     <div class="col-lg-3">
@@ -51,6 +51,14 @@
     </div>
   </div>
 </div>
+
+<div class="card bg-dark text-light rounded-3 m-2 card-hover p-1" *ngIf="content$ | async as content"
+[routerLink]="['/', currentLang, 'tools']">
+ <h5 class="card-title fw-bolder new-rocker-regular text-warning mb-0">{{ content.navbar.tools }}
+   <span class="badge bg-danger text-lowercase fs-7 btn-pulse ">new</span>
+ </h5> 
+
+  </div>
 
 </div>
 

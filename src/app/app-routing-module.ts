@@ -11,6 +11,9 @@ import { ArticleDetails } from './components/article-details/article-details';
 import { Contact } from './components/contact/contact';
 import { CookieInfo } from './components/cookie-info/cookie-info';
 import { Tools } from './components/tools/tools';
+import { WildCampMapHu } from './wild-camp-map-hu/wild-camp-map-hu';
+import { WildCampMapEn } from './wild-camp-map-en/wild-camp-map-en';
+import { FuelCalc } from './fuel-calc/fuel-calc';
 
 const routes: Routes = [
 
@@ -46,6 +49,21 @@ const routes: Routes = [
   {
     path: ':lang/tools',
     component: Tools
+  },
+
+    {
+    path: ':lang/wildCampMapHu',
+    component: WildCampMapHu
+  },
+
+     {
+    path: ':lang/wildCampMapEn',
+    component: WildCampMapEn
+  },
+
+    {
+    path: ':lang/fuelCalc',
+    component: FuelCalc
   },
 
 

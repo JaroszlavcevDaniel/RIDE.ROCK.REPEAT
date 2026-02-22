@@ -44,9 +44,19 @@ export interface ArticleLang {
   heroTextStories: string;
   ctaTwo: string;
   tools: string;
-  
-
+  fuelCalcBadge: string;
+  wildCampMapHu: string;
+  wildCampMapEn: string;
+  fuelCalcUsedFuel: string;
+  fuelCalcDistance: string;
+  fuelCalcPayed: string;
+  fuelCalcBtn: string;
+  fuelCalcResultOne: string;
+  fuelCalcResultTwo: string;
+    fuelCalcTip: string;
 }
+
+
 
 export interface Article {
   id: number;
@@ -110,4 +120,15 @@ export interface Article {
   heroTextStories: string;
   ctaTwo: string;
   tools: string;
+  fuelCalcBadge: string;
+  wildCampMapHu: string;
+   wildCampMapEn: string;
+   fuelCalcUsedFuel: string;
+   fuelCalcDistance: string;
+   fuelCalcPayed: string;
+   fuelCalcBtn: string;
+  fuelCalcResultOne: string;
+  fuelCalcResultTwo: string;
+  fuelCalcTip: string;
+
 }

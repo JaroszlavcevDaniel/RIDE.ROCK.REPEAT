@@ -1,0 +1,62 @@
+
+<div class="container mt-0" *ngIf="content$ | async as content">
+  <div class="card shadow">
+    <div class="card-body bg-dark text-light">
+     
+      <h4 class="mb-3">{{ content.toolsComp.fuelCalcBadge }}</h4>
+
+      <!-- Üzemanyag -->
+      <div class="mb-3">
+        <label class="form-label">{{ content.toolsComp.fuelCalcUsedFuel }} (liter)</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="fuelUsed"
+        />
+      </div>
+
+      <!-- Távolság -->
+      <div class="mb-3">
+        <label class="form-label">{{ content.toolsComp.fuelCalcDistance }} (km)</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="distance"
+        />
+      </div>
+
+      <!-- Ár -->
+      <div class="mb-3">
+        <label class="form-label"> {{ content.toolsComp.fuelCalcPayed }} (HUF / USD / EUR) </label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="price"
+        />
+      </div>
+
+         <button class="btn btn-success w-100"  (click)="calculate()">  {{ content.toolsComp.fuelCalcBtn }}  </button>
+        <!-- <button class="btn btn-success w-25" type="reset">  reset </button> -->
+
+      <hr />
+
+      <!-- Eredmény -->
+      <div *ngIf="consumption !== null">
+        <p>
+          <strong class="fw-bolder text-warning">{{ content.toolsComp.fuelCalcResultOne }} :</strong>
+         <span class="fw-bolder" style="color: rgb(244, 250, 124) !important;"> {{ consumption | number:'1.1-2' }} </span> l / 100 km 
+        </p>
+
+        <p>
+          <strong class="fw-bolder text-warning">{{ content.toolsComp.fuelCalcResultTwo }} :</strong>
+          <span class="fw-bolder" style="color: rgb(244, 250, 124) !important;"> {{ totalCost | number }} </span> (HUF / USD / EUR) 
+        </p>
+
+        <markdown> <small> {{ content.toolsComp.fuelCalcTip }} </small> </markdown>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
