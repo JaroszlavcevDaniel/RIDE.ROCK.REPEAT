@@ -13,6 +13,24 @@
          alt="Ride. Rock. Repeat. logo"
          class="logo-img rounded-5">
 </a>
+   <!-- LANGUAGE SWITCH -->
+    <div class="d-flex gap-2">
+      <button
+        class="btn btn-sm"
+        [class.btn-light]="currentLang === 'hu'"
+        [class.btn-outline-light]="currentLang !== 'hu'"
+        (click)="switchLanguage('hu')">
+        🇭🇺 HU
+      </button>
+
+      <button
+        class="btn btn-sm"
+        [class.btn-light]="currentLang === 'en'"
+        [class.btn-outline-light]="currentLang !== 'en'"
+        (click)="switchLanguage('en')">
+        🇬🇧 EN
+      </button>
+    </div>
 <ng-container *ngIf="content$ | async as content">
 <a *ngIf="showBackButton" class="m-2 btn btn-secondary text-light fw-bolder btn-ripple btn-animate new-rocker-regular" 
 (click)="goBack()"> ←  {{ content.navbar.back }}</a>
@@ -91,24 +109,7 @@
 
     </ng-container>
 
-    <!-- LANGUAGE SWITCH -->
-    <div class="d-flex gap-2">
-      <button
-        class="btn btn-sm"
-        [class.btn-light]="currentLang === 'hu'"
-        [class.btn-outline-light]="currentLang !== 'hu'"
-        (click)="switchLanguage('hu')">
-        🇭🇺 HU
-      </button>
-
-      <button
-        class="btn btn-sm"
-        [class.btn-light]="currentLang === 'en'"
-        [class.btn-outline-light]="currentLang !== 'en'"
-        (click)="switchLanguage('en')">
-        🇬🇧 EN
-      </button>
-    </div>
+ 
 
   </div>
 </nav>
