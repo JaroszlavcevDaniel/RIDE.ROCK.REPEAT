@@ -9,7 +9,7 @@
 
   <div *ngFor="let article of articles" class="col-lg-6 col-12 bg-transparent" style="text-align: justify !important">
    <h1 class="text-light"></h1>
-  <p style="white-space: pre-line !important" class="text-light white-space: pre-line;" >{{ article[lang].aboutText }}</p>
+  <p style="white-space: pre-line !important" class="text-light white-space: pre-line;" [innerHTML]="article[lang].aboutText  | toMarkdownPipe">{{ article[lang].aboutText | toMarkdownPipe }}</p>
   <p class="text-light"> </p>
     </div>
    </div>

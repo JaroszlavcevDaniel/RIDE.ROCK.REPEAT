@@ -3,11 +3,11 @@
   <div class="card shadow">
     <div class="card-body bg-dark text-light">
      
-      <h4 class="mb-3">{{ content.toolsComp.fuelCalcBadge }}</h4>
+      <h4 class="mb-3">{{ content.toolsComp.fuelCalcBadge | toMarkdownPipe }}</h4>
 
       <!-- Üzemanyag -->
       <div class="mb-3">
-        <label class="form-label">{{ content.toolsComp.fuelCalcUsedFuel }} (liter)</label>
+        <label class="form-label">{{ content.toolsComp.fuelCalcUsedFuel | toMarkdownPipe }} (liter)</label>
         <input
           type="number"
           class="form-control"
@@ -17,7 +17,7 @@
 
       <!-- Távolság -->
       <div class="mb-3">
-        <label class="form-label">{{ content.toolsComp.fuelCalcDistance }} (km)</label>
+        <label class="form-label">{{ content.toolsComp.fuelCalcDistance | toMarkdownPipe }} (km)</label>
         <input
           type="number"
           class="form-control"
@@ -27,7 +27,7 @@
 
       <!-- Ár -->
       <div class="mb-3">
-        <label class="form-label"> {{ content.toolsComp.fuelCalcPayed }} (HUF / USD / EUR) </label>
+        <label class="form-label"> {{ content.toolsComp.fuelCalcPayed | toMarkdownPipe }} (HUF / USD / EUR) </label>
         <input
           type="number"
           class="form-control"
@@ -35,7 +35,7 @@
         />
       </div>
 
-         <button class="btn btn-success w-100"  (click)="calculate()">  {{ content.toolsComp.fuelCalcBtn }}  </button>
+         <button class="btn btn-success w-100"  (click)="calculate()">  {{ content.toolsComp.fuelCalcBtn | toMarkdownPipe }}  </button>
         <!-- <button class="btn btn-success w-25" type="reset">  reset </button> -->
 
       <hr />
@@ -44,15 +44,15 @@
       <div *ngIf="consumption !== null">
         <p>
           <strong class="fw-bolder text-warning">{{ content.toolsComp.fuelCalcResultOne }} :</strong>
-         <span class="fw-bolder" style="color: rgb(244, 250, 124) !important;"> {{ consumption | number:'1.1-2' }} </span> l / 100 km 
+         <span class="fw-bolder" style="color: rgb(244, 250, 124) !important;"> {{ consumption | number:'1.1-2' | toMarkdownPipe }} </span> l / 100 km 
         </p>
 
         <p>
           <strong class="fw-bolder text-warning">{{ content.toolsComp.fuelCalcResultTwo }} :</strong>
-          <span class="fw-bolder" style="color: rgb(244, 250, 124) !important;"> {{ totalCost | number }} </span> (HUF / USD / EUR) 
+          <span class="fw-bolder" style="color: rgb(244, 250, 124) !important;"> {{ totalCost | number | toMarkdownPipe }} </span> (HUF / USD / EUR) 
         </p>
 
-        <markdown> <small> {{ content.toolsComp.fuelCalcTip }} </small> </markdown>
+        <p> <small> {{ content.toolsComp.fuelCalcTip | toMarkdownPipe }} </small> </p>
 
       </div>
 

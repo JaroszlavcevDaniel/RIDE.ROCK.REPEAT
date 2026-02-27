@@ -17,7 +17,7 @@ import { LanguageGuard } from './core/core/guards/language-guard';
 import { MainPage } from './components/main-page/main-page';
 import { ArticleDetails } from './components/article-details/article-details';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MarkdownModule } from 'ngx-markdown';
+// import { MarkdownModule } from 'ngx-markdown';
 import { environment } from './environment/environment';
 
 import { AngularFireModule } from '@angular/fire/compat';
@@ -35,6 +35,7 @@ import { Tools } from './components/tools/tools';
 import { FuelCalc } from './fuel-calc/fuel-calc';
 import { WildCampMapHu } from './wild-camp-map-hu/wild-camp-map-hu';
 import { WildCampMapEn } from './wild-camp-map-en/wild-camp-map-en';
+import { ToMarkdownPipePipe } from './pipes/pipes/to-markdown-pipe-pipe';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { WildCampMapEn } from './wild-camp-map-en/wild-camp-map-en';
     FuelCalc,
     WildCampMapHu,
     WildCampMapEn,
+    ToMarkdownPipePipe,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +71,7 @@ import { WildCampMapEn } from './wild-camp-map-en/wild-camp-map-en';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MarkdownModule.forRoot(),
+    // MarkdownModule.forRoot(),
    
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,

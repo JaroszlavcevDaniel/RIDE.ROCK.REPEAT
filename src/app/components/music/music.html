@@ -18,9 +18,9 @@
       
       <div class="card-body col-6">
        
-        <h5 class="card-title text-light fw-bolder p-2 new-rocker-regular">{{ article[lang]?.title }}</h5>
+        <h5 class="card-title text-light fw-bolder p-2 new-rocker-regular">{{ article[lang]?.title | toMarkdownPipe }}</h5>
         
-        <h6 class="p-2">{{ article[lang].excerpt }}</h6>
+        <h6 class="p-2">{{ article[lang].excerpt | toMarkdownPipe }}</h6>
         
         <!-- Read More Link -->
    <!-- <a class="text-light btn bg-black text-decoration-none fw-bold btn-animate btn-ripple" >
@@ -35,7 +35,7 @@
   <!-- No articles fallback -->
   <ng-template #noArticles>
     <p class="no-articles">
-      {{ lang === 'hu' ? 'Nincsenek elérhető cikkek.' : 'No articles available.' }}
+      {{ lang === 'hu' ? 'Nincsenek elérhető cikkek.' : 'No articles available.' | toMarkdownPipe }}
     </p>
   </ng-template>
   

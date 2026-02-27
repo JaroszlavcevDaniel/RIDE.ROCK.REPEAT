@@ -33,7 +33,7 @@
     </div>
 <ng-container *ngIf="content$ | async as content">
 <a *ngIf="showBackButton" class="m-2 btn btn-secondary text-light fw-bolder btn-ripple btn-animate new-rocker-regular" 
-(click)="goBack()"> ←  {{ content.navbar.back }}</a>
+(click)="goBack()"> ←  {{ content.navbar.back | toMarkdownPipe }}</a>
 </ng-container>
   <!-- TOGGLER (mobilhoz) -->
   <button
@@ -57,31 +57,31 @@
 
         <li class="nav-item">
           <a class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'about']">
-            {{ content.navbar.about }}
+            {{ content.navbar.about | toMarkdownPipe }}
           </a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'stories']">
-            {{ content.navbar.travel }}
+            {{ content.navbar.travel | toMarkdownPipe  }}
           </a>
         </li>
 
           <li class="nav-item">
           <a class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'playlists']">
-            {{ content.navbar.playlists }}
+            {{ content.navbar.playlists | toMarkdownPipe }}
           </a>
         </li>
 
           <li class="nav-item">
           <a class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'contact']">
-            {{ content.navbar.contact }}
+            {{ content.navbar.contact | toMarkdownPipe }}
           </a>
         </li>
 
          <li class="nav-item">
           <a class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'tools']">
-            {{ content.navbar.tools }}
+            {{ content.navbar.tools | toMarkdownPipe }}
             <!-- <span class="badge bg-danger text-lowercase fs-7 btn-pulse ">new</span> -->
           </a>
         </li>
@@ -92,7 +92,7 @@
         </button>
 
         <div *ngIf="user">
-          👋 {{ user.displayName }}
+          👋 {{ user.displayName | toMarkdownPipe }}
            <!-- <img
           
           [src]="userPhoto"

@@ -1,7 +1,7 @@
 <div class="container" *ngIf="content$ | async as content">
    
   <h2 class="article-title m-3 text-uppercase" style="text-align: justify !important">
-    {{ content.toolsComp.toolsh1 }}
+    {{ content.toolsComp.toolsh1 | toMarkdownPipe  }}
   </h2>
 
   <div class="container">
@@ -12,7 +12,7 @@
   [routerLink]="['/', currentLang, 'fuelCalc']" >
   <img src="images/the-case-for-the-mid-sized-cruiser.webp" class="article-image-main rounded-3 " alt="fuel calculator logo">
   <div class="card-body">
-    <p class="card-text">{{ content.toolsComp.fuelCalcBadge }} 
+    <p class="card-text">{{ content.toolsComp.fuelCalcBadge | toMarkdownPipe }} 
       <span class="badge bg-danger text-lowercase fs-7 btn-pulse">new</span></p>
   </div>
 </div>
@@ -21,7 +21,7 @@
 [routerLink]="['/', currentLang, 'wildCampMapHu']">
   <img src="images/wildCampMapHu.jpg" class="article-image-main rounded-3 " alt="wild camping map hungarian">
   <div class="card-body">
-    <p class="card-text">{{ content.toolsComp.wildCampMapHu }}</p>
+    <p class="card-text">{{ content.toolsComp.wildCampMapHu | toMarkdownPipe }}</p>
   </div>
 </div>
 
@@ -29,7 +29,7 @@
 [routerLink]="['/', currentLang, 'wildCampMapEn']">
   <img src="images/wildCampMapEn.jpg" class="article-image-main rounded-3 " alt="wild camping map english">
   <div class="card-body">
-    <p class="card-text">{{ content.toolsComp.wildCampMapEn }}</p>
+    <p class="card-text">{{ content.toolsComp.wildCampMapEn | toMarkdownPipe }}</p>
   </div>
 
 </div>

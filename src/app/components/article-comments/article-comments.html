@@ -31,19 +31,19 @@
         />
 
         <div>
-          <strong>{{ comment.userName }}</strong><br />
+          <strong>{{ comment.userName | toMarkdownPipe  }}</strong><br />
           <small class="text-secondary">
-            {{ comment.createdAt?.toDate() | date:'medium' }}
+            {{ comment.createdAt?.toDate() | date:'medium' | toMarkdownPipe  }}
           </small>
         </div>
 
       </div>
 
       <!-- COMMENT TEXT -->
-      <p class="mb-2">{{ comment.text }}</p>
+      <p class="mb-2">{{ comment.text | toMarkdownPipe }}</p>
 
       <!-- DEBUG ID -->
-      <p class="mb-2 text-black">{{ comment.id }}</p>
+      <p class="mb-2 text-black">{{ comment.id | toMarkdownPipe  }}</p>
 
       <!-- REPLY BUTTON (CSAK LOGIN USERNEK) -->
       <ng-container *ngIf="user$ | async as user">
@@ -91,16 +91,16 @@
           />
 
           <div>
-            <strong>{{ reply.userName }}</strong>
+            <strong>{{ reply.userName  | toMarkdownPipe }}</strong>
             <small class="text-secondary ms-2">
-              {{ reply.createdAt?.toDate() | date:'medium' }}
+              {{ reply.createdAt?.toDate() | date:'medium' | toMarkdownPipe }}
             </small>
           </div>
 
         </div>
 
-        <p class="mb-0">{{ reply.text }}</p>
-        <p class="mb-0 text-black">{{ reply.id }}</p>
+        <p class="mb-0">{{ reply.text | toMarkdownPipe }}</p>
+        <p class="mb-0 text-black">{{ reply.id | toMarkdownPipe }}</p>
 
       </div>
 
