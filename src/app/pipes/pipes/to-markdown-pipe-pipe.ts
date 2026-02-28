@@ -36,7 +36,7 @@ line = line.replace(/\.##\s*(.*?)\s*##\./g, '<h2>$1</h2>');
     // bold **text**
     line = line.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
     // italic *text*
-    line = line.replace(/\*(.*?)\*/g, '<i>$1</i>');
+    line = line.replace(/\ *(.*?)\*/g, '<i>$1</i>');
     return line;
   })
   .join('<br>');  // sorok összefűzése

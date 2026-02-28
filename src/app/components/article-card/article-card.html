@@ -1,6 +1,6 @@
 <div *ngIf="article && article[lang]" class="container my-5">
 
-  <h1>{{ article[lang].title | toMarkdownPipe  }}</h1>
+  <h1 [innerHTML]="article[lang].title | toMarkdownPipe">{{ article[lang].title | toMarkdownPipe  }}</h1>
 
   <img
     [src]="article.image"

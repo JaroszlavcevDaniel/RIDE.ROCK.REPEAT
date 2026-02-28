@@ -32,7 +32,7 @@
 
         <div>
           <strong>{{ comment.userName | toMarkdownPipe  }}</strong><br />
-          <small class="text-secondary">
+          <small class="text-secondary" >
             {{ comment.createdAt?.toDate() | date:'medium' | toMarkdownPipe  }}
           </small>
         </div>

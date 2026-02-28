@@ -17,9 +17,9 @@
     </div>
     <div class="col-lg-7">
       <div class="card-body">
-        <small class="card-title text-light">{{ article[lang].featuredText | toMarkdownPipe }} </small>
+        <small class="card-title text-light" [innerHTML]=" article[lang].featuredText | toMarkdownPipe">{{ article[lang].featuredText | toMarkdownPipe }} </small>
         <h5 class="card-title fw-bolder new-rocker-regular text-warning mb-0"> {{ article[lang].title | toMarkdownPipe }} </h5>
-      <small class="card-text">{{ article[lang].excerpt | toMarkdownPipe }}
+      <small class="card-text" [innerHTML]=" article[lang].excerpt | toMarkdownPipe">{{ article[lang].excerpt | toMarkdownPipe }}
       <!-- <a class="text-light btn bg-black text-decoration-none fw-bold " 
       >
         {{ lang === 'hu' ? 'Olvasom tovább' : 'Read more' }} 
@@ -39,10 +39,10 @@
     </div>
     <div class="col-lg-7">
       <div class="card-body">
-        <small class="card-title text-light ">{{ article[lang].featuredText | toMarkdownPipe }} </small>
-        <h5 class="card-title fw-bolder new-rocker-regular text-warning mb-0"> {{ article[lang].title | toMarkdownPipe }} </h5>
+        <small class="card-title text-light " [innerHTML]="article[lang].featuredText | toMarkdownPipe">{{ article[lang].featuredText | toMarkdownPipe }} </small>
+        <h5 class="card-title fw-bolder new-rocker-regular text-warning mb-0" [innerHTML]="article[lang].title  | toMarkdownPipe"> {{ article[lang].title | toMarkdownPipe }} </h5>
         <!-- <p class="card-text">{{ article[lang].excerpt }} </p> -->
-      <small class="card-text">{{ article[lang].excerpt | toMarkdownPipe }}
+      <small class="card-text" [innerHTML]="article[lang].excerpt | toMarkdownPipe">{{ article[lang].excerpt | toMarkdownPipe }}
       <!-- <a class="text-light btn bg-black text-decoration-none fw-bold btn-ripple btn-animate m-2" >
         {{ lang === 'hu' ? 'Olvasom tovább' : 'Read more' }} 
       </a> -->

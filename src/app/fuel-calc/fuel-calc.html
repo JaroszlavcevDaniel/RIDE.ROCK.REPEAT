@@ -52,7 +52,7 @@
           <span class="fw-bolder" style="color: rgb(244, 250, 124) !important;"> {{ totalCost | number | toMarkdownPipe }} </span> (HUF / USD / EUR) 
         </p>
 
-        <p> <small> {{ content.toolsComp.fuelCalcTip | toMarkdownPipe }} </small> </p>
+        <p> <small [innerHTML]="content.toolsComp.fuelCalcTip  | toMarkdownPipe"> {{ content.toolsComp.fuelCalcTip | toMarkdownPipe }} </small> </p>
 
       </div>
 
