@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { PlatformService } from '../core/services/platform-service';
+import { Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser, DOCUMENT } from '@angular/common';
 
 export interface SeoData {
   title: string;
@@ -19,47 +22,53 @@ export class SeoService {
 
   constructor(
     private meta: Meta,
-    private title: Title
+    private title: Title,
+    private platform: PlatformService,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(DOCUMENT) private document: Document
   ) {}
 
-  updateTags(config: SeoData) {
+updateTags(config: SeoData) {
 
-    const image = config.image || this.defaultImage;
-    const type = config.type || 'website';
-    const url = config.url || window.location.href;
+  const image = config.image || this.defaultImage;
+  const type = config.type || 'website';
 
-    this.title.setTitle(config.title);
+  const url = config.url || (
+    isPlatformBrowser(this.platformId)
+      ? window.location.href
+      : ''
+  );
 
-    // Basic
-    this.meta.updateTag({ name: 'description', content: config.description });
-    if (config.keywords) {
-      this.meta.updateTag({ name: 'keywords', content: config.keywords });
-    }
+  this.title.setTitle(config.title);
 
-    // Open Graph
-    this.meta.updateTag({ property: 'og:title', content: config.title });
-    this.meta.updateTag({ property: 'og:description', content: config.description });
-    this.meta.updateTag({ property: 'og:image', content: image });
-    this.meta.updateTag({ property: 'og:type', content: type });
+  this.meta.updateTag({ name: 'description', content: config.description });
+
+  if (config.keywords) {
+    this.meta.updateTag({ name: 'keywords', content: config.keywords });
+  }
+
+  this.meta.updateTag({ property: 'og:title', content: config.title });
+  this.meta.updateTag({ property: 'og:description', content: config.description });
+  this.meta.updateTag({ property: 'og:image', content: image });
+  this.meta.updateTag({ property: 'og:type', content: type });
+
+  if (url) {
     this.meta.updateTag({ property: 'og:url', content: url });
-
-    // Twitter
-    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
-    this.meta.updateTag({ name: 'twitter:title', content: config.title });
-    this.meta.updateTag({ name: 'twitter:description', content: config.description });
-    this.meta.updateTag({ name: 'twitter:image', content: image });
-
     this.updateCanonical(url);
   }
+}
 
   updateCanonical(url: string) {
-    let link: HTMLLinkElement =
-      document.querySelector("link[rel='canonical']") ||
-      document.createElement('link');
 
-    link.setAttribute('rel', 'canonical');
-    link.setAttribute('href', url);
-    document.head.appendChild(link);
-  }
+  if (!isPlatformBrowser(this.platformId)) return;
 
+  let link: HTMLLinkElement =
+    this.document.querySelector("link[rel='canonical']") ||
+    this.document.createElement('link');
+
+  link.setAttribute('rel', 'canonical');
+  link.setAttribute('href', url);
+
+  this.document.head.appendChild(link);
+}
 }

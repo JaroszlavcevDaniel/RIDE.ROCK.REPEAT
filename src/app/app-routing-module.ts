@@ -19,57 +19,56 @@ const routes: Routes = [
 
   {
     path: ':lang/articles/:slug',
-    component: ArticleDetails
+    component: ArticleDetails, data: { renderMode: 'static' } 
   },
 
   
   {
     path: ':lang',
-    component: Home
+    component: Home, data: { renderMode: 'static' } 
   },
 
  
   {
     path: ':lang/about',
-    component: About
+    component: About, data: { renderMode: 'static' } 
   },
   {
     path: ':lang/stories',
-    component: Stories
+    component: Stories, data: { renderMode: 'static' } 
   },
   {
     path: ':lang/playlists',
-    component: Music
+    component: Music, data: { renderMode: 'static' } 
   },
    {
     path: ':lang/contact',
-    component: Contact
+    component: Contact, data: { renderMode: 'static' } 
   },
 
   {
-    path: ':lang/tools',
-    component: Tools
+    path: ':lang/tools', component: Tools, data: { renderMode: 'static' } 
   },
 
     {
     path: ':lang/wildCampMapHu',
-    component: WildCampMapHu
+    component: WildCampMapHu, data: { renderMode: 'static' } 
   },
 
      {
     path: ':lang/wildCampMapEn',
-    component: WildCampMapEn
+    component: WildCampMapEn, data: { renderMode: 'static' } 
   },
 
     {
     path: ':lang/fuelCalc',
-    component: FuelCalc
+    component: FuelCalc, data: { renderMode: 'static' } 
   },
 
 
    {
     path: ':lang/cookieinfo',
-    component: CookieInfo
+    component: CookieInfo, data: { renderMode: 'static' } 
   },
 
 

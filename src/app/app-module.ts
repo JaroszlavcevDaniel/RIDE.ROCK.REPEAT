@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
@@ -11,7 +11,7 @@ import { Navbar } from './components/navbar/navbar';
 import { ArticleCard } from './components/article-card/article-card';
 import { Footer } from './components/footer/footer';
 import { NotFound } from './components/not-found/not-found';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LanguageGuard } from './core/core/guards/language-guard';
 import { MainPage } from './components/main-page/main-page';
@@ -74,14 +74,18 @@ import { ToMarkdownPipePipe } from './pipes/pipes/to-markdown-pipe-pipe';
     // MarkdownModule.forRoot(),
    
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-    AngularFirestoreModule,
+      AngularFireAuthModule,
+      AngularFirestoreModule,
      
 
   ],
   providers: [
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-   provideFirestore(() => getFirestore()),
+  //   provideFirebaseApp(() => initializeApp(environment.firebase)),
+  //  provideFirestore(() => getFirestore()),
+   provideClientHydration(withEventReplay()),
+   provideHttpClient(withFetch()),
+       provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())
   ],
   bootstrap: [App]
 })

@@ -1,10 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContentService } from '../../services/content-service';
 import { Article } from '../../models/article-model';
 import { Language, LanguageService } from '../../services/language-service';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../services/seo-service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-about',
@@ -17,13 +18,15 @@ export class About implements OnInit, OnDestroy {
   articles: Article[] = [];  
   lang: Language = 'hu';
   private sub = new Subscription();
+  isBrowser = false;
 
   constructor(
     private contentService: ContentService,
     private languageService: LanguageService,
     private seo: SeoService,
-    private route: ActivatedRoute
-  ) {}
+    private route: ActivatedRoute,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) { this.isBrowser = isPlatformBrowser(this.platformId);}
 
   ngOnInit() {
   

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Language, LanguageService } from '../../services/language-service';
 import { map, Observable } from 'rxjs';
 import { ContentService } from '../../services/content-service';
@@ -6,12 +6,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Article } from '../../models/article-model';
 import emailjs from 'emailjs-com';
 import { SeoService } from '../../services/seo-service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
   standalone: false,
   templateUrl: './contact.html',
-  styleUrl: './contact.css',
+  styleUrl: './contact.css', 
 })
 export class Contact implements OnInit {
 
@@ -19,15 +20,18 @@ export class Contact implements OnInit {
 
   presentForm: FormGroup;
 
-  // EZ MÁR CSAK A NYELVHEZ TARTOZÓ RÉSZ
+  isBrowser = false;
+ 
   content$!: Observable<any>;
 
   constructor(
     private fb: FormBuilder,
     private languageService: LanguageService,
     private contentService: ContentService,
-    private seo: SeoService
+    private seo: SeoService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
     this.presentForm = this.fb.group({
       yourName: ['', Validators.required],
       yourEmail: ['', [Validators.required, Validators.email]],

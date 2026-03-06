@@ -1,13 +1,13 @@
 <!-- HERO SZEKCIÓ  -->
 <div class="container-fluid bg-black rounded-2 position-relative z-index-5" id="home_banner_div" *ngIf="content$ | async as content">
     <br>
-    <p class="card-text m-3 text-light fw-bolder bannerText text-uppercase mt-0" style="font-size: 2em;" [innerHTML]=" content.hero.title | toMarkdownPipe">{{ content.hero.title | toMarkdownPipe }}</p>
+    <p *ngIf="isBrowser" class="card-text m-3 text-light fw-bolder bannerText text-uppercase mt-0" style="font-size: 2em;" [innerHTML]=" content.hero.title | toMarkdownPipe">{{ content.hero.title | toMarkdownPipe }}</p>
     <br>
-    <p class="card-text m-3 text-light fw-bold bannerText text-uppercase" style="font-size: 1.5em;" [innerHTML]=" content.hero.subtitle | toMarkdownPipe">{{ content.hero.subtitle | toMarkdownPipe  }}</p>
+    <p *ngIf="isBrowser" class="card-text m-3 text-light fw-bold bannerText text-uppercase" style="font-size: 1.5em;" [innerHTML]=" content.hero.subtitle | toMarkdownPipe">{{ content.hero.subtitle | toMarkdownPipe  }}</p>
     <br>
-    <button class="btn btn-dark fw-bolder m-3 p-2 fs-5 btn-pulse  text-uppercase" (click)="onClick()" routerLink="stories"> {{ content.hero.cta | toMarkdownPipe }} </button>
+    <button *ngIf="isBrowser" class="btn btn-dark fw-bolder m-3 p-2 fs-5 btn-pulse  text-uppercase" (click)="onClick()" routerLink="stories"> {{ content.hero.cta | toMarkdownPipe }} </button>
 
-    <button class="btn btn-dark fw-bolder m-3 p-2 fs-5 btn-pulse  text-uppercase" (click)="onClick()" routerLink="playlists"> {{ content.hero.ctaTwo | toMarkdownPipe }} </button>
+    <button *ngIf="isBrowser" class="btn btn-dark fw-bolder m-3 p-2 fs-5 btn-pulse  text-uppercase" (click)="onClick()" routerLink="playlists"> {{ content.hero.ctaTwo | toMarkdownPipe }} </button>
 </div>
 <!-- KIEMELT CÍKKEK + LOGÓ -->
 <app-main-page class="bg-black"></app-main-page>

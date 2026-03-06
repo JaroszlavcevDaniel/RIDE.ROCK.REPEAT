@@ -1,10 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import { Article } from '../../models/article-model';
 import { Lang } from '../article-card/article-card';
 import { ContentService } from '../../services/content-service';
 import { Language, LanguageService } from '../../services/language-service';
 import { Observable, Subscription } from 'rxjs';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { SeoService } from '../../services/seo-service';
 import { SoundService } from '../../services/sound-service';
 
@@ -23,13 +23,16 @@ export class MainPage implements OnInit, OnDestroy {
     currentLang: Language;
   private sub = new Subscription();
   content$!: Observable<any>;
+  isBrowser = false;
 
   constructor(
     private contentService: ContentService,
     private languageService: LanguageService,
     private seo: SeoService,
-    private soundService: SoundService
+    private soundService: SoundService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
     this.currentLang = this.languageService.getCurrentLang();
     this.content$ = this.contentService.getContent();
   }

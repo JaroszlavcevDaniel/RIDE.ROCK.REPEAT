@@ -1,13 +1,13 @@
 <div *ngIf="article && article[lang]" class="container my-5">
 
-  <h1 [innerHTML]="article[lang].title | toMarkdownPipe">{{ article[lang].title | toMarkdownPipe  }}</h1>
+  <h1 *ngIf="isBrowser" [innerHTML]="article[lang].title | toMarkdownPipe">{{ article[lang].title | toMarkdownPipe  }}</h1>
 
   <img
     [src]="article.image"
     class="img-fluid my-4"
   />
 
-  <div [innerHTML]="article[lang].content"></div>
+  <div *ngIf="isBrowser" [innerHTML]="article[lang].content"></div>
 
 </div>
 

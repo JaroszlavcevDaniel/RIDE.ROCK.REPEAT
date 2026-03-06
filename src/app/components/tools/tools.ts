@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Language, LanguageService } from '../../services/language-service';
 import { Observable } from 'rxjs';
 import { ContentService } from '../../services/content-service';
 import { SeoService } from '../../services/seo-service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-tools',
@@ -15,12 +16,15 @@ export class Tools  implements OnInit {
   lang: Language = 'hu';
   currentLang: Language;
   content$!: Observable<any>;
+  isBrowser = false;
 
   constructor(
     private languageService: LanguageService,
     private contentService: ContentService,
-    private seo: SeoService
+    private seo: SeoService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
+  this.isBrowser = isPlatformBrowser(this.platformId)
    this.currentLang = this.languageService.getCurrentLang();
   }
 

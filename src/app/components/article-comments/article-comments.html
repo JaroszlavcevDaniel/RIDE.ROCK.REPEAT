@@ -31,8 +31,8 @@
         />
 
         <div>
-          <strong>{{ comment.userName | toMarkdownPipe  }}</strong><br />
-          <small class="text-secondary" >
+          <strong *ngIf="isBrowser">{{ comment.userName | toMarkdownPipe  }}</strong><br />
+          <small *ngIf="isBrowser" class="text-secondary" >
             {{ comment.createdAt?.toDate() | date:'medium' | toMarkdownPipe  }}
           </small>
         </div>
@@ -40,10 +40,10 @@
       </div>
 
       <!-- COMMENT TEXT -->
-      <p class="mb-2">{{ comment.text | toMarkdownPipe }}</p>
+      <p *ngIf="isBrowser" class="mb-2">{{ comment.text | toMarkdownPipe }}</p>
 
       <!-- DEBUG ID -->
-      <p class="mb-2 text-black">{{ comment.id | toMarkdownPipe  }}</p>
+      <p *ngIf="isBrowser" class="mb-2 text-black">{{ comment.id | toMarkdownPipe  }}</p>
 
       <!-- REPLY BUTTON (CSAK LOGIN USERNEK) -->
       <ng-container *ngIf="user$ | async as user">
@@ -91,16 +91,16 @@
           />
 
           <div>
-            <strong>{{ reply.userName  | toMarkdownPipe }}</strong>
-            <small class="text-secondary ms-2">
+            <strong *ngIf="isBrowser">{{ reply.userName  | toMarkdownPipe }}</strong>
+            <small *ngIf="isBrowser" class="text-secondary ms-2">
               {{ reply.createdAt?.toDate() | date:'medium' | toMarkdownPipe }}
             </small>
           </div>
 
         </div>
 
-        <p class="mb-0">{{ reply.text | toMarkdownPipe }}</p>
-        <p class="mb-0 text-black">{{ reply.id | toMarkdownPipe }}</p>
+        <p *ngIf="isBrowser" class="mb-0">{{ reply.text | toMarkdownPipe }}</p>
+        <p *ngIf="isBrowser" class="mb-0 text-black">{{ reply.id | toMarkdownPipe }}</p>
 
       </div>
 

@@ -1,7 +1,7 @@
 import { Language, LanguageService } from './../../services/language-service';
 import { ContentService } from './../../services/content-service';
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Observable, Subscription } from 'rxjs';
 import { Article } from '../../models/article-model';
 import { SeoService } from '../../services/seo-service';
@@ -18,13 +18,15 @@ export class Stories implements OnInit, OnDestroy {
   articles: Article[] = []; 
   lang: Language = 'hu';
   private sub = new Subscription();
+  isBrowser = false;
 
   constructor(
     private contentService: ContentService,
     private languageService: LanguageService,
     private seo: SeoService,
-    private soundService: SoundService
-  ) {}
+    private soundService: SoundService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {this.isBrowser = isPlatformBrowser(this.platformId)}
 
   ngOnInit() {
     this.sub.add(

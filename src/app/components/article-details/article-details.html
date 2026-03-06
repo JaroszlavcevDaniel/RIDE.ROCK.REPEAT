@@ -3,33 +3,33 @@
    
   <div *ngIf="article as a" class="text-start" style="max-width: 800px;">
     
-   <h1 class="article-title m-3 text-uppercase">{{ a?.title | toMarkdownPipe }}</h1>
+   <h1 *ngIf="isBrowser" class="article-title m-3 text-uppercase">{{ a?.title | toMarkdownPipe }}</h1>
    <img class="w-75 rounded-2 mx-auto d-block m-3" [src]="article?.image" alt="article-picture" id="articlePicture">
-  <p class="text-light" style="text-align: justify !important" [innerHTML]="a?.content | toMarkdownPipe">{{ a?.content | toMarkdownPipe }}</p>
+  <p *ngIf="isBrowser" class="text-light" style="text-align: justify !important" [innerHTML]="a?.content | toMarkdownPipe">{{ a?.content | toMarkdownPipe }}</p>
     </div>
    </div>
 
 <!-- LINKS  -->
 <div *ngIf="article?.isThereLinks" class="text-info p-3">
   <h4 >Links: 
-     <a target="_blank" class="text-decoration-none" [href]="article?.linkOne"> {{article?.linkOneName | toMarkdownPipe }} </a> 
-     <a target="_blank" class="text-decoration-none" [href]="article?.linkTwo"> {{article?.linkTwoName | toMarkdownPipe }} </a> 
-     <a target="_blank" class="text-decoration-none" [href]="article?.linkThree"> {{article?.linkThreeName | toMarkdownPipe }}</a> 
-     <a target="_blank" class="text-decoration-none" [href]="article?.linkFour"> {{article?.linkFourName | toMarkdownPipe }} </a> 
-     <a target="_blank" class="text-decoration-none" [href]="article?.linkFive"> {{article?.linkFiveName | toMarkdownPipe }} </a> 
-     <a target="_blank" class="text-decoration-none" [href]="article?.linkSix"> {{article?.linkSixName | toMarkdownPipe }} </a> 
-     <a target="_blank" class="text-decoration-none" [href]="article?.linkSeven"> {{article?.linkSevenName | toMarkdownPipe }} </a> 
-     <a target="_blank" class="text-decoration-none" [href]="article?.linkEight"> {{article?.linkEightName | toMarkdownPipe }} </a> 
-     <a target="_blank" class="text-decoration-none" [href]="article?.linkNine"> {{article?.linkNineName | toMarkdownPipe }} </a> 
-     <a target="_blank" class="text-decoration-none" [href]="article?.linkTen"> {{article?.linkTenName | toMarkdownPipe }} </a> 
-    <a target="_blank" class="text-decoration-none" [href]="article?.linkEleven"> {{article?.linkElevenName | toMarkdownPipe }} </a> 
+     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkOne"> {{article?.linkOneName | toMarkdownPipe }} </a> 
+     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkTwo"> {{article?.linkTwoName | toMarkdownPipe }} </a> 
+     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkThree"> {{article?.linkThreeName | toMarkdownPipe }}</a> 
+     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkFour"> {{article?.linkFourName | toMarkdownPipe }} </a> 
+     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkFive"> {{article?.linkFiveName | toMarkdownPipe }} </a> 
+     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkSix"> {{article?.linkSixName | toMarkdownPipe }} </a> 
+     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkSeven"> {{article?.linkSevenName | toMarkdownPipe }} </a> 
+     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkEight"> {{article?.linkEightName | toMarkdownPipe }} </a> 
+     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkNine"> {{article?.linkNineName | toMarkdownPipe }} </a> 
+     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkTen"> {{article?.linkTenName | toMarkdownPipe }} </a> 
+    <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkEleven"> {{article?.linkElevenName | toMarkdownPipe }} </a> 
 
     </h4>
 </div>
  <!-- CAROUSEL  -->
 <div *ngIf="article?.isThereCarousel">
 
-<h2 class="text-light m-4"> {{ article?.carouselText | toMarkdownPipe }} </h2>
+<h2 *ngIf="isBrowser" class="text-light m-4"> {{ article?.carouselText | toMarkdownPipe }} </h2>
 
 <div id="carouselExample" class="carousel slide d-flex">
   <div class="carousel-inner justify-content-center">
@@ -77,7 +77,7 @@
 </div> 
 <div *ngIf="article as a" class="d-flex justify-content-center">
   <div class="text-start" style="max-width: 800px;">
- <p class="text-light m-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentSecondPart | toMarkdownPipe">{{ a?.contentSecondPart | toMarkdownPipe }}</p> 
+ <p *ngIf="isBrowser" class="text-light m-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentSecondPart | toMarkdownPipe">{{ a?.contentSecondPart | toMarkdownPipe }}</p> 
  </div>
 </div>
 

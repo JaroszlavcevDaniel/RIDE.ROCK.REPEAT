@@ -1,13 +1,16 @@
 import {
   Component,
+  Inject,
   Input,
   OnChanges,
+  PLATFORM_ID,
   SimpleChanges
 } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { AuthService } from '../../services/auth-service';
 import { CommentService } from '../../services/comment-service';
 import { ArticleComment } from '../../models/user.model';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-article-comments',
@@ -34,11 +37,16 @@ export class ArticleComments implements OnChanges {
   replyingTo: string | null = null;
   replyText = '';
 
+   isBrowser = false;
+
   constructor(
     private auth: AuthService,
-    private commentService: CommentService
+    private commentService: CommentService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
     this.user$ = this.auth.user$;
+    
   }
 
 

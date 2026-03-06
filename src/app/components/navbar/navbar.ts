@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ContentService } from '../../services/content-service';
 import { LanguageService } from '../../services/language-service';
 import { filter, Observable, Subject } from 'rxjs';
@@ -6,7 +6,7 @@ import { Language } from '../../models/language.type';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { AuthService } from '../../services/auth-service';
 import firebase from 'firebase/compat/app';
-import { Location } from '@angular/common';
+import { isPlatformBrowser, Location } from '@angular/common';
 import { Collapse } from 'bootstrap';
 
 @Component({
@@ -20,12 +20,11 @@ export class Navbar implements OnInit  {
 
   private destroy$ = new Subject<void>();
   
-   lang: Language = 'hu'; 
-
+  lang: Language = 'hu'; 
+  isBrowser = false;
   currentLang: Language;
   content$!: Observable<any>;
   showBackButton = false;
-
   user: firebase.User | null = null;
 
   constructor(
@@ -33,8 +32,10 @@ export class Navbar implements OnInit  {
     private languageService: LanguageService,
     private contentService: ContentService,
     private auth: AuthService,
-    private location: Location
+    private location: Location,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
     this.currentLang = this.languageService.getCurrentLang();
     this.content$ = this.contentService.getContent();
     this.auth.user$.subscribe(user => this.user = user);
@@ -85,14 +86,15 @@ export class Navbar implements OnInit  {
   }
 
 closeNavbar() {
-  const navbar = document.getElementById('mainNavbar');
+  if (!isPlatformBrowser(this.platformId)) return;
 
-  if (navbar && navbar.classList.contains('show')) {
-    const bsCollapse = Collapse.getInstance(navbar)
-      || new Collapse(navbar, { toggle: false });
-
-    bsCollapse.hide();
-  }
+  import('bootstrap').then(({ Collapse }) => {
+    const navbar = document.getElementById('mainNavbar');
+    if (navbar && navbar.classList.contains('show')) {
+      const bsCollapse = Collapse.getInstance(navbar) || new Collapse(navbar, { toggle: false });
+      bsCollapse.hide();
+    }
+  });
 }
 
 ngOnDestroy() {

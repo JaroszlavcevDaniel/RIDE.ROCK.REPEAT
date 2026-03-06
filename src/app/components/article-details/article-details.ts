@@ -1,9 +1,9 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import { Article } from '../../models/article-model';
 import { Language, LanguageService } from '../../services/language-service';
 import { ActivatedRoute } from '@angular/router';
 import { ContentService } from '../../services/content-service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import firebase from 'firebase/compat/app';
 import { AuthService } from '../../services/auth-service';
 import { combineLatest, Subscription, switchMap } from 'rxjs';
@@ -20,13 +20,15 @@ import { SeoService } from '../../services/seo-service';
 export class ArticleDetails implements OnInit, OnDestroy {
   article: any;
   private subscription?: Subscription;
+  isBrowser = false;
 
   constructor(
     private route: ActivatedRoute,
     private contentService: ContentService,
     private languageService: LanguageService,
-    private seo: SeoService
-  ) {}
+    private seo: SeoService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {this.isBrowser = isPlatformBrowser(this.platformId);}
 
   ngOnInit(): void {
     this.subscription = combineLatest([

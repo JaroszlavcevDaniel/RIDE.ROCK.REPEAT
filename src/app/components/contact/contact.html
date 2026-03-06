@@ -1,7 +1,7 @@
 <div class="container" *ngIf="content$ | async as content">
 
 
-  <p class="text-light" style="text-align: justify !important" [innerHTML]=" content.contact.contactText | toMarkdownPipe">
+  <p *ngIf="isBrowser" class="text-light" style="text-align: justify !important" [innerHTML]=" content.contact.contactText | toMarkdownPipe">
     {{ content.contact.contactText | toMarkdownPipe }}
   </p>
 
@@ -31,28 +31,28 @@
 </div>
 
 
-  <p class="text-light mt-3" style="text-align: justify !important" [innerHTML]=" content.contact.contactTextTwo  | toMarkdownPipe">
+  <p *ngIf="isBrowser" class="text-light mt-3" style="text-align: justify !important" [innerHTML]=" content.contact.contactTextTwo  | toMarkdownPipe">
     {{ content.contact.contactTextTwo | toMarkdownPipe }}
   </p>
 
   <form class="mt-4" [formGroup]="presentForm" (ngSubmit)="onSubmit()" action="https://formspree.io/f/XXXXXXX" method="POST">
 
     <div class="col-md-6 my-3">
-      <label class="form-label text-light"> {{ content.contact.yourName | toMarkdownPipe  }}</label>
+      <label *ngIf="isBrowser" class="form-label text-light"> {{ content.contact.yourName | toMarkdownPipe  }}</label>
       <input    class="form-control"   type="text" formControlName="yourName">
     </div>
 
     <div class="col-md-6 my-3">
-      <label class="form-label text-light">{{ content.contact.yourEmail | toMarkdownPipe }}</label>
+      <label *ngIf="isBrowser" class="form-label text-light">{{ content.contact.yourEmail | toMarkdownPipe }}</label>
       <input   class="form-control"  type="email" formControlName="yourEmail">
     </div>
 
     <div class="col-md-8 my-3">
-      <label class="form-label text-light">{{ content.contact.yourMessage | toMarkdownPipe }}</label>
+      <label *ngIf="isBrowser" class="form-label text-light">{{ content.contact.yourMessage | toMarkdownPipe }}</label>
       <textarea   class="form-control"  rows="4"  formControlName="yourMessage"></textarea>
     </div>
 
-    <button
+    <button *ngIf="isBrowser"
   type="submit"
   class="btn btn-success m-2"
   [disabled]="presentForm.invalid || sending">
