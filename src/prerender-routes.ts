@@ -65,5 +65,5 @@ export const articleRoutes: ArticleRoute[] = [
   { lang: 'en', slug: 'top-10-progressive-gothic-metal&rock-songs-for-riding' },
   { lang: 'hu', slug: 'ejszakai-utak-es-brit-visszhangok-top-15-brit-rock-dal-motorozashoz' },
   { lang: 'en', slug: 'night-roads-british-echoes-top-15-brit-rock-songs-for-the-ride' },
-  // további cikkek...
+  // további cikkek...fefe
 ];
