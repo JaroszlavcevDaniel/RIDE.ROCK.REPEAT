@@ -1,23 +1,13 @@
+// src/app/app.module.server.ts
 import { NgModule } from '@angular/core';
-// import { ServerModule } from '@angular/platform-server';
-import { App } from './app';
 import { provideServerRendering, withRoutes } from '@angular/ssr';
-import { serverRoutes } from './app.routes.server';
+import { App } from './app';
 import { AppModule } from './app-module';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { environment } from './environment/environment';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { serverRoutes } from './app.routes.server';
 
 @NgModule({
-  imports: [
-    AppModule,
-    // ServerModule
-  ],
-  providers: [
-    provideServerRendering(withRoutes(serverRoutes)),
-     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
-  ],
+  imports: [AppModule],
+  providers: [provideServerRendering(withRoutes(serverRoutes))],
   bootstrap: [App],
 })
 export class AppServerModule {}
