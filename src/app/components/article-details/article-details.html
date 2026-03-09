@@ -20,8 +20,8 @@
      <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkSix"> {{article?.linkSixName | toMarkdownPipe }} </a> 
      <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkSeven"> {{article?.linkSevenName | toMarkdownPipe }} </a> 
      <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkEight"> {{article?.linkEightName | toMarkdownPipe }} </a> 
-     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkNine"> {{article?.linkNineName | toMarkdownPipe }} </a> 
-     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkTen"> {{article?.linkTenName | toMarkdownPipe }} </a> 
+     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkNine" [innerHTML]="article?.linkNineName | toMarkdownPipe"> {{article?.linkNineName | toMarkdownPipe }} </a> 
+     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkTen" [innerHTML]="article?.linkTenName | toMarkdownPipe"> {{article?.linkTenName | toMarkdownPipe }} </a> 
     <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkEleven"> {{article?.linkElevenName | toMarkdownPipe }} </a> 
 
     </h4>

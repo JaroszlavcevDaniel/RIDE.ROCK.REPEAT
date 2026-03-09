@@ -65,5 +65,11 @@ export const articleRoutes: ArticleRoute[] = [
   { lang: 'en', slug: 'top-10-progressive-gothic-metal&rock-songs-for-riding' },
   { lang: 'hu', slug: 'ejszakai-utak-es-brit-visszhangok-top-15-brit-rock-dal-motorozashoz' },
   { lang: 'en', slug: 'night-roads-british-echoes-top-15-brit-rock-songs-for-the-ride' },
+  { lang: 'hu', slug: 'milyen-motoros-kesztyut-erdemes-venni' },
+  { lang: 'en', slug: 'what-motorcycle-gloves-should-you-buy' },
+   { lang: 'hu', slug: 'nem-indul-a-motor-amit-en-ilyenkor-vegignezek-az-ut-szelen' },
+  { lang: 'en', slug: 'the-motorcycle-wont-start–what-i-usually-check-on-the-side-of-the-road' },
+   { lang: 'hu', slug: 'milyen-motort-erdemes-elsonek-valasztani-oszinte-gondolatok-kezdo-motorosoknak' },
+  { lang: 'en', slug: 'what-type-of-motorcycle-should-you-choose-as-your-first-one' },
   // további cikkek...fefe
 ];

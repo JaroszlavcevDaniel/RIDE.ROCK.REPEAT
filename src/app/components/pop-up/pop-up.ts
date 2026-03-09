@@ -15,7 +15,7 @@ export class PopUp implements OnInit {
  ngOnInit(): void {
   setTimeout(() => {
     this.show = true; 
-  }, 2000);
+  }, 4000);
   
 }
 

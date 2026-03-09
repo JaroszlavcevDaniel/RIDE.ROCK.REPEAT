@@ -17,8 +17,10 @@ export class ConsentService {
     return localStorage.getItem(this.STORAGE_KEY) as ConsentState;
   }
 
-  hasDecision(): boolean {
-    return this.getConsent() !== null;
+    hasDecision(): boolean {
+    if (!isPlatformBrowser(this.platformId)) return true;
+
+    return !!localStorage.getItem(this.STORAGE_KEY);
   }
 
   accept(): void {
