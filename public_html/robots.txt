@@ -1,0 +1,15 @@
+# robots.txt a ride-rock-repeat.hu oldalhoz
+
+User-agent: *
+
+Allow: /
+
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /node_modules/
+
+# A sitemap helye
+Sitemap: https://ride-rock-repeat.hu/sitemap_v7.xml
+

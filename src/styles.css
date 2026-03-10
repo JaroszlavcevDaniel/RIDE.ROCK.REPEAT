@@ -21,7 +21,7 @@ a:hover {
     }
 
 main {
-    background-image: url("/images/back.jpg") !important;
+    background-image: url("/images/back.webp") !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     font-weight: bolder !important;

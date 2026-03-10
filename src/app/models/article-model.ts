@@ -54,6 +54,28 @@ export interface ArticleLang {
   fuelCalcResultOne: string;
   fuelCalcResultTwo: string;
     fuelCalcTip: string;
+    contentDropOne: string;
+    contentDropTwo: string;
+    contentDropThree: string;
+    contentDropFour: string;
+    contentDropFive: string;
+    contentDropSix: string;
+    contentDropSeven: string;
+    contentDropEight: string;
+    contentDropNine: string;
+    contentDropTen: string;
+    contentPicOne: string;
+    contentPicTwo: string;
+    contentPicThree: string;
+    contentPicFour: string;
+    contentPicFive: string;
+    contentPicSix: string;
+    contentPicSeven: string;
+    contentPicEight: string;
+    contentPicNine: string;
+    contentPicTen: string;
+    isItCuted: boolean;
+
 }
 
 
@@ -130,5 +152,27 @@ export interface Article {
   fuelCalcResultOne: string;
   fuelCalcResultTwo: string;
   fuelCalcTip: string;
+  contentDropOne: string;
+    contentDropTwo: string;
+    contentDropThree: string;
+    contentDropFour: string;
+    contentDropFive: string;
+    contentDropSix: string;
+    contentDropSeven: string;
+    contentDropEight: string;
+    contentDropNine: string;
+    contentDropTen: string;
+    contentPicOne: string;
+    contentPicTwo: string;
+    contentPicThree: string;
+    contentPicFour: string;
+    contentPicFive: string;
+    contentPicSix: string;
+    contentPicSeven: string;
+    contentPicEight: string;
+    contentPicNine: string;
+    contentPicTen: string;
+    isItCuted: boolean;
+
 
 }
