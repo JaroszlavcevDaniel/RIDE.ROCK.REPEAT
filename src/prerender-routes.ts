@@ -71,5 +71,11 @@ export const articleRoutes: ArticleRoute[] = [
   { lang: 'en', slug: 'the-motorcycle-wont-start–what-i-usually-check-on-the-side-of-the-road' },
    { lang: 'hu', slug: 'milyen-motort-erdemes-elsonek-valasztani-oszinte-gondolatok-kezdo-motorosoknak' },
   { lang: 'en', slug: 'what-type-of-motorcycle-should-you-choose-as-your-first-one' },
+    { lang: 'hu', slug: 'top-15-francia-rock-dal' },
+  { lang: 'en', slug: 'top-15-french-rock-songs' },
+    { lang: 'hu', slug: 'top-15-magyar-rock-dal-ami-elvisz-messzire-meg-ugy-is-hogyha-itthon-maradok' },
+  { lang: 'en', slug: 'top-15-hungarian-rock-songs-that-will-take-you-far-even-if-you-stay-at-home' },
+    { lang: 'hu', slug: '10-eldugott-es-hangulatos-motoros-hely-magyarorszagon' },
+  { lang: 'en', slug: '10-secluded-and-cosy-motorcycle-spots-in-hungary' },
   // további cikkek...fefe
 ];
