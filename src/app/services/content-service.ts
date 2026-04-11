@@ -18,7 +18,7 @@ export class ContentService {
     private http: HttpClient,
     private languageService: LanguageService
   ) {
-    // Initialize content$ in constructor
+
     this.content$ = this.http
       .get<ContentData>(this.CONTENT_URL)
       .pipe(

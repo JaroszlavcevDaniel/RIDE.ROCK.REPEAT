@@ -1,16 +1,20 @@
-<div class="container m-1 bg-transparent">
-    <div class="row bg-transparent">
+<div class="container mt-0 mb-5 ">
+    <div class="row glassgow">
 
- <div class="col-lg-6 col-12 bg-transparent d-flex justify-content-end" style="background-color: transparent !important; ">
+ <div class="col-lg-6 col-12  d-flex justify-content-end" style="background-color: transparent !important; ">
    <!-- <div class="image-container  bg-transparent"> -->
-  <img class="w-75 rounded-2 m-3" src="images/me.png" alt="founder photo" >
+  <img class="w-75 rounded-0 m-3" src="images/me.png" alt="founder photo" >
   <!-- </div> -->
   </div>
 
-  <div *ngFor="let article of articles" class="col-lg-6 col-12 bg-transparent" style="text-align: justify !important">
+  <div *ngFor="let article of articles" class="col-lg-6 col-12 " style="text-align: justify !important">
    <h1 class="text-light"></h1>
-  <p *ngIf="isBrowser" style="white-space: pre-line !important" class="text-light white-space: pre-line;" [innerHTML]="article[lang].aboutText  | toMarkdownPipe">{{ article[lang].aboutText | toMarkdownPipe }}</p>
+  <p *ngIf="isBrowser"  class="text-light archivo-black text-uppercase" [innerHTML]="article[lang].aboutText  | toMarkdownPipe">{{ article[lang].aboutText | toMarkdownPipe }}</p>
   <p class="text-light"> </p>
+    </div>
+
+    <div class="col-12 text-center ">
+      <a class="text-decoration-none text-light text-uppercase" href="https://weboldal-rendeles.hu/"> <span class="text-warning">Weboldal-rendelés</span>  / Egy másik weboldalom / My another webpage </a>
     </div>
    </div>
 </div>

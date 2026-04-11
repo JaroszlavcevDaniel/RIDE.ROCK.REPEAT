@@ -1,16 +1,16 @@
 
 <div class="container d-flex justify-content-center" >
    
-  <div *ngIf="article as a" class="text-start" style="max-width: 800px;">
+  <div *ngIf="article as a" class="text-start glassgow " style="max-width: 800px;">
     
    <h1 *ngIf="isBrowser" class="article-title m-3 text-uppercase">{{ a?.title | toMarkdownPipe }}</h1>
-   <img class="w-75 rounded-2 mx-auto d-block m-3" [src]="article?.image" alt="article-picture" id="articlePicture">
-  <p *ngIf="isBrowser" class="text-light" style="text-align: justify !important" [innerHTML]="a?.content | toMarkdownPipe">{{ a?.content | toMarkdownPipe }}</p>
+   <img class="w-75 rounded-0 mx-auto d-block m-3" [src]="article?.image" alt="article-picture" id="articlePicture">
+  <p *ngIf="isBrowser" class="text-light text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.content | toMarkdownPipe">{{ a?.content | toMarkdownPipe }}</p>
     </div>
    </div>
 
 <!-- LINKS  -->
-<div *ngIf="article?.isThereLinks" class="text-info p-1 mb-0">
+<div *ngIf="article?.isThereLinks" class="text-info p-1 mb-0 ">
   <h4 >Links: 
      <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkOne"> {{article?.linkOneName | toMarkdownPipe }} </a> 
      <a *ngIf="isBrowser" target="_blank" class="text-decoration-none" [href]="article?.linkTwo"> {{article?.linkTwoName | toMarkdownPipe }} </a> 
@@ -79,7 +79,7 @@
 
 <div *ngIf="article as a" class="d-flex justify-content-center">
   <div class="text-start" style="max-width: 800px;">
- <p *ngIf="isBrowser" class="text-light mx-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentSecondPart | toMarkdownPipe">{{ a?.contentSecondPart | toMarkdownPipe }}</p> 
+ <p *ngIf="isBrowser" class="text-light mx-4 p-1 text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.contentSecondPart | toMarkdownPipe">{{ a?.contentSecondPart | toMarkdownPipe }}</p> 
  </div>
 </div>
 
@@ -88,85 +88,95 @@
 
 
 <div *ngIf="article as a">
-  <div *ngIf="article.isItCuted">
+  <div *ngIf="article.isItCuted" class="">
+    
+   
+ 
+   <div class="d-flex justify-content-center">
+  <div class="text-start glassgow" style="max-width: 800px;">
+    <img *ngIf="a?.contentPicOne" class="w-100 rounded-0 mx-auto d-block m-0" [src]="a?.contentPicOne" alt="article-picture">
+ <p *ngIf="isBrowser" class="text-light mx-4 p-1 text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.contentDropOne | toMarkdownPipe">{{ a?.contentDropOne | toMarkdownPipe }}</p> 
+ </div>
+ </div>
+
   
-   <img *ngIf="a?.contentPicOne" class="w-50 rounded-2 mx-auto d-block m-0" [src]="a?.contentPicOne" alt="article-picture">
 
    <div class="d-flex justify-content-center">
-  <div class="text-start" style="max-width: 800px;">
- <p *ngIf="isBrowser" class="text-light mx-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentDropOne | toMarkdownPipe">{{ a?.contentDropOne | toMarkdownPipe }}</p> 
+  <div class="text-start glassgow" style="max-width: 800px;">
+<img *ngIf="a?.contentPicTwo" class="w-100 rounded-0 mx-auto d-block m-3" [src]="a?.contentPicTwo" alt="article-picture">
+ <p *ngIf="isBrowser" class="text-light mx-4 p-1 text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.contentDropTwo | toMarkdownPipe">{{ a?.contentDropTwo | toMarkdownPipe }}</p> 
  </div>
  </div>
 
-  <img *ngIf="a?.contentPicTwo" class="w-50 rounded-2 mx-auto d-block m-3" [src]="a?.contentPicTwo" alt="article-picture">
-
-   <div class="d-flex justify-content-center">
-  <div class="text-start" style="max-width: 800px;">
- <p *ngIf="isBrowser" class="text-light mx-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentDropTwo | toMarkdownPipe">{{ a?.contentDropTwo | toMarkdownPipe }}</p> 
- </div>
- </div>
-
-   <img *ngIf="a?.contentPicThree" class="w-50 rounded-2 mx-auto d-block m-3" [src]="a?.contentPicThree" alt="article-picture">
+   
 
    <div class="d-flex justify-content-center">
-  <div class="text-start" style="max-width: 800px;">
- <p *ngIf="isBrowser" class="text-light mx-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentDropThree | toMarkdownPipe">{{ a?.contentDropThree | toMarkdownPipe }}</p> 
+  <div class="text-start glassgow" style="max-width: 800px;">
+    <img *ngIf="a?.contentPicThree" class="w-100 rounded-0 mx-auto d-block m-3" [src]="a?.contentPicThree" alt="article-picture">
+ <p *ngIf="isBrowser" class="text-light mx-4 p-1 text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.contentDropThree | toMarkdownPipe">{{ a?.contentDropThree | toMarkdownPipe }}</p> 
  </div>
  </div>
 
-    <img *ngIf="a?.contentPicFour" class="w-50 rounded-2 mx-auto d-block m-3" [src]="a?.contentPicFour" alt="article-picture">
-
-   <div class="d-flex justify-content-center">
-  <div class="text-start" style="max-width: 800px;">
- <p *ngIf="isBrowser" class="text-light mx-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentDropFour | toMarkdownPipe">{{ a?.contentDropFour | toMarkdownPipe }}</p> 
- </div>
- </div>
-
-     <img *ngIf="a?.contentPicFive" class="w-50 rounded-2 mx-auto d-block m-3" [src]="a?.contentPicFive" alt="article-picture">
+    
 
    <div class="d-flex justify-content-center">
-  <div class="text-start" style="max-width: 800px;">
- <p *ngIf="isBrowser" class="text-light mx-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentDropFive | toMarkdownPipe">{{ a?.contentDropFive | toMarkdownPipe }}</p> 
+  <div class="text-start glassgow" style="max-width: 800px;">
+    <img *ngIf="a?.contentPicFour" class="w-100 rounded-0 mx-auto d-block m-3" [src]="a?.contentPicFour" alt="article-picture">
+ <p *ngIf="isBrowser" class="text-light mx-4 p-1 text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.contentDropFour | toMarkdownPipe">{{ a?.contentDropFour | toMarkdownPipe }}</p> 
  </div>
  </div>
 
-      <img *ngIf="a?.contentPicSix" class="w-50 rounded-2 mx-auto d-block m-3" [src]="a?.contentPicSix" alt="article-picture">
-
-   <div class="d-flex justify-content-center">
-  <div class="text-start" style="max-width: 800px;">
- <p *ngIf="isBrowser" class="text-light mx-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentDropSix | toMarkdownPipe">{{ a?.contentDropSix | toMarkdownPipe }}</p> 
- </div>
- </div>
-
-       <img *ngIf="a?.contentPicSeven" class="w-50 rounded-2 mx-auto d-block m-3" [src]="a?.contentPicSeven" alt="article-picture">
+     
 
    <div class="d-flex justify-content-center">
-  <div class="text-start" style="max-width: 800px;">
- <p *ngIf="isBrowser" class="text-light mx-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentDropSeven | toMarkdownPipe">{{ a?.contentDropSeven | toMarkdownPipe }}</p> 
+  <div class="text-start glassgow" style="max-width: 800px;">
+    <img *ngIf="a?.contentPicFive" class="w-100 rounded-0 mx-auto d-block m-3" [src]="a?.contentPicFive" alt="article-picture">
+ <p *ngIf="isBrowser" class="text-light mx-4 p-1 text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.contentDropFive | toMarkdownPipe">{{ a?.contentDropFive | toMarkdownPipe }}</p> 
  </div>
  </div>
 
-        <img *ngIf="a?.contentPicEight" class="w-50 rounded-2 mx-auto d-block m-3" [src]="a?.contentPicEight" alt="article-picture">
-
-   <div class="d-flex justify-content-center">
-  <div class="text-start" style="max-width: 800px;">
- <p *ngIf="isBrowser" class="text-light mx-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentDropEight | toMarkdownPipe">{{ a?.contentDropEight | toMarkdownPipe }}</p> 
- </div>
- </div>
-
-         <img *ngIf="a?.contentPicNine" class="w-50 rounded-2 mx-auto d-block m-3" [src]="a?.contentPicNine" alt="article-picture">
+      
 
    <div class="d-flex justify-content-center">
-  <div class="text-start" style="max-width: 800px;">
- <p *ngIf="isBrowser" class="text-light mx-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentDropNine | toMarkdownPipe">{{ a?.contentDropNine | toMarkdownPipe }}</p> 
+  <div class="text-start glassgow" style="max-width: 800px;">
+    <img *ngIf="a?.contentPicSix" class="w-100 rounded-0 mx-auto d-block m-3" [src]="a?.contentPicSix" alt="article-picture">
+ <p *ngIf="isBrowser" class="text-light mx-4 p-1 text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.contentDropSix | toMarkdownPipe">{{ a?.contentDropSix | toMarkdownPipe }}</p> 
  </div>
  </div>
 
-          <img *ngIf="a?.contentPicTen" class="w-50 rounded-2 mx-auto d-block m-3" [src]="a?.contentPicTen" alt="article-picture">
+       
 
    <div class="d-flex justify-content-center">
-  <div class="text-start" style="max-width: 800px;">
- <p *ngIf="isBrowser" class="text-light mx-4 p-1 " style="text-align: justify !important" [innerHTML]="a?.contentDropTen | toMarkdownPipe">{{ a?.contentDropTen | toMarkdownPipe }}</p> 
+  <div class="text-start glassgow" style="max-width: 800px;">
+    <img *ngIf="a?.contentPicSeven" class="w-100 rounded-0 mx-auto d-block m-3" [src]="a?.contentPicSeven" alt="article-picture">
+ <p *ngIf="isBrowser" class="text-light mx-4 p-1 text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.contentDropSeven | toMarkdownPipe">{{ a?.contentDropSeven | toMarkdownPipe }}</p> 
+ </div>
+ </div>
+
+        
+
+   <div class="d-flex justify-content-center">
+  <div class="text-start glassgow" style="max-width: 800px;">
+    <img *ngIf="a?.contentPicEight" class="w-100 rounded-0 mx-auto d-block m-3" [src]="a?.contentPicEight" alt="article-picture">
+ <p *ngIf="isBrowser" class="text-light mx-4 p-1 text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.contentDropEight | toMarkdownPipe">{{ a?.contentDropEight | toMarkdownPipe }}</p> 
+ </div>
+ </div>
+
+         
+
+   <div class="d-flex justify-content-center">
+  <div class="text-start glassgow" style="max-width: 800px;">
+  <img *ngIf="a?.contentPicNine" class="w-100 rounded-0 mx-auto d-block m-3" [src]="a?.contentPicNine" alt="article-picture">
+ <p *ngIf="isBrowser" class="text-light mx-4 p-1 text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.contentDropNine | toMarkdownPipe">{{ a?.contentDropNine | toMarkdownPipe }}</p> 
+ </div>
+ </div>
+
+          
+
+   <div class="d-flex justify-content-center">
+  <div class="text-start glassgow" style="max-width: 800px;">
+    <img *ngIf="a?.contentPicTen" class="w-100 rounded-0 mx-auto d-block m-3" [src]="a?.contentPicTen" alt="article-picture">
+ <p *ngIf="isBrowser" class="text-light mx-4 p-1 text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.contentDropTen | toMarkdownPipe">{{ a?.contentDropTen | toMarkdownPipe }}</p> 
  </div>
  </div>
  
@@ -177,5 +187,5 @@
 
 <!--  KOMMENTEK -->
 
-<app-article-comments class="text-light mt-0" *ngIf="article" [articleId]="article.id"></app-article-comments>
+<app-article-comments class="text-light mt-0 mb-4 text-uppercase archivo-black" *ngIf="article" [articleId]="article.id"></app-article-comments>
 

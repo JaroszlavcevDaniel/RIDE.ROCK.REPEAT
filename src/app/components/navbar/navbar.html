@@ -16,7 +16,7 @@
    <!-- LANGUAGE SWITCH -->
     <div class="d-flex gap-2">
       <button
-        class="btn btn-sm"
+        class="btn btn-sm rounded-0 fw-bolder"
         [class.btn-light]="currentLang === 'hu'"
         [class.btn-outline-light]="currentLang !== 'hu'"
         (click)="switchLanguage('hu')">
@@ -24,7 +24,7 @@
       </button>
 
       <button
-        class="btn btn-sm"
+        class="btn btn-sm rounded-0 fw-bolder"
         [class.btn-light]="currentLang === 'en'"
         [class.btn-outline-light]="currentLang !== 'en'"
         (click)="switchLanguage('en')">
@@ -32,8 +32,8 @@
       </button>
     </div>
 <ng-container *ngIf="content$ | async as content">
-<a *ngIf="showBackButton && isBrowser" class="m-2 btn btn-secondary text-light fw-bolder btn-ripple btn-animate new-rocker-regular" 
-(click)="goBack()"> ←  {{ content.navbar.back | toMarkdownPipe }}</a>
+<a *ngIf="showBackButton && isBrowser" class="m-1 btn btn-secondary text-light fw-bolder btn-ripple btn-animate fs-6 rounded-0 p-1" 
+(click)="goBack()"> ← {{ content.navbar.back | toMarkdownPipe }}</a>
 </ng-container>
   <!-- TOGGLER (mobilhoz) -->
   <button
@@ -53,41 +53,41 @@
     <!-- NG-CONTAINER, NEM UL -->
     <ng-container *ngIf="content$ | async as content">
 
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-1 mb-lg-0">
 
         <li class="nav-item">
-          <a *ngIf="isBrowser" class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'about']">
+          <a *ngIf="isBrowser" class="nav-link text-light archivo-black-regular text-uppercase m-0" [routerLink]="['/', currentLang, 'about']">
             {{ content.navbar.about | toMarkdownPipe }}
           </a>
         </li>
 
         <li class="nav-item">
-          <a *ngIf="isBrowser" class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'stories']">
+          <a *ngIf="isBrowser" class="nav-link text-light archivo-black-regular text-uppercase m-0" [routerLink]="['/', currentLang, 'stories']">
             {{ content.navbar.travel | toMarkdownPipe  }}
           </a>
         </li>
 
           <li class="nav-item">
-          <a *ngIf="isBrowser" class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'playlists']">
+          <a *ngIf="isBrowser" class="nav-link text-light archivo-black-regular text-uppercase m-0" [routerLink]="['/', currentLang, 'playlists']">
             {{ content.navbar.playlists | toMarkdownPipe }}
           </a>
         </li>
 
           <li class="nav-item">
-          <a *ngIf="isBrowser" class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'contact']">
+          <a *ngIf="isBrowser" class="nav-link text-light archivo-black-regular text-uppercase m-0" [routerLink]="['/', currentLang, 'contact']">
             {{ content.navbar.contact | toMarkdownPipe }}
           </a>
         </li>
 
          <li class="nav-item">
-          <a *ngIf="isBrowser" class="nav-link text-light new-rocker-regular" [routerLink]="['/', currentLang, 'tools']">
+          <a *ngIf="isBrowser" class="nav-link text-light archivo-black-regular text-uppercase m-0" [routerLink]="['/', currentLang, 'tools']">
             {{ content.navbar.tools | toMarkdownPipe }}
             <!-- <span class="badge bg-danger text-lowercase fs-7 btn-pulse ">new</span> -->
           </a>
         </li>
 
         <li class="nav-item new-rocker-regular">
-          <button *ngIf="!user" (click)="login()" class="btn btn-secondary btn-pulse">
+          <button *ngIf="!user" (click)="login()" class="btn btn-secondary btn-pulse rounded-0">
          Login by Google
         </button>
 
@@ -101,11 +101,15 @@
           height="36"
           class="rounded-circle me-2 "
         /> -->
-          <button (click)="logout()" class="btn btn-secondary mx-4">LogOut</button>
+          <button (click)="logout()" class="btn btn-secondary mx-4 rounded-0">LogOut</button>
         </div>
         </li>
 
       </ul>
+
+      <li class="nav-item">
+        <button class="btn btn-outline-light nav-link" (click)="toggleTheme()"> 🌙 / ☀️ </button>
+      </li>
 
     </ng-container>
 

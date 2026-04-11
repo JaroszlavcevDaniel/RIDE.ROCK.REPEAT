@@ -3,7 +3,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { LanguageService } from './services/language-service';
 import { filter } from 'rxjs';
 import { Language } from './models/language.type';
-import { isPlatformBrowser } from '@angular/common';
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 declare let gtag: Function; 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,8 @@ export class App implements OnInit {
   constructor(
     private router: Router,
     private languageService: LanguageService,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(DOCUMENT) private document: Document,
   ) {
     // Router event SSR-safe Google Analytics
     if (isPlatformBrowser(this.platformId)) {
@@ -31,6 +32,7 @@ export class App implements OnInit {
   }
 
   ngOnInit(): void {
+   
     if (isPlatformBrowser(this.platformId)) {
       this.router.events
         .pipe(filter(event => event instanceof NavigationEnd))
@@ -41,5 +43,8 @@ export class App implements OnInit {
           }
         });
     }
+     if (isPlatformBrowser(this.platformId)) {
+    this.document.body.classList.add('night-mode');
+  }
   }
 }

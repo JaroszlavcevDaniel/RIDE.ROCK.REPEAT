@@ -1,4 +1,4 @@
-<div class="container" *ngIf="content$ | async as content">
+<div class="container mb-5" *ngIf="content$ | async as content">
    
   <h2 *ngIf="isBrowser" class="article-title m-3 text-uppercase" style="text-align: justify !important">
     {{ content.toolsComp.toolsh1 | toMarkdownPipe  }}
@@ -8,28 +8,28 @@
   <div class="row">
   
 
-<div class="card col-lg-3 col-md-12 col-12 m-2 bg-dark text-light btn btn-dark card-hover"
+<div class="card col-lg-3 col-md-12 col-12 m-2 glassgow text-light btn btn-dark card-hover"
   [routerLink]="['/', currentLang, 'fuelCalc']" >
   <img src="images/the-case-for-the-mid-sized-cruiser.webp" class="article-image-main rounded-3 " alt="fuel calculator logo">
   <div class="card-body">
-    <p *ngIf="isBrowser" class="card-text">{{ content.toolsComp.fuelCalcBadge | toMarkdownPipe }} 
+    <p *ngIf="isBrowser" class="archivo-black text-uppercase">{{ content.toolsComp.fuelCalcBadge | toMarkdownPipe }} 
       <span class="badge bg-danger text-lowercase fs-7 btn-pulse">new</span></p>
   </div>
 </div>
 
-<div class="card col-lg-3 col-md-12 col-12 m-2 bg-dark text-light btn btn-dark card-hover"
+<div class="card col-lg-3 col-md-12 col-12 m-2 glassgow text-light btn btn-dark card-hover"
 [routerLink]="['/', currentLang, 'wildCampMapHu']">
   <img src="images/wildCampMapHu.jpg" class="article-image-main rounded-3 " alt="wild camping map hungarian">
   <div class="card-body">
-    <p *ngIf="isBrowser" class="card-text">{{ content.toolsComp.wildCampMapHu | toMarkdownPipe }}</p>
+    <p *ngIf="isBrowser" class="archivo-black text-uppercase">{{ content.toolsComp.wildCampMapHu | toMarkdownPipe }}</p>
   </div>
 </div>
 
-<div class="card col-lg-3 col-md-12 col-12 m-2 bg-dark text-light btn btn-dark card-hover"
+<div class="card col-lg-3 col-md-12 col-12 m-2 glassgow text-light btn btn-dark card-hover"
 [routerLink]="['/', currentLang, 'wildCampMapEn']">
   <img src="images/wildCampMapEn.jpg" class="article-image-main rounded-3 " alt="wild camping map english">
   <div class="card-body">
-    <p *ngIf="isBrowser" class="card-text">{{ content.toolsComp.wildCampMapEn | toMarkdownPipe }}</p>
+    <p *ngIf="isBrowser" class="archivo-black text-uppercase">{{ content.toolsComp.wildCampMapEn | toMarkdownPipe }}</p>
   </div>
 
 </div>

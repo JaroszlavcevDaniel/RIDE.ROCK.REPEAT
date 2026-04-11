@@ -5,9 +5,10 @@ body {
 }
 
 #home_banner_div {
-    background-image: url(
+    /* background-image: url(
         "/images/SOXBQ5XNTBHGTIEMYVJZNXPQFA.jpg"
-        ); 
+        );  */
+        background: none !important;
     background-repeat: no-repeat; 
     background-size: cover;
 }
@@ -20,12 +21,44 @@ a:hover {
     color: red !important;
     }
 
+body.day-mode main {
+  background-image: url("/images/zugwuzecwe.png") !important;
+}
+
+body.night-mode main {
+  background-image: url("/images/vwrvrwerbvewrbvrweb.png") !important;
+}
+
+
 main {
-    background-image: url("/images/back.webp") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+  background-position: center;
+  font-weight: bolder !important;
+}
+
+main {
+  transition: background-image 0.5s ease-in-out,
+              filter 0.5s ease-in-out;
+}
+
+/* kis hangulat váltás */
+body.day-mode main {
+  filter: brightness(1.1);
+}
+
+body.night-mode main {
+  filter: brightness(1);
+}
+
+/* main {
+    background-image: url("/images/vwrvrwerbvewrbvrweb.png") !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
-    font-weight: bolder !important;
-}
+    background-attachment: fixed;
+    background-position: center;
+} */
 
 .btn-animate {
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
@@ -65,7 +98,7 @@ main {
 }
 
 .btn-ripple:active::after {
-  transform: scale(2.5);
+  /* transform: scale(2.5); */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -114,8 +147,9 @@ main {
 .article-image-main {
   width: 100%;
   height: 100%;
-  max-height: 140px;   /* itt szabályozod a card magasságát */
-  object-fit: cover;   /* kép levágása torzítás nélkül */
+  max-height: 300px;  
+  min-height: 250px;
+  object-fit: cover;   
 }
 
 .logo-wrapper {
@@ -376,6 +410,14 @@ background:
  
 }
 
+.news-title-classic {
+    font-family: 'Abril Fatface', serif;
+    font-weight: 300;
+    font-size: 1rem !important;
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #000; 
+}
+
 .tapestry-regular {
   font-family: "Tapestry", serif !important;
   font-style: normal;
@@ -409,4 +451,28 @@ background:
   #media, #mediaTwo {
     margin-top: 40px !important; 
   }
+}
+
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.7rem !important;
+}
+
+.archivo-black {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* font-size: 0.7rem !important; */
+}
+
+.glassgow {
+  /* background: rgba(255, 255, 255, 0.12); */
+  background: rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  padding: 5px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
 }

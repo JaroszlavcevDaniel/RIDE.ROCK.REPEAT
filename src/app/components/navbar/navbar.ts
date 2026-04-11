@@ -102,4 +102,18 @@ ngOnDestroy() {
   this.destroy$.complete();
 }
 
+isNight = true;
+
+toggleTheme() {
+  this.isNight = !this.isNight;
+
+  if (this.isNight) {
+    document.body.classList.add('night-mode');
+    document.body.classList.remove('day-mode');
+  } else {
+    document.body.classList.add('day-mode');
+    document.body.classList.remove('night-mode');
+  }
+}
+
 }

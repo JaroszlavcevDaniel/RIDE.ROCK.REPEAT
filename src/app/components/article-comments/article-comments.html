@@ -1,6 +1,6 @@
 <section class="article-comments mt-5">
 
-  <h4 class="mb-3 text-light">
+  <h4 class="mb-3 text-light ">
     Comments 👥 Kommentek
   </h4>
 
@@ -9,7 +9,7 @@
 
     <!-- EMPTY STATE -->
     <div *ngIf="data.topLevel.length === 0"
-         class="text-light mb-3">
+         class="text-light mb-3 ">
       No comments yet. Be the first 🤘
       Még nincsenek hozzászólások. Légy az első!
     </div>
@@ -17,7 +17,7 @@
     <!-- TOP LEVEL COMMENTS -->
     <div
       *ngFor="let comment of data.topLevel"
-      class="comment mb-3 p-3 rounded border">
+      class="comment mb-3 p-3 rounded border glassgow">
 
       <!-- HEADER -->
       <div class="d-flex align-items-center mb-2">
@@ -121,7 +121,7 @@
       </textarea>
 
       <button
-        class="btn btn-success mt-2"
+        class="btn btn-success mt-2 mb-4"
         (click)="submitComment(user)"
         [disabled]="!newComment.trim()">
         Post comment ☑️ Hozzászólás közzététele
