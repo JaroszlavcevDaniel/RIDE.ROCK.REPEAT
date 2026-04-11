@@ -5,10 +5,8 @@ body {
 }
 
 #home_banner_div {
-    /* background-image: url(
-        "/images/SOXBQ5XNTBHGTIEMYVJZNXPQFA.jpg"
-        );  */
-        background: none !important;
+
+    background: none !important;
     background-repeat: no-repeat; 
     background-size: cover;
 }
@@ -43,7 +41,6 @@ main {
               filter 0.5s ease-in-out;
 }
 
-/* kis hangulat váltás */
 body.day-mode main {
   filter: brightness(1.1);
 }
@@ -52,13 +49,7 @@ body.night-mode main {
   filter: brightness(1);
 }
 
-/* main {
-    background-image: url("/images/vwrvrwerbvewrbvrweb.png") !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed;
-    background-position: center;
-} */
+
 
 .btn-animate {
   transition: transform 0.2s ease, box-shadow 0.2s ease !important;
@@ -97,9 +88,7 @@ body.night-mode main {
   transition: transform 0.4s ease;
 }
 
-.btn-ripple:active::after {
-  /* transform: scale(2.5); */
-}
+
 
 @media (prefers-reduced-motion: reduce) {
   .btn-animate,
@@ -153,10 +142,9 @@ body.night-mode main {
 }
 
 .logo-wrapper {
-  /* position: relative;
-  display: inline-block; */
+
   position: relative;
-  overflow: hidden;   /* 🔥 nem engedi kilógni */
+  overflow: hidden;   
   background: #000;
   border-radius: 12px;
 }
@@ -182,7 +170,6 @@ background:
   z-index: 0;
   pointer-events: none;
 
-  /* 🔥 EZ MOSSA ÖSSZE FEKETÉVEL */
   mask-image: radial-gradient(circle at center,
       rgba(0,0,0,1) 45%,
       rgba(0,0,0,0.6) 65%,
@@ -210,7 +197,7 @@ background:
 }
 
 .logo-wrapper::after {
-  z-index: 2;   /* 🔥 mindig legfelül */
+  z-index: 2; 
 }
 
 
@@ -291,7 +278,7 @@ background:
 
 .cookie-banner {
   position: fixed;
-  bottom: 0;
+  bottom: 0% !important;
   left: 0;
   right: 0;
   background: #111;
@@ -433,14 +420,12 @@ background:
     width: auto;
 }
 
-/* Tablet */
 @media (max-width: 992px) {
     .logo-img {
         height: 50px;
     }
 }
 
-/* Mobil */
 @media (max-width: 576px) {
     .logo-img {
         height: 60px;
@@ -464,11 +449,9 @@ background:
   font-family: "Archivo Black", sans-serif;
   font-weight: 400;
   font-style: normal;
-  /* font-size: 0.7rem !important; */
 }
 
 .glassgow {
-  /* background: rgba(255, 255, 255, 0.12); */
   background: rgba(0, 0, 0, 0.25) !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
