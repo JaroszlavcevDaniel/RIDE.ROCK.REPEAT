@@ -43,7 +43,7 @@
       <p *ngIf="isBrowser" class="mb-2">{{ comment.text | toMarkdownPipe }}</p>
 
       <!-- DEBUG ID -->
-      <p *ngIf="isBrowser" class="mb-2 text-black">{{ comment.id | toMarkdownPipe  }}</p>
+      <p *ngIf="isBrowser" class="mb-2 d-none">{{ comment.id | toMarkdownPipe  }}</p>
 
       <!-- REPLY BUTTON (CSAK LOGIN USERNEK) -->
       <ng-container *ngIf="user$ | async as user">
@@ -100,7 +100,7 @@
         </div>
 
         <p *ngIf="isBrowser" class="mb-0">{{ reply.text | toMarkdownPipe }}</p>
-        <p *ngIf="isBrowser" class="mb-0 text-black">{{ reply.id | toMarkdownPipe }}</p>
+        <p *ngIf="isBrowser" class="mb-0 d-none">{{ reply.id | toMarkdownPipe }}</p>
 
       </div>
 
