@@ -1,0 +1,48 @@
+<div class="container-fluid p-0 map-wrapper bg-transparent" id="terkep">
+  <div class="map-container">
+
+    <svg
+      viewBox="0 0 1000 625"
+      class="hungary-svg"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      
+      <image 
+      class="bg-transparent"
+        href="images/481437-removebg-preview.png" 
+        x="0" y="0" 
+        width="1000" height="625" 
+        preserveAspectRatio="xMidYMid slice"
+      />
+
+      <g class="interactive-roads">
+
+        <path d="M414,249 L348,223 L312,216 L245,200 L187,178" 
+              class="road-zone" 
+              (mouseenter)="hoveredRoad='M1'" (mouseleave)="hoveredRoad=null" />
+
+        <path d="M473,238 C526,206 580,183 630,172 C680,161 742,171 789,165 C836,159 872,143 898,131" 
+              class="road-zone" 
+              (mouseenter)="hoveredRoad='M3'" (mouseleave)="hoveredRoad=null" />
+
+        <path d="M428,266 C387,294 345,334 290,366 L205,420 L163,445" 
+              class="road-zone" 
+              (mouseenter)="hoveredRoad='M7'" (mouseleave)="hoveredRoad=null" />
+
+        <path d="M470,268 C501,311 538,367 568,416 L615,483" 
+              class="road-zone" 
+              (mouseenter)="hoveredRoad='M5'" (mouseleave)="hoveredRoad=null" />
+
+        <path d="M475,254 L536,268 L603,286 L680,314 L751,339 L781,343" 
+              class="road-zone" 
+              (mouseenter)="hoveredRoad='M4'" (mouseleave)="hoveredRoad=null" />
+
+        <ellipse cx="452" cy="254" rx="35" ry="30" 
+                 class="road-zone" 
+                 (mouseenter)="hoveredRoad='M0'" (mouseleave)="hoveredRoad=null" />
+
+      </g>
+
+    </svg>
+  </div>
+</div>

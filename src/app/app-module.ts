@@ -36,6 +36,7 @@ import { FuelCalc } from './fuel-calc/fuel-calc';
 import { WildCampMapHu } from './wild-camp-map-hu/wild-camp-map-hu';
 import { WildCampMapEn } from './wild-camp-map-en/wild-camp-map-en';
 import { ToMarkdownPipePipe } from './pipes/pipes/to-markdown-pipe-pipe';
+import { Mapper } from './components/mapper/mapper';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ToMarkdownPipePipe } from './pipes/pipes/to-markdown-pipe-pipe';
     ArticleCard,
     Footer,
     NotFound,
+    Mapper,
     MainPage,
     ArticleDetails,
     Contact,

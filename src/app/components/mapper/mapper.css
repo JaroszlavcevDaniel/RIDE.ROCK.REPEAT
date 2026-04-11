@@ -1,0 +1,43 @@
+.map-wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.map-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hungary-svg {
+  width: 90%; 
+  height: 90%;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
+.road-zone {
+  fill: none;
+  stroke: red; 
+  stroke-width: 15; 
+  stroke-linecap: round;
+  cursor: pointer;
+  opacity: 0; 
+  transition: opacity 0.2s ease, filter 0.2s ease;
+  pointer-events: all; 
+}
+
+.road-zone:hover {
+  opacity: 0.8; 
+  stroke-width: 12; 
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 1)); 
+}
+
+  @media (max-width: 768px) {
+      #terkep {
+        display: none !important;
+
+      }
+    }
