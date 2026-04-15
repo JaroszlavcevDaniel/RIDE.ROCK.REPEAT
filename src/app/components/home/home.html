@@ -3,11 +3,16 @@
     
     <p *ngIf="isBrowser" class=" m-1 text-light fw-bolder archivo-black fs-1 text-uppercase mt-0"  [innerHTML]=" content.hero.title | toMarkdownPipe">{{ content.hero.title | toMarkdownPipe }}</p>
     <br>
-    <p *ngIf="isBrowser" class=" m-1 text-light fw-bold archivo-black fs-2 text-uppercase" [innerHTML]=" content.hero.subtitle | toMarkdownPipe">{{ content.hero.subtitle | toMarkdownPipe  }}</p>
+    <!-- <p *ngIf="isBrowser" class=" m-1 text-light fw-bold archivo-black fs-2 text-uppercase" [innerHTML]=" content.hero.subtitle | toMarkdownPipe">{{ content.hero.subtitle | toMarkdownPipe  }}</p> -->
 
     
     <div class="v-twin-cta mt-3 mb-1">
 
+        <div>
+    <p *ngIf="isBrowser" class=" m-1 text-light fw-bold archivo-black fs-2 text-uppercase " [innerHTML]=" content.hero.subtitle | toMarkdownPipe">{{ content.hero.subtitle | toMarkdownPipe  }}</p>
+
+        </div>
+        <div class="cylinders-wrapper">
     <div *ngIf="isBrowser" class="cylinder left m-0 d-block" (click)="onClick()" routerLink="stories">
         <br>
         <br>
@@ -15,7 +20,7 @@
         <br>
         <br>
         <br>
-         <p class="cylinder text-light archivo-black text-uppercase fs-5">{{ content.hero.cta | toMarkdownPipe }}&nbsp; &nbsp;  </p> 
+         <p class="cylinder text-warning archivo-black text-uppercase fs-5 text-border">{{ content.hero.cta | toMarkdownPipe }}&nbsp; &nbsp;  </p> 
     </div>
            
     <div *ngIf="isBrowser" class="cylinder right m-0 d-block" (click)="onClick()" routerLink="playlists">
@@ -25,12 +30,12 @@
         <br>
         <br>
         <br>
-        <p class="cylinder text-light archivo-black text-uppercase fs-5">&nbsp; &nbsp;  {{ content.hero.ctaTwo | toMarkdownPipe }} </p> 
+        <p class="cylinder text-warning archivo-black text-uppercase fs-5 text-border">&nbsp; &nbsp;  {{ content.hero.ctaTwo | toMarkdownPipe }} </p> 
     </div>
   
     </div>
 
-    
+    </div>
 
 <!-- KIEMELT CÍKKEK + LOGÓ -->
 <app-main-page class="mt-1"></app-main-page>
@@ -39,10 +44,10 @@
 
 <div class="container-fluid bg-transparent glassgow rounded-2 position-relative z-index-5" id="home_banner_div" *ngIf="content$ | async as content">
   
-    <p *ngIf="isBrowser" class="m-3 text-light fw-bold archivo-black-regular fs-2 text-uppercase" [innerHTML]=" content.hero.ctaThree | toMarkdownPipe">{{ content.hero.ctaThree | toMarkdownPipe  }}</p>
+    <p *ngIf="isBrowser" class="m-3 text-warning fw-bold archivo-black-regular fs-2 text-uppercase" [innerHTML]=" content.hero.ctaThree | toMarkdownPipe">{{ content.hero.ctaThree | toMarkdownPipe  }}</p>
 
     <div class="glassgow">
-        <p *ngIf="isBrowser" class=" m-3 text-secondary fw-bold archivo-black-regular fs-4 text-uppercase" style="font-size: 1em;" [innerHTML]=" content.hero.ctaFour | toMarkdownPipe">{{ content.hero.ctaFour | toMarkdownPipe  }}</p>
+        <p *ngIf="isBrowser" class=" m-3 text-light fw-bold archivo-black-regular fs-4 text-uppercase" style="font-size: 1em;" [innerHTML]=" content.hero.ctaFour | toMarkdownPipe">{{ content.hero.ctaFour | toMarkdownPipe  }}</p>
 </div>
 <div class="d-block">
     <a *ngIf="isBrowser" class="fw-bolder m-3 p-2 fs-5 archivo-black rounded-0 text-uppercase text-warning text-decoration-none" (click)="onClick()" routerLink="stories"> {{ content.hero.cta | toMarkdownPipe }} </a>
