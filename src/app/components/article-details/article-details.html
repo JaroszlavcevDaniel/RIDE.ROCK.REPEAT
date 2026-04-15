@@ -3,7 +3,7 @@
    
   <div *ngIf="article as a" class="text-start glassgow " style="max-width: 800px;">
     
-   <h1 *ngIf="isBrowser" class="article-title m-3 text-uppercase">{{ a?.title | toMarkdownPipe }}</h1>
+   <h1 *ngIf="isBrowser" class="archivo-black  m-3 text-uppercase text-light">{{ a?.title | toMarkdownPipe }}</h1>
    <img class="w-75 rounded-0 mx-auto d-block m-3" [src]="article?.image" alt="article-picture" id="articlePicture">
   <p *ngIf="isBrowser" class="text-light text-uppercase archivo-black" style="text-align: justify !important" [innerHTML]="a?.content | toMarkdownPipe">{{ a?.content | toMarkdownPipe }}</p>
     </div>

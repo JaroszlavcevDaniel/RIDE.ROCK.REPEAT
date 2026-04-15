@@ -27,4 +27,6 @@ export class Home {
    onClick() {
     this.soundService.playClick();
   }
+
+
 }

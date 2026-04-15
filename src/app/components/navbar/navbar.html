@@ -1,7 +1,7 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light px-4 fixed-top mb-5">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light fixed-top p-1">
 
-  <a class="navbar-brand new-rocker-regular" [routerLink]="['/', currentLang]">Ride. Rock. Repeat.
+  <a class="navbar-brand new-rocker-regular fs-6 ms-3 text-warning text-uppercase" [routerLink]="['/', currentLang]">Ride. Rock. Repeat.
     <svg style="width: 20px !important;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#f2f4e2"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0L0 6V8H1V15H4V10H7V15H15V8H16V6L14 4.5V1H11V2.25L8 0ZM9 10H12V13H9V10Z" fill="#000000"></path> </g></svg>
   </a>
 <a href="https://www.instagram.com/ride.rock.repeat/" 
@@ -14,7 +14,7 @@
          class="logo-img rounded-5">
 </a>
    <!-- LANGUAGE SWITCH -->
-    <div class="d-flex gap-2">
+    <div class="d-flex gap-1">
       <button
         class="btn btn-sm rounded-0 fw-bolder"
         [class.btn-light]="currentLang === 'hu'"
@@ -105,9 +105,7 @@
         </div>
         </li>
 
-      <li class="nav-item">
-        <button class="btn nav-link" (click)="toggleTheme()"> 🌙 / ☀️ </button>
-      </li>
+   
       
       </ul>
 

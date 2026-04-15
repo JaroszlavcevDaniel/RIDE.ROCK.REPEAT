@@ -1,4 +1,4 @@
-<div class="container  mt-2 ">
+<div class="container  mt-0 ">
   <div class="row mt-0">
 
 
@@ -8,7 +8,7 @@
 
 
 
-<div class="col-lg-6 col-md-12 card glassgow text-light rounded-3  card-hover mb-5 mt-5"  *ngIf="featuredArticle as article"
+<div class="col-lg-6 col-md-12 card glassgow text-light rounded-3  card-hover mb-5 mt-1"  *ngIf="featuredArticle as article"
 
 >
   <div class="row g-0 align-items-center" (click)="onClick()" [routerLink]="['/', lang, 'articles', article[lang].slug]">
@@ -17,7 +17,7 @@
     </div>
     <div class="col-lg-7">
       <div class="card-body">
-        <small *ngIf="isBrowser" class="card-title text-light text-uppercase" [innerHTML]=" article[lang].featuredText | toMarkdownPipe">{{ article[lang].featuredText | toMarkdownPipe }} </small>
+        <small *ngIf="isBrowser" class="card-title text-light archivo-black text-uppercase" [innerHTML]=" article[lang].featuredText | toMarkdownPipe">{{ article[lang].featuredText | toMarkdownPipe }} </small>
         <h5 *ngIf="isBrowser" class="card-title fw-bolder archivo-black text-warning mb-0 text-uppercase"> {{ article[lang].title | toMarkdownPipe }} </h5>
       <small *ngIf="isBrowser" class="archivo-black text-uppercase" [innerHTML]=" article[lang].excerpt | toMarkdownPipe">{{ article[lang].excerpt | toMarkdownPipe }}
 
@@ -28,7 +28,7 @@
 </div>
 
 <!-- KEIEMELT PLAYLISZT  -->
- <div class="col-lg-6 col-md-12 card glassgow text-light rounded-3  card-hover mb-5 mt-5" *ngIf="featuredPlaylist as article"
+ <div class="col-lg-6 col-md-12 card glassgow text-light rounded-3  card-hover mb-5 mt-1" *ngIf="featuredPlaylist as article"
  (click)="onClick()"  [routerLink]="['/', lang, 'articles', article[lang].slug]">
   <div class="row g-0 align-items-center">
     <div class="col-lg-3">
@@ -36,7 +36,7 @@
     </div>
     <div class="col-lg-7">
       <div class="card-body">
-        <small *ngIf="isBrowser" class="card-title text-light text-uppercase" [innerHTML]="article[lang].featuredText | toMarkdownPipe">{{ article[lang].featuredText | toMarkdownPipe }} </small>
+        <small *ngIf="isBrowser" class="card-title text-light text-uppercase archivo-black" [innerHTML]="article[lang].featuredText | toMarkdownPipe">{{ article[lang].featuredText | toMarkdownPipe }} </small>
         <h5 *ngIf="isBrowser" class="card-title fw-bolder archivo-black text-uppercase text-warning mb-0" [innerHTML]="article[lang].title  | toMarkdownPipe"> {{ article[lang].title | toMarkdownPipe }} </h5>
         <!-- <p class="card-text">{{ article[lang].excerpt }} </p> -->
       <small *ngIf="isBrowser" class="archivo-black text-uppercase" [innerHTML]="article[lang].excerpt | toMarkdownPipe">{{ article[lang].excerpt | toMarkdownPipe }}
@@ -52,7 +52,7 @@
 
 <div class="col-12">
 
-<app-mapper></app-mapper>
+<app-mapper class=""></app-mapper>
 
 </div>
 
