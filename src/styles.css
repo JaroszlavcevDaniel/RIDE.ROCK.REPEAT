@@ -177,7 +177,7 @@ a:hover {
 /* BACKGROUND / DAY & NIGHT MODE  */
 
 main {
-  background-image: url('/images/orange-leafed-trees-rocky-hill.jpg');
+  background-image: url('/images/background/illuminated-shot-forest-night-time.jpg');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -303,4 +303,36 @@ main {
   padding: 5px !important;
   border-radius: 16px !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* RESPONSE */
+
+@media (max-width: 992px) {
+    .logo-img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-img {
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+  .v-twin-cta {
+  background-image: none;
+  }
+  .logo-img {
+    height: 30px;
+  }
+
+
+}
+
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }

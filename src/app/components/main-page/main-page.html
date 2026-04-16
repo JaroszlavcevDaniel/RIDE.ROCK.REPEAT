@@ -16,10 +16,10 @@
         <img src="images/myTrip.png" class="article-image-main rounded-3 " alt="motorcycle article image">
     </div>
     <div class="col-lg-7">
-      <div class="card-body">
+      <div class="card-body" style="text-align: justify !important">
         <small *ngIf="isBrowser" class="card-title text-light archivo-black text-uppercase" [innerHTML]=" article[lang].featuredText | toMarkdownPipe">{{ article[lang].featuredText | toMarkdownPipe }} </small>
         <h5 *ngIf="isBrowser" class="card-title fw-bolder archivo-black text-warning mb-0 text-uppercase"> {{ article[lang].title | toMarkdownPipe }} </h5>
-      <small *ngIf="isBrowser" class="archivo-black text-uppercase" [innerHTML]=" article[lang].excerpt | toMarkdownPipe">{{ article[lang].excerpt | toMarkdownPipe }}
+      <small  *ngIf="isBrowser" class="archivo-black text-uppercase" [innerHTML]=" article[lang].excerpt | toMarkdownPipe">{{ article[lang].excerpt | toMarkdownPipe }}
 
       </small>
       </div>
@@ -35,7 +35,7 @@
       <img src="images/thumb_95458_0_1080_0_0_auto.jpg" class="card-img-top article-image-main p-1 m-1 rounded-3 " alt="playlist picture">
     </div>
     <div class="col-lg-7">
-      <div class="card-body">
+      <div class="card-body" style="text-align: justify !important">
         <small *ngIf="isBrowser" class="card-title text-light text-uppercase archivo-black" [innerHTML]="article[lang].featuredText | toMarkdownPipe">{{ article[lang].featuredText | toMarkdownPipe }} </small>
         <h5 *ngIf="isBrowser" class="card-title fw-bolder archivo-black text-uppercase text-warning mb-0" [innerHTML]="article[lang].title  | toMarkdownPipe"> {{ article[lang].title | toMarkdownPipe }} </h5>
         <!-- <p class="card-text">{{ article[lang].excerpt }} </p> -->
