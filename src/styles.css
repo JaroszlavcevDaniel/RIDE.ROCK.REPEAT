@@ -36,9 +36,9 @@ a:hover {
   justify-content: flex-start;
   align-items: center;
   gap: 1px;
-  background-image: url("/images/virago3.png");
+  background-image: url("/images/virago4.png");
   background-size: 1200px 800px;
-  background-position: 2% -295px;
+  background-position: 5% -330px;
   background-repeat: no-repeat;
 }
 
@@ -76,7 +76,7 @@ a:hover {
   background-size:contain;
   background-position: right;
   background-repeat: no-repeat;
-  height: 220px;
+  height: 235px;
 }
 
 .right {
@@ -85,7 +85,7 @@ a:hover {
   background-size:contain;
   background-position: left;
   background-repeat: no-repeat;
-  height: 220px;
+  height: 235px;
 }
 
 .right:hover {
