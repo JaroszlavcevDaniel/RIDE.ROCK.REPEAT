@@ -81,7 +81,7 @@ a:hover {
 
 .right {
   animation: vibrateRight 0.25s infinite linear;
-    background-image: url("/images/rightCilinder.png");
+  background-image: url("/images/rightCilinder.png");
   background-size:contain;
   background-position: left;
   background-repeat: no-repeat;
